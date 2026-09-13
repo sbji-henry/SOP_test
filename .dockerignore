@@ -1,0 +1,9 @@
+.git
+.github
+node_modules
+__pycache__
+**/__pycache__
+test-results
+playwright-report
+*.hwpx
+.env

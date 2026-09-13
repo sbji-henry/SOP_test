@@ -1,0 +1,67 @@
+name: Verify wildfire SOP
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  docker-and-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Source integrity and API tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate Compose
+        run: docker compose config --quiet
+      - name: Build and start actual containers
+        run: docker compose up --build -d --wait --wait-timeout 90
+      - name: Smoke-test container
+        run: python scripts/smoke.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Browser tests against Docker service
+        run: npm run test:e2e
+      - name: Logs
+        if: always()
+        run: docker compose logs --no-color
+      - name: Keep browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-screenshots
+          path: test-results/
+          if-no-files-found: ignore
+      - name: Stop containers
+        if: always()
+        run: docker compose down
+  release-v010:
+    needs: docker-and-browser
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.event.head_commit.message == 'feat: implement base wildfire SOP workflow service'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Tag the validated commit without replacing an existing release
+        shell: bash
+        run: |
+          if git rev-parse -q --verify refs/tags/v0.1.0 >/dev/null; then
+            test "$(git rev-list -n 1 v0.1.0)" = "$GITHUB_SHA"
+          else
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git tag -a v0.1.0 "$GITHUB_SHA" -m 'v0.1.0: base wildfire SOP workflow service'
+            git push origin refs/tags/v0.1.0
+          fi

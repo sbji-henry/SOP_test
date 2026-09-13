@@ -1,0 +1,1726 @@
+{
+  "version": "0.1.0",
+  "source": {
+    "id": "KFS-2026-06",
+    "title": "「산불 재난」 위기대응 실무매뉴얼",
+    "publisher": "산림청",
+    "edition": "2026. 6.",
+    "filename": "산불재난위기대응실무매뉴얼산림청260625.hwpx",
+    "sha256": "b5a36563644d1d1e343d49c470fb11512cbbffba226d352c670742cc80f5614a",
+    "locatorNote": "HWPX 내부 XML 위치입니다. 인쇄 쪽수는 추정하지 않았습니다.",
+    "extractionNote": "원문 문단의 문자·기호를 보존하며 줄바꿈과 공백만 정규화합니다."
+  },
+  "phases": [
+    "징후 감지",
+    "초기 대응",
+    "비상 대응",
+    "수습·복구"
+  ],
+  "editorialNote": "WF 번호·업무명·검색 분류는 서비스용 매핑입니다. 매뉴얼의 공식 코드나 의무 실행 순서를 뜻하지 않습니다.",
+  "graphNote": "실선은 업무에 포함된 조치입니다. 화살표가 없는 선은 선후 관계를 뜻하지 않습니다. 조건은 원문에서 확인하십시오.",
+  "workflows": [
+    {
+      "id": "WF-001",
+      "title": "위기징후 감시·평가",
+      "phases": [
+        "징후 감지"
+      ],
+      "agencies": [
+        "산불방지과"
+      ],
+      "evidenceIds": [
+        "S5-E885",
+        "S5-E923",
+        "S5-E939"
+      ],
+      "nodes": [
+        {
+          "id": "WF-001-N01",
+          "label": "감시수단 분석",
+          "text": "징후감지 산불위험지수, 기상여건 등 감시수단 분석",
+          "evidenceIds": [
+            "S5-E885"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-001-N02",
+          "label": "위기징후 평가·정보 공유",
+          "text": "• 위기징후 감시 및 평가를 통해 위기정보 수준과 발령 여부 결정, 감시결과 관련기관 공유․전파",
+          "evidenceIds": [
+            "S5-E923"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-001-N03",
+          "label": "담당자 정위치",
+          "text": "• 담당과장, 계장, 담당자 정위치",
+          "evidenceIds": [
+            "S5-E939"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-001",
+          "target": "WF-001-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E885"
+          ]
+        },
+        {
+          "source": "WF-001",
+          "target": "WF-001-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E923"
+          ]
+        },
+        {
+          "source": "WF-001",
+          "target": "WF-001-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E939"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WF-002",
+      "title": "상황접수·피해 파악",
+      "phases": [
+        "징후 감지"
+      ],
+      "agencies": [
+        "중앙산불상황실"
+      ],
+      "evidenceIds": [
+        "S5-E308",
+        "S5-E346",
+        "S5-E355",
+        "S5-E367"
+      ],
+      "nodes": [
+        {
+          "id": "WF-002-N01",
+          "label": "산불 신고 접수",
+          "text": "상황접수 신고체계 : 단말기, 119, 지자체, 직접신고",
+          "evidenceIds": [
+            "S5-E308"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-002-N02",
+          "label": "산불발생 상황 파악",
+          "text": "• 산불발생 상황 파악 (사망사고 등 인명피해 시 중수본 가동)",
+          "evidenceIds": [
+            "S5-E346"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-002-N03",
+          "label": "피해현황 파악",
+          "text": "- 피해현황 파악(원인, 피해내용, 현장조치 사항 등)",
+          "evidenceIds": [
+            "S5-E355"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-002-N04",
+          "label": "피해 확대 가능성 판단",
+          "text": "- 인명, 국가유산, 고압선 등 피해 및 확대 가능성 판단",
+          "evidenceIds": [
+            "S5-E367"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-002",
+          "target": "WF-002-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E308"
+          ]
+        },
+        {
+          "source": "WF-002",
+          "target": "WF-002-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E346"
+          ]
+        },
+        {
+          "source": "WF-002",
+          "target": "WF-002-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E355"
+          ]
+        },
+        {
+          "source": "WF-002",
+          "target": "WF-002-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E367"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WF-003",
+      "title": "상황 전파·보고",
+      "phases": [
+        "징후 감지",
+        "초기 대응"
+      ],
+      "agencies": [
+        "중앙산불상황실"
+      ],
+      "evidenceIds": [
+        "S5-E423",
+        "S5-E432",
+        "S5-E439",
+        "S5-E534"
+      ],
+      "nodes": [
+        {
+          "id": "WF-003-N01",
+          "label": "청·차장 유선보고",
+          "text": "• 청 · 차장, 실‧국장 유선보고(보고 : 상황실장)",
+          "evidenceIds": [
+            "S5-E423"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-003-N02",
+          "label": "유관기관 전파",
+          "text": "• 대통령비서실, 총리실, 행안부, 소방청 등 유관기관 전파",
+          "evidenceIds": [
+            "S5-E432"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-003-N03",
+          "label": "필수요원 비상소집",
+          "text": "• 필수요원 비상소집 및 상황모니터링",
+          "evidenceIds": [
+            "S5-E439"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-003-N04",
+          "label": "상황보고서 작성·전파",
+          "text": "• 산불상황보고서 작성 및 전파",
+          "evidenceIds": [
+            "S5-E534"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-003",
+          "target": "WF-003-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E423"
+          ]
+        },
+        {
+          "source": "WF-003",
+          "target": "WF-003-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E432"
+          ]
+        },
+        {
+          "source": "WF-003",
+          "target": "WF-003-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E439"
+          ]
+        },
+        {
+          "source": "WF-003",
+          "target": "WF-003-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E534"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WF-004",
+      "title": "초기 진화자원 투입",
+      "phases": [
+        "징후 감지",
+        "초기 대응"
+      ],
+      "agencies": [
+        "중앙산불상황실",
+        "산림청",
+        "지자체",
+        "소방청"
+      ],
+      "evidenceIds": [
+        "S3-E1161",
+        "S5-E380",
+        "S5-E541"
+      ],
+      "nodes": [
+        {
+          "id": "WF-004-N01",
+          "label": "진화자원 즉시 출동",
+          "text": "3) 산불 발생 시 산림청·지자체·소방청 등 진화자원(인력, 헬기) 즉시 출동",
+          "evidenceIds": [
+            "S3-E1161"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-004-N02",
+          "label": "헬기·지상자원 투입",
+          "text": "- 헬기 및 지상 진화 자원 현장 투입",
+          "evidenceIds": [
+            "S5-E380"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-004-N03",
+          "label": "지상·공중 진화활동",
+          "text": "• 지상 · 공중의 입체적인 진화활동 전개 및 지원",
+          "evidenceIds": [
+            "S5-E541"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-004",
+          "target": "WF-004-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E1161"
+          ]
+        },
+        {
+          "source": "WF-004",
+          "target": "WF-004-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E380"
+          ]
+        },
+        {
+          "source": "WF-004",
+          "target": "WF-004-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E541"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WF-005",
+      "title": "상황판단회의·대응단계 검토",
+      "phases": [
+        "초기 대응"
+      ],
+      "agencies": [
+        "중앙산불상황실",
+        "청·차장"
+      ],
+      "evidenceIds": [
+        "S5-E673",
+        "S5-E679",
+        "S5-E1321",
+        "S5-E704"
+      ],
+      "nodes": [
+        {
+          "id": "WF-005-N01",
+          "label": "대응단계·동원령 검토",
+          "text": "- 산불 대응단계 및 동원령 발령 검토",
+          "evidenceIds": [
+            "S5-E673"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-005-N02",
+          "label": "상황판단회의 준비",
+          "text": "• 상황판단회의 개최 준비",
+          "evidenceIds": [
+            "S5-E679"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-005-N03",
+          "label": "현장상황·대처상황 점검",
+          "text": "• 현장상황 파악 및 대처상황 점검(지시)",
+          "evidenceIds": [
+            "S5-E1321"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-005-N04",
+          "label": "회의 후속조치 이행",
+          "text": "• 상황판단회의 및 관계기관 대책회의 후속조치 이행",
+          "evidenceIds": [
+            "S5-E704"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-005",
+          "target": "WF-005-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E673"
+          ]
+        },
+        {
+          "source": "WF-005",
+          "target": "WF-005-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E679"
+          ]
+        },
+        {
+          "source": "WF-005",
+          "target": "WF-005-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E1321"
+          ]
+        },
+        {
+          "source": "WF-005",
+          "target": "WF-005-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E704"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WF-006",
+      "title": "산불현장 통합지휘",
+      "phases": [
+        "초기 대응",
+        "비상 대응"
+      ],
+      "agencies": [
+        "산불현장 통합지휘본부"
+      ],
+      "evidenceIds": [
+        "S3-E1181",
+        "S3-E1191",
+        "S3-E1238",
+        "S3-E1264"
+      ],
+      "nodes": [
+        {
+          "id": "WF-006-N01",
+          "label": "확산·확산 우려 시 본부 설치",
+          "text": "5) 산불 확산 또는 우려 시 산불현장 통합지휘본부 설치 및 운영",
+          "evidenceIds": [
+            "S3-E1181"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-006-N02",
+          "label": "현장 대책회의·임무부여",
+          "text": "나) 현장 대책회의 실시(산불유관기관 참여 및 기관별 임무부여)",
+          "evidenceIds": [
+            "S3-E1191"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-006-N03",
+          "label": "지상·공중 통신망 확보",
+          "text": "바) 산불상황 관리를 위한 지상과 공중 간 통신망 확보",
+          "evidenceIds": [
+            "S3-E1238"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-006-N04",
+          "label": "우선순위에 따른 진화",
+          "text": "* <우선순위> ① 인명 보호, ② 국가기간산업시설, 군사시설 및 국가유산의 보호, ③ 가옥 등 재산 보호, ④ 산림보호구역, 채종림, 시험림 등 중요 산림자원의 보호, ⑤ 그밖에 산림지역의 산불 확산 방지",
+          "evidenceIds": [
+            "S3-E1264"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-006",
+          "target": "WF-006-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E1181"
+          ]
+        },
+        {
+          "source": "WF-006",
+          "target": "WF-006-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E1191"
+          ]
+        },
+        {
+          "source": "WF-006",
+          "target": "WF-006-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E1238"
+          ]
+        },
+        {
+          "source": "WF-006",
+          "target": "WF-006-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E1264"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WF-007",
+      "title": "위험구역 설정·주민대피",
+      "phases": [
+        "징후 감지",
+        "초기 대응",
+        "비상 대응"
+      ],
+      "agencies": [
+        "중앙산불상황실",
+        "산림청",
+        "지자체"
+      ],
+      "evidenceIds": [
+        "S5-E360",
+        "S5-E374",
+        "S5-E501",
+        "S6-E129",
+        "S6-E146",
+        "S3-E1340"
+      ],
+      "nodes": [
+        {
+          "id": "WF-007-N01",
+          "label": "확산예측·위험구역 설정",
+          "text": "- 산불확산예측도 분석 및 위험구역 설정(산림과학원 협조)",
+          "evidenceIds": [
+            "S5-E360"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-007-N02",
+          "label": "산불발생 시 재난문자",
+          "text": "- (산불발생 시) 긴급재난문자(CBS) 발송 및 재난문자방송(DITS) 송출",
+          "evidenceIds": [
+            "S5-E374"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-007-N03",
+          "label": "대피권고 시 재난문자",
+          "text": "• (산불 대피 권고 시) 긴급재난문자(CBS) 발송 및 재난문자방송(DITS) 송출",
+          "evidenceIds": [
+            "S5-E501"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-007-N04",
+          "label": "대피명령 시 재난문자",
+          "text": "• (산불 대피 명령 시) 긴급재난문자(CBS) 발송 및 재난 문자방송(DITS) 송출",
+          "evidenceIds": [
+            "S6-E129"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-007-N05",
+          "label": "안전취약계층 우선 대피",
+          "text": "• 피해 예상지역 내 주민대피 및 안전취약계층 우선 대피 조치",
+          "evidenceIds": [
+            "S6-E146"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-007-N06",
+          "label": "기관별 대피 역할",
+          "text": "* 산림청은 산불확산예측을 통해 위험구역 설정 및 정보전달, 지자체는 현실적인 대피 범위 및 대피 명령 실시",
+          "evidenceIds": [
+            "S3-E1340"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-007",
+          "target": "WF-007-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E360"
+          ]
+        },
+        {
+          "source": "WF-007",
+          "target": "WF-007-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E374"
+          ]
+        },
+        {
+          "source": "WF-007",
+          "target": "WF-007-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E501"
+          ]
+        },
+        {
+          "source": "WF-007",
+          "target": "WF-007-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S6-E129"
+          ]
+        },
+        {
+          "source": "WF-007",
+          "target": "WF-007-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S6-E146"
+          ]
+        },
+        {
+          "source": "WF-007",
+          "target": "WF-007-N06",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E1340"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WF-008",
+      "title": "중앙사고수습본부 운영",
+      "phases": [
+        "초기 대응",
+        "비상 대응"
+      ],
+      "agencies": [
+        "청·차장",
+        "중앙사고수습본부",
+        "산불방지과"
+      ],
+      "evidenceIds": [
+        "S5-E1364",
+        "S6-E278",
+        "S6-E480",
+        "S6-E487"
+      ],
+      "nodes": [
+        {
+          "id": "WF-008-N01",
+          "label": "추가피해 가능성에 따른 가동",
+          "text": "⇒ 인명피해 등 추가피해 가능성에 따라 중수본 가동",
+          "evidenceIds": [
+            "S5-E1364"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-008-N02",
+          "label": "필요시 중수본 운영",
+          "text": "• (필요시)중앙사고수습본부 운영",
+          "evidenceIds": [
+            "S6-E278"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-008-N03",
+          "label": "중대본과 연락",
+          "text": "• 산불 피해확산 방지 및 조기수습을 위한 중대본과 유기적인 연락",
+          "evidenceIds": [
+            "S6-E480"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-008-N04",
+          "label": "대책회의 주재",
+          "text": "• 대책회의 회의 주재(화상회의 등)",
+          "evidenceIds": [
+            "S6-E487"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-008",
+          "target": "WF-008-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E1364"
+          ]
+        },
+        {
+          "source": "WF-008",
+          "target": "WF-008-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S6-E278"
+          ]
+        },
+        {
+          "source": "WF-008",
+          "target": "WF-008-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S6-E480"
+          ]
+        },
+        {
+          "source": "WF-008",
+          "target": "WF-008-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S6-E487"
+          ]
+        },
+        {
+          "source": "WF-008-N01",
+          "target": "WF-008-N02",
+          "kind": "conditional",
+          "label": "추가피해 가능성에 따라",
+          "evidenceIds": [
+            "S5-E1364",
+            "S6-E278"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WF-009",
+      "title": "관계기관 지원·자원 동원",
+      "phases": [
+        "초기 대응",
+        "비상 대응"
+      ],
+      "agencies": [
+        "청·차장",
+        "산림재난통제관"
+      ],
+      "evidenceIds": [
+        "S5-E1391",
+        "S5-E1407",
+        "S5-E1412",
+        "S6-E499",
+        "S6-E504"
+      ],
+      "nodes": [
+        {
+          "id": "WF-009-N01",
+          "label": "관계기관 대책회의 필요시",
+          "text": "관계기관 대책회의 주재(필요시)",
+          "evidenceIds": [
+            "S5-E1391"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-009-N02",
+          "label": "관계부처 협업사항",
+          "text": "- 피해현장 지원을 위한 관계부처별 협업사항",
+          "evidenceIds": [
+            "S5-E1407"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-009-N03",
+          "label": "현장상황에 따른 추가자원",
+          "text": "- 현장상황에 따라 장비 및 진화인원 등 추가 자원 투입",
+          "evidenceIds": [
+            "S5-E1412"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-009-N04",
+          "label": "범정부 지원 요청 필요시",
+          "text": "- 범정부적 지원(인력, 장비) 요청(필요시)",
+          "evidenceIds": [
+            "S6-E499"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-009-N05",
+          "label": "이재민 수용시설·구호품",
+          "text": "- 이재민 발생 시 수용시설 및 구호품 지원 요청",
+          "evidenceIds": [
+            "S6-E504"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-009",
+          "target": "WF-009-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E1391"
+          ]
+        },
+        {
+          "source": "WF-009",
+          "target": "WF-009-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E1407"
+          ]
+        },
+        {
+          "source": "WF-009",
+          "target": "WF-009-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E1412"
+          ]
+        },
+        {
+          "source": "WF-009",
+          "target": "WF-009-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S6-E499"
+          ]
+        },
+        {
+          "source": "WF-009",
+          "target": "WF-009-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S6-E504"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WF-010",
+      "title": "언론 브리핑·오보 대응",
+      "phases": [
+        "초기 대응",
+        "비상 대응",
+        "수습·복구"
+      ],
+      "agencies": [
+        "대변인"
+      ],
+      "evidenceIds": [
+        "S5-E1852",
+        "S5-E1859",
+        "S6-E919",
+        "S6-E926",
+        "S6-E982"
+      ],
+      "nodes": [
+        {
+          "id": "WF-010-N01",
+          "label": "필요시 보도자료·브리핑",
+          "text": "• 보도자료 작성 및 브리핑 실시(필요시)",
+          "evidenceIds": [
+            "S5-E1852"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-010-N02",
+          "label": "현장대변인 핫라인",
+          "text": "• 현장대변인과 핫라인 유지",
+          "evidenceIds": [
+            "S5-E1859"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-010-N03",
+          "label": "언론 모니터링·오보 대응",
+          "text": "• 언론 모니터링 및 오보 대응",
+          "evidenceIds": [
+            "S6-E919"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-010-N04",
+          "label": "중대본과 사전 협의",
+          "text": "※ 언론대응 중대본과 사전 협의",
+          "evidenceIds": [
+            "S6-E926"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-010-N05",
+          "label": "수습상황 브리핑",
+          "text": "• 단계별 수습상황 브리핑 및 보도자료 배표",
+          "evidenceIds": [
+            "S6-E982"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-010",
+          "target": "WF-010-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E1852"
+          ]
+        },
+        {
+          "source": "WF-010",
+          "target": "WF-010-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S5-E1859"
+          ]
+        },
+        {
+          "source": "WF-010",
+          "target": "WF-010-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S6-E919"
+          ]
+        },
+        {
+          "source": "WF-010",
+          "target": "WF-010-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S6-E926"
+          ]
+        },
+        {
+          "source": "WF-010",
+          "target": "WF-010-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S6-E982"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WF-011",
+      "title": "잔불진화·뒷불감시",
+      "phases": [
+        "비상 대응"
+      ],
+      "agencies": [
+        "산림청",
+        "지자체"
+      ],
+      "evidenceIds": [
+        "S3-E1302",
+        "S3-E1302",
+        "S3-E14008",
+        "S3-E14024"
+      ],
+      "nodes": [
+        {
+          "id": "WF-011-N01",
+          "label": "잔불 진화",
+          "text": "9) 잔불 진화 후 뒷불감시를 위한 진화·감시인력 배치",
+          "evidenceIds": [
+            "S3-E1302"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-011-N02",
+          "label": "뒷불감시 인력 배치",
+          "text": "9) 잔불 진화 후 뒷불감시를 위한 진화·감시인력 배치",
+          "evidenceIds": [
+            "S3-E1302"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-011-N03",
+          "label": "감시조·책임담당제",
+          "text": "(1) 잔불진화 철저, 뒷불 감시조 편성‧운영 및 감시 책임담당제 실시",
+          "evidenceIds": [
+            "S3-E14008"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-011-N04",
+          "label": "발생·진화·피해 보고",
+          "text": "(3) 산불 발생상황, 진화상황 및 산불피해 보고 철저",
+          "evidenceIds": [
+            "S3-E14024"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-011",
+          "target": "WF-011-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E1302"
+          ]
+        },
+        {
+          "source": "WF-011",
+          "target": "WF-011-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E1302"
+          ]
+        },
+        {
+          "source": "WF-011",
+          "target": "WF-011-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E14008"
+          ]
+        },
+        {
+          "source": "WF-011",
+          "target": "WF-011-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E14024"
+          ]
+        },
+        {
+          "source": "WF-011-N01",
+          "target": "WF-011-N02",
+          "kind": "after",
+          "label": "잔불 진화 후",
+          "evidenceIds": [
+            "S3-E1302"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WF-012",
+      "title": "피해조사·수습·복구",
+      "phases": [
+        "수습·복구"
+      ],
+      "agencies": [
+        "산림청",
+        "지방자치단체",
+        "소관부서"
+      ],
+      "evidenceIds": [
+        "S3-E14440",
+        "S3-E14451",
+        "S3-E14480",
+        "S3-E14496",
+        "S6-E664"
+      ],
+      "nodes": [
+        {
+          "id": "WF-012-N01",
+          "label": "산불전문조사반 운영",
+          "text": "(1) 피해 규모 및 종류에 따라 전문가 등으로 구성된 산불전문조사반 편성․운영",
+          "evidenceIds": [
+            "S3-E14440"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-012-N02",
+          "label": "원인·확산경로 조사",
+          "text": "- 발생원인, 발생일시, 발생지점, 피해확산 경로와 원인(기상 등) 및 진화 대응 문제점, 가해자 검거를 위한 정보 수집 등 조사",
+          "evidenceIds": [
+            "S3-E14451"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-012-N03",
+          "label": "피해 유형별 복구대책",
+          "text": "(1) 복구대책은 피해 유형별로 소관부서에서 수립하여 추진",
+          "evidenceIds": [
+            "S3-E14480"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-012-N04",
+          "label": "응급복구·항구복구",
+          "text": "(3) 산불피해지 중 산사태 우려지역은 장마기 토사유출 등을 대비한 응급복구와 장기간에 걸친 항구복구로 구분 추진",
+          "evidenceIds": [
+            "S3-E14496"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "WF-012-N05",
+          "label": "피해지역 생활안정 지원",
+          "text": "• 이재민 구호 등 피해지역 생활안정 지원 요청",
+          "evidenceIds": [
+            "S6-E664"
+          ],
+          "kind": "action"
+        }
+      ],
+      "edges": [
+        {
+          "source": "WF-012",
+          "target": "WF-012-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E14440"
+          ]
+        },
+        {
+          "source": "WF-012",
+          "target": "WF-012-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E14451"
+          ]
+        },
+        {
+          "source": "WF-012",
+          "target": "WF-012-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E14480"
+          ]
+        },
+        {
+          "source": "WF-012",
+          "target": "WF-012-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S3-E14496"
+          ]
+        },
+        {
+          "source": "WF-012",
+          "target": "WF-012-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "S6-E664"
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": {
+    "S5-E885": {
+      "id": "S5-E885",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 885,
+      "paragraphId": "2147483648",
+      "quote": "징후감지 산불위험지수, 기상여건 등 감시수단 분석",
+      "sha256": "1b6c56f251777f5fcb95af4a54ab6b25d4afe92ae87dc5f97915c0853869fa5b"
+    },
+    "S5-E923": {
+      "id": "S5-E923",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 923,
+      "paragraphId": "2147483648",
+      "quote": "• 위기징후 감시 및 평가를 통해 위기정보 수준과 발령 여부 결정, 감시결과 관련기관 공유․전파",
+      "sha256": "a5340441eb6476d0d6d8378accd2afc8f66c266f58d5dc49224ea3384100f28f"
+    },
+    "S5-E939": {
+      "id": "S5-E939",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 939,
+      "paragraphId": "2147483648",
+      "quote": "• 담당과장, 계장, 담당자 정위치",
+      "sha256": "1d9ab16d387495dff12baaea44872c70f74499b188cae5a3eb12fb36229c5be9"
+    },
+    "S5-E308": {
+      "id": "S5-E308",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 308,
+      "paragraphId": "2147483648",
+      "quote": "상황접수 신고체계 : 단말기, 119, 지자체, 직접신고",
+      "sha256": "684fc042ed5f1c34459b050ab333803f64ee167458a6b90b56d76a6c631069bb"
+    },
+    "S5-E346": {
+      "id": "S5-E346",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 346,
+      "paragraphId": "2147483648",
+      "quote": "• 산불발생 상황 파악 (사망사고 등 인명피해 시 중수본 가동)",
+      "sha256": "65bca9f86691e38a6473bdc31735538cc7dffd09c235eaa10209dada63271db6"
+    },
+    "S5-E355": {
+      "id": "S5-E355",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 355,
+      "paragraphId": "2147483648",
+      "quote": "- 피해현황 파악(원인, 피해내용, 현장조치 사항 등)",
+      "sha256": "bfb4e5a60120ba5c16c084f5853dfa3d53bfacbdd66a6b93d94e80527cdb9d46"
+    },
+    "S5-E367": {
+      "id": "S5-E367",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 367,
+      "paragraphId": "2147483648",
+      "quote": "- 인명, 국가유산, 고압선 등 피해 및 확대 가능성 판단",
+      "sha256": "337b517148e8a5db7e7cc1b525da8bd969881e15c4545760b10fd9363cb010be"
+    },
+    "S5-E423": {
+      "id": "S5-E423",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 423,
+      "paragraphId": "2147483648",
+      "quote": "• 청 · 차장, 실‧국장 유선보고(보고 : 상황실장)",
+      "sha256": "e39de35838a9c33626d84fc97a919b9e9c297703cc20be50a28e8e01f5ae4887"
+    },
+    "S5-E432": {
+      "id": "S5-E432",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 432,
+      "paragraphId": "2147483648",
+      "quote": "• 대통령비서실, 총리실, 행안부, 소방청 등 유관기관 전파",
+      "sha256": "bab070f0de15c86614296b9e38201a3df47a8ac7140d4d93d5e3c09a7b162da2"
+    },
+    "S5-E439": {
+      "id": "S5-E439",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 439,
+      "paragraphId": "2147483648",
+      "quote": "• 필수요원 비상소집 및 상황모니터링",
+      "sha256": "3c55cbb714f2623cff1436d9c1eef8d18ff8557c723f33e258cafbfd681a8d1f"
+    },
+    "S5-E534": {
+      "id": "S5-E534",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 534,
+      "paragraphId": "2147483648",
+      "quote": "• 산불상황보고서 작성 및 전파",
+      "sha256": "0d11ea01eff6d6364a062a1fa9b0c853c268cb7ec7d2ea703b06afeb68bc1564"
+    },
+    "S3-E1161": {
+      "id": "S3-E1161",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅲ. 위기관리 기본방향 / 3. 위기대응 지침 및 판단·고려 요소",
+      "member": "Contents/section3.xml",
+      "elementIndex": 1161,
+      "paragraphId": "0",
+      "quote": "3) 산불 발생 시 산림청·지자체·소방청 등 진화자원(인력, 헬기) 즉시 출동",
+      "sha256": "699544d9ea7ef67c080ba79efe429712fa2d187d315d8d1af01979c012142eb2"
+    },
+    "S5-E380": {
+      "id": "S5-E380",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 380,
+      "paragraphId": "2147483648",
+      "quote": "- 헬기 및 지상 진화 자원 현장 투입",
+      "sha256": "81bb85cbecacab03d58a0fedd2e77acbae28150feee215e9e7fe4a8e016d47c3"
+    },
+    "S5-E541": {
+      "id": "S5-E541",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 541,
+      "paragraphId": "2147483648",
+      "quote": "• 지상 · 공중의 입체적인 진화활동 전개 및 지원",
+      "sha256": "e78fca9ed0856df23742b20ccfac8f34501bd8ccd6cd22db5174f1010bb8d2eb"
+    },
+    "S5-E673": {
+      "id": "S5-E673",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 673,
+      "paragraphId": "2147483648",
+      "quote": "- 산불 대응단계 및 동원령 발령 검토",
+      "sha256": "ce33b0268b3442959caffc499b365623762171653717ef83b30349b227363034"
+    },
+    "S5-E679": {
+      "id": "S5-E679",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 679,
+      "paragraphId": "2147483648",
+      "quote": "• 상황판단회의 개최 준비",
+      "sha256": "6a4162125f964683de16e61d6b5c7062d0f9ca91eb0461c7abaef3a9d746d008"
+    },
+    "S5-E1321": {
+      "id": "S5-E1321",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 1321,
+      "paragraphId": "2147483648",
+      "quote": "• 현장상황 파악 및 대처상황 점검(지시)",
+      "sha256": "51740e237973f9bbd76d3eafe1fe9a3e22e7156809a649bd71f8d43cc5370256"
+    },
+    "S5-E704": {
+      "id": "S5-E704",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 704,
+      "paragraphId": "2147483648",
+      "quote": "• 상황판단회의 및 관계기관 대책회의 후속조치 이행",
+      "sha256": "ec8212534a5565c3bfebb164df85007fa60a8127fa0b8434f47873353a2f931f"
+    },
+    "S3-E1181": {
+      "id": "S3-E1181",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅲ. 위기관리 기본방향 / 3. 위기대응 지침 및 판단·고려 요소",
+      "member": "Contents/section3.xml",
+      "elementIndex": 1181,
+      "paragraphId": "0",
+      "quote": "5) 산불 확산 또는 우려 시 산불현장 통합지휘본부 설치 및 운영",
+      "sha256": "6b807f7678b5395aafb8324bd03910d1a79e511e4bae9ae7c3cdabf916f30034"
+    },
+    "S3-E1191": {
+      "id": "S3-E1191",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅲ. 위기관리 기본방향 / 3. 위기대응 지침 및 판단·고려 요소",
+      "member": "Contents/section3.xml",
+      "elementIndex": 1191,
+      "paragraphId": "2147483648",
+      "quote": "나) 현장 대책회의 실시(산불유관기관 참여 및 기관별 임무부여)",
+      "sha256": "4ccc5b6248dc00acbaaa095398cd4b63989f00c29f789d8fe9c2d414c3f69672"
+    },
+    "S3-E1238": {
+      "id": "S3-E1238",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅲ. 위기관리 기본방향 / 3. 위기대응 지침 및 판단·고려 요소",
+      "member": "Contents/section3.xml",
+      "elementIndex": 1238,
+      "paragraphId": "2147483648",
+      "quote": "바) 산불상황 관리를 위한 지상과 공중 간 통신망 확보",
+      "sha256": "ad3dbc3196c8675f71260da09d7b045900a5a6c8ee04eb53a3ea9a456aae63b0"
+    },
+    "S3-E1264": {
+      "id": "S3-E1264",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅲ. 위기관리 기본방향 / 3. 위기대응 지침 및 판단·고려 요소",
+      "member": "Contents/section3.xml",
+      "elementIndex": 1264,
+      "paragraphId": "0",
+      "quote": "* <우선순위> ① 인명 보호, ② 국가기간산업시설, 군사시설 및 국가유산의 보호, ③ 가옥 등 재산 보호, ④ 산림보호구역, 채종림, 시험림 등 중요 산림자원의 보호, ⑤ 그밖에 산림지역의 산불 확산 방지",
+      "sha256": "cd02d5b1f2b3eb689c86482ff0fc1ae28fcb0cc5ca8111861fcf1999808a49fe"
+    },
+    "S5-E360": {
+      "id": "S5-E360",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 360,
+      "paragraphId": "2147483648",
+      "quote": "- 산불확산예측도 분석 및 위험구역 설정(산림과학원 협조)",
+      "sha256": "1df24cad81ae4294c534e7f444b54092ad3c3d8cdb970cd75e4e3f48b90c281a"
+    },
+    "S5-E374": {
+      "id": "S5-E374",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 374,
+      "paragraphId": "2147483648",
+      "quote": "- (산불발생 시) 긴급재난문자(CBS) 발송 및 재난문자방송(DITS) 송출",
+      "sha256": "65849b775978ff6b023e3d6b5e796340ae30e1d9da3e78ae19dfeaccf370e3ed"
+    },
+    "S5-E501": {
+      "id": "S5-E501",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 501,
+      "paragraphId": "2147483648",
+      "quote": "• (산불 대피 권고 시) 긴급재난문자(CBS) 발송 및 재난문자방송(DITS) 송출",
+      "sha256": "077816d9f7f87e6de304e90826bc1530fdd512f7792aad3e7a02902ca39f1356"
+    },
+    "S6-E129": {
+      "id": "S6-E129",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section6.xml",
+      "elementIndex": 129,
+      "paragraphId": "2147483648",
+      "quote": "• (산불 대피 명령 시) 긴급재난문자(CBS) 발송 및 재난 문자방송(DITS) 송출",
+      "sha256": "c553bc0a93577f12f338c41ba2f2eab131d376b72f25db96f34285ac866c9670"
+    },
+    "S6-E146": {
+      "id": "S6-E146",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section6.xml",
+      "elementIndex": 146,
+      "paragraphId": "2147483648",
+      "quote": "• 피해 예상지역 내 주민대피 및 안전취약계층 우선 대피 조치",
+      "sha256": "d6978bc5ef8c341497a88c04a4731e0abc0ac00c2ab97da71b7a67561c080cef"
+    },
+    "S3-E1340": {
+      "id": "S3-E1340",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅲ. 위기관리 기본방향 / 3. 위기대응 지침 및 판단·고려 요소",
+      "member": "Contents/section3.xml",
+      "elementIndex": 1340,
+      "paragraphId": "0",
+      "quote": "* 산림청은 산불확산예측을 통해 위험구역 설정 및 정보전달, 지자체는 현실적인 대피 범위 및 대피 명령 실시",
+      "sha256": "de77dbf55e50a181b6f56803b6e10b4c496ad2888f7576e8aca8e7dc5a889cb4"
+    },
+    "S5-E1364": {
+      "id": "S5-E1364",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 1364,
+      "paragraphId": "2147483648",
+      "quote": "⇒ 인명피해 등 추가피해 가능성에 따라 중수본 가동",
+      "sha256": "e4f868c4da95b11205ee670a65f033519a8fc137d2b56760819572da33a2654d"
+    },
+    "S6-E278": {
+      "id": "S6-E278",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section6.xml",
+      "elementIndex": 278,
+      "paragraphId": "2147483648",
+      "quote": "• (필요시)중앙사고수습본부 운영",
+      "sha256": "5fc9c158f70d45f2f41862ce5c3929e364370db29d4ccd68f181daea0ee8ddfc"
+    },
+    "S6-E480": {
+      "id": "S6-E480",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section6.xml",
+      "elementIndex": 480,
+      "paragraphId": "2147483648",
+      "quote": "• 산불 피해확산 방지 및 조기수습을 위한 중대본과 유기적인 연락",
+      "sha256": "1a0876e05ce777ac7afd4adde9c584e71c9a5470bb3eed4b20e251325d2b751e"
+    },
+    "S6-E487": {
+      "id": "S6-E487",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section6.xml",
+      "elementIndex": 487,
+      "paragraphId": "2147483648",
+      "quote": "• 대책회의 회의 주재(화상회의 등)",
+      "sha256": "e9b894197744c0e4b0cf7ebd381cc937c53272c74273497f97b246f92f14e77a"
+    },
+    "S5-E1391": {
+      "id": "S5-E1391",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 1391,
+      "paragraphId": "2147483648",
+      "quote": "관계기관 대책회의 주재(필요시)",
+      "sha256": "dee0d6fa65536c683d558169256d453325f07ca88c6c52ce23490842a512906f"
+    },
+    "S5-E1407": {
+      "id": "S5-E1407",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 1407,
+      "paragraphId": "2147483648",
+      "quote": "- 피해현장 지원을 위한 관계부처별 협업사항",
+      "sha256": "c54797a632bb19ec3565ff36fe6e2a3547c609551d5bb8ce09cc6eacf1d4fcde"
+    },
+    "S5-E1412": {
+      "id": "S5-E1412",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 1412,
+      "paragraphId": "2147483648",
+      "quote": "- 현장상황에 따라 장비 및 진화인원 등 추가 자원 투입",
+      "sha256": "659f291d32fce6638f923d82c4f93155d4b676622d04a5f97b8bfc1cb519dda4"
+    },
+    "S6-E499": {
+      "id": "S6-E499",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section6.xml",
+      "elementIndex": 499,
+      "paragraphId": "2147483648",
+      "quote": "- 범정부적 지원(인력, 장비) 요청(필요시)",
+      "sha256": "8e4a25ae2d78276c7486f0ad3b0d655d8e1d8075cf312d808ffb17c220bf97a4"
+    },
+    "S6-E504": {
+      "id": "S6-E504",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section6.xml",
+      "elementIndex": 504,
+      "paragraphId": "2147483648",
+      "quote": "- 이재민 발생 시 수용시설 및 구호품 지원 요청",
+      "sha256": "7e30c2ca8cd40bb0a39e241f3d52e0bfbb940f266c9fa460b9b91da40cf78cdc"
+    },
+    "S5-E1852": {
+      "id": "S5-E1852",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 1852,
+      "paragraphId": "2147483648",
+      "quote": "• 보도자료 작성 및 브리핑 실시(필요시)",
+      "sha256": "87a6b39b0f9d0971f787cfb3e05c2a03d88bacc1cfbf38563f9066e4df3430f9"
+    },
+    "S5-E1859": {
+      "id": "S5-E1859",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section5.xml",
+      "elementIndex": 1859,
+      "paragraphId": "2147483648",
+      "quote": "• 현장대변인과 핫라인 유지",
+      "sha256": "b75b1cce0319c19b9cf7f1a358915ade7192da679224cf8400758354b6dbadb5"
+    },
+    "S6-E919": {
+      "id": "S6-E919",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section6.xml",
+      "elementIndex": 919,
+      "paragraphId": "2147483648",
+      "quote": "• 언론 모니터링 및 오보 대응",
+      "sha256": "c87cbd1c1d1b8dc1af5139f3cb83925063818feed539a3744a4b065702a77c5b"
+    },
+    "S6-E926": {
+      "id": "S6-E926",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section6.xml",
+      "elementIndex": 926,
+      "paragraphId": "2147483648",
+      "quote": "※ 언론대응 중대본과 사전 협의",
+      "sha256": "723fb594a66d4784a5388c6ecb378f7c0ece175d582d238ce2e3c1464ea6bb70"
+    },
+    "S6-E982": {
+      "id": "S6-E982",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section6.xml",
+      "elementIndex": 982,
+      "paragraphId": "2147483648",
+      "quote": "• 단계별 수습상황 브리핑 및 보도자료 배표",
+      "sha256": "fc5f0aa025ed56ef3e68f472a728e44c2a4d77906d2df81dae9529d004a1a03b"
+    },
+    "S3-E1302": {
+      "id": "S3-E1302",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅲ. 위기관리 기본방향 / 3. 위기대응 지침 및 판단·고려 요소",
+      "member": "Contents/section3.xml",
+      "elementIndex": 1302,
+      "paragraphId": "0",
+      "quote": "9) 잔불 진화 후 뒷불감시를 위한 진화·감시인력 배치",
+      "sha256": "5d2c086b861488a130623b92a93493faefcd26a4d37be3de4f6fe7fcb27119b7"
+    },
+    "S3-E14008": {
+      "id": "S3-E14008",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅳ. 위기경보 수준별 조치사항 / 1. 비상단계별 조치사항 / 다. 대응 단계",
+      "member": "Contents/section3.xml",
+      "elementIndex": 14008,
+      "paragraphId": "2147483648",
+      "quote": "(1) 잔불진화 철저, 뒷불 감시조 편성‧운영 및 감시 책임담당제 실시",
+      "sha256": "bd0683bee190acb760dccbcf65dd3b7c5048e83c24189910d7bcb49a9de0a9bb"
+    },
+    "S3-E14024": {
+      "id": "S3-E14024",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅳ. 위기경보 수준별 조치사항 / 1. 비상단계별 조치사항 / 다. 대응 단계",
+      "member": "Contents/section3.xml",
+      "elementIndex": 14024,
+      "paragraphId": "2147483648",
+      "quote": "(3) 산불 발생상황, 진화상황 및 산불피해 보고 철저",
+      "sha256": "5e711753e07fd67f31580b905100025499d7ca20fa113aaea2ffa82446e57650"
+    },
+    "S3-E14440": {
+      "id": "S3-E14440",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅳ. 위기경보 수준별 조치사항 / 1. 비상단계별 조치사항 / 라. 복구 단계",
+      "member": "Contents/section3.xml",
+      "elementIndex": 14440,
+      "paragraphId": "2147483648",
+      "quote": "(1) 피해 규모 및 종류에 따라 전문가 등으로 구성된 산불전문조사반 편성․운영",
+      "sha256": "776a02f5149dbc479f4fa122c186b236d0f8a09ec7a35eb54f906ec49b014ec2"
+    },
+    "S3-E14451": {
+      "id": "S3-E14451",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅳ. 위기경보 수준별 조치사항 / 1. 비상단계별 조치사항 / 라. 복구 단계",
+      "member": "Contents/section3.xml",
+      "elementIndex": 14451,
+      "paragraphId": "2147483648",
+      "quote": "- 발생원인, 발생일시, 발생지점, 피해확산 경로와 원인(기상 등) 및 진화 대응 문제점, 가해자 검거를 위한 정보 수집 등 조사",
+      "sha256": "c83e767ad9a7c97c7658a58c9ad696b8be2b111d86a766bc0837371906629e70"
+    },
+    "S3-E14480": {
+      "id": "S3-E14480",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅳ. 위기경보 수준별 조치사항 / 1. 비상단계별 조치사항 / 라. 복구 단계",
+      "member": "Contents/section3.xml",
+      "elementIndex": 14480,
+      "paragraphId": "2147483648",
+      "quote": "(1) 복구대책은 피해 유형별로 소관부서에서 수립하여 추진",
+      "sha256": "6bbadbd5bcb25ba5678ea4b17a20e79546e71e7d00569b21d04f8b6be52e7808"
+    },
+    "S3-E14496": {
+      "id": "S3-E14496",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅳ. 위기경보 수준별 조치사항 / 1. 비상단계별 조치사항 / 라. 복구 단계",
+      "member": "Contents/section3.xml",
+      "elementIndex": 14496,
+      "paragraphId": "2147483648",
+      "quote": "(3) 산불피해지 중 산사태 우려지역은 장마기 토사유출 등을 대비한 응급복구와 장기간에 걸친 항구복구로 구분 추진",
+      "sha256": "5179274f746e38529f38045f064337a2d84c317add134fc94bd16318c8559317"
+    },
+    "S6-E664": {
+      "id": "S6-E664",
+      "sourceId": "KFS-2026-06",
+      "heading": "Ⅴ. 기관대응수칙 / 2. 산불재난 대응 프로세스",
+      "member": "Contents/section6.xml",
+      "elementIndex": 664,
+      "paragraphId": "2147483648",
+      "quote": "• 이재민 구호 등 피해지역 생활안정 지원 요청",
+      "sha256": "f5395ec93177e68b6130efb56929113fdc54e0a069cb11b8a1ad2eb0fa9b4e6b"
+    }
+  }
+}

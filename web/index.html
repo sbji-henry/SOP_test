@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="산림청 2026년 6월 산불재난 위기대응 실무매뉴얼 기반 SOP 탐색 서비스">
+  <title>산불 대응 SOP | Workflow Explorer</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#workspace">본문으로 이동</a>
+<header class="topbar">
+  <a class="brand" href="/" aria-label="산불 대응 SOP 홈"><span class="brand-icon">山</span><span>산불 대응 <b>SOP</b><small>WILDFIRE RESPONSE WORKSPACE</small></span></a>
+  <div class="header-meta"><span class="pill">매뉴얼 기반</span><span>산림청 · 2026. 6.</span><span class="version">v0.1.0</span></div>
+</header>
+<main>
+  <section class="intro">
+    <div><div class="eyebrow">STANDARD OPERATING PROCEDURES</div><h1>산불 대응 워크플로우</h1><p>대응 업무를 찾고, 조치별 매뉴얼 근거를 확인하세요.</p></div>
+    <button id="source-info" class="outline">원천 문서 정보 <span aria-hidden="true">↗</span></button>
+  </section>
+  <section class="stats" aria-label="수록 현황">
+    <div><span>수록 워크플로우</span><strong id="workflow-count">—</strong><small>WF-001 ~ WF-012</small></div>
+    <div><span>근거 연결 조치</span><strong id="node-count">—</strong><small>모든 조치에 원문 연결</small></div>
+    <div><span>업무 탐색 단계</span><strong>4</strong><small>징후 감지부터 수습·복구까지</small></div>
+    <div class="source-stat"><span>기준 문서</span><b>산불 재난 위기대응<br>실무매뉴얼</b><small>산림청 / 2026년 6월</small></div>
+  </section>
+  <section class="filters" aria-label="워크플로우 검색과 필터">
+    <label class="search-field"><span>통합 검색</span><input id="search" type="search" maxlength="200" placeholder="업무명, 기관, 원문 내용 검색…" autocomplete="off"></label>
+    <label><span>업무 단계</span><select id="phase"><option value="">전체 단계</option></select></label>
+    <label><span>관련 기관·부서</span><select id="agency"><option value="">전체 기관·부서</option></select></label>
+    <button id="reset" class="outline">초기화</button>
+  </section>
+  <div id="status" role="status" aria-live="polite">매뉴얼 데이터를 불러오는 중입니다.</div>
+  <section id="workspace" class="workspace" tabindex="-1">
+    <aside class="catalog"><div class="panel-heading"><h2>워크플로우 목록</h2><span id="result-count" class="count">0</span></div><div id="workflow-list"></div></aside>
+    <article class="detail">
+      <div id="selection-empty" class="empty" hidden>검색 조건에 해당하는 워크플로우가 없습니다.<br>검색어 또는 필터를 변경하세요.</div>
+      <div id="selected-workflow" hidden>
+        <div class="detail-heading"><div><div id="selected-id" class="eyebrow"></div><h2 id="selected-title"></h2><div id="selected-tags" class="tags"></div></div><button id="copy-link" class="outline">링크 복사</button></div>
+        <div class="view-tabs" role="tablist" aria-label="업무 보기 방식"><button id="graph-tab" role="tab" aria-selected="true" aria-controls="graph-panel">Workflow Graph</button><button id="actions-tab" role="tab" aria-selected="false" aria-controls="actions-panel" tabindex="-1">조치 목록</button></div>
+        <section id="graph-panel" role="tabpanel" aria-labelledby="graph-tab">
+          <div class="graph-toolbar"><span>노드를 선택하면 원문 근거가 표시됩니다.</span><div><button id="zoom-out" aria-label="그래프 축소">−</button><button id="zoom-reset">화면 맞춤</button><button id="zoom-in" aria-label="그래프 확대">＋</button></div></div>
+          <div class="graph-viewport"><svg id="graph" viewBox="0 0 900 490" role="group" aria-label="워크플로우 그래프"></svg></div>
+          <p class="graph-legend"><span>─ 업무 포함</span><span>→ 원문에 명시된 순서·조건</span><span>WF 번호는 실행 순서가 아닙니다.</span></p>
+        </section>
+        <section id="actions-panel" role="tabpanel" aria-labelledby="actions-tab" hidden><div id="action-list"></div></section>
+        <section class="evidence-panel" aria-label="선택 조치의 원문 근거"><div class="panel-heading"><h3>원문 근거</h3><span class="verified">원문 연결</span></div><div id="evidence-content"></div></section>
+      </div>
+    </article>
+  </section>
+  <footer>기준: 산림청 「산불 재난」 위기대응 실무매뉴얼, 2026. 6. <span>업무명·WF 번호는 탐색용 분류이며, 조치 조건은 원문을 따릅니다.</span></footer>
+</main>
+<dialog id="source-dialog"><div class="dialog-heading"><h2>원천 문서 정보</h2><button id="close-dialog" aria-label="문서 정보 닫기">✕</button></div><div id="source-content"></div></dialog>
+</body></html>

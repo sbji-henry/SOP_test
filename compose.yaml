@@ -1,0 +1,16 @@
+name: wildfire-sop
+services:
+  sop:
+    build: .
+    image: wildfire-sop:0.1.0
+    ports:
+      - "127.0.0.1:${SOP_PORT:-8080}:8080"
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped

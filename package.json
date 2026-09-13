@@ -1,0 +1,8 @@
+{
+  "name": "wildfire-sop-tests",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser tests only; the service has no npm runtime dependencies",
+  "scripts": { "test:e2e": "node tests/e2e.cjs" },
+  "devDependencies": { "playwright": "1.58.2" }
+}
