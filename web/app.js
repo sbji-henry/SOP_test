@@ -156,7 +156,17 @@ for(const event of ['pointerup','pointercancel','lostpointercapture']) $('graph'
 $('copy-link').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);notice('현재 워크플로우·조치 링크를 복사했습니다.');}catch{notice('주소 표시줄의 현재 URL을 복사해 주세요.');}});
 $('source-info').addEventListener('click',()=>{if(state.meta)$('source-dialog').showModal();});
 $('close-dialog').addEventListener('click',()=>$('source-dialog').close());
-window.addEventListener('hashchange',()=>{const h=currentHash();if(state.items.some(w=>w.id===h.wf))selectWorkflow(h.wf,h.node);});
+window.addEventListener('hashchange',()=>{
+  const h=currentHash();
+  if(!/^WF-\d{3}$/.test(h.wf||''))return;
+  clearTimeout(timer);
+  if(state.items.some(w=>w.id===h.wf))selectWorkflow(h.wf,h.node);
+  else {
+    // An incoming shared link takes precedence over filters from the previous view.
+    for(const id of ['search','phase','agency'])$(id).value='';
+    search();
+  }
+});
 async function boot() {
   try {
     state.meta=await api('/api/meta'); const m=state.meta;
