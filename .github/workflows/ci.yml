@@ -46,7 +46,8 @@ jobs:
         run: docker compose down
   release-v010:
     needs: docker-and-browser
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.event.head_commit.message == 'feat: implement base wildfire SOP workflow service'
+    if: >-
+      github.event_name == 'push' && github.ref == 'refs/heads/main' && github.event.head_commit.message == 'feat: implement base wildfire SOP workflow service'
     runs-on: ubuntu-latest
     permissions:
       contents: write
