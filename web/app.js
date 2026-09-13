@@ -88,7 +88,7 @@ function renderGraph() {
   const height=Math.max(490,Math.ceil(positions.length/2)*155+30);
   state.graphHeight=height;
   const lookup=new Map([root,...positions].map(n=>[n.id,n]));
-  let markup='<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#196a55"/></marker></defs>';
+  let markup='<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/></marker></defs>';
   markup+='<g id="graph-scene">';
   for(const edge of w.edges) {
     const from=lookup.get(edge.source),to=lookup.get(edge.target);
