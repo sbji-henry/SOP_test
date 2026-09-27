@@ -1,30 +1,34 @@
 'use strict';
 const $ = (id) => document.getElementById(id);
-const state = { meta: null, items: [], selected: null, node: null, request: 0, selectionRequest: 0, zoom: 1, x: 0, y: 0 };
+const hazards = {wildfire:'산불', 'typhoon-rain':'태풍·호우', snow:'대설'};
+const state = { disaster:'wildfire', bootRequest:0, meta: null, items: [], selected: null, node: null, request: 0, selectionRequest: 0, zoom: 1, x: 0, y: 0 };
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 async function api(path) {
-  const response = await fetch(path);
+  const response = await fetch(path.replace('/api/', `/api/disasters/${state.disaster}/`));
   if (!response.ok) throw new Error(`요청 실패 (${response.status})`);
   return response.json();
 }
 function notice(message, error=false) { $('status').textContent = message; $('status').classList.toggle('error', error); }
 function currentHash() {
   const params = new URLSearchParams(location.hash.slice(1));
-  return { wf: params.get('wf'), node: params.get('node') };
+  const explicit = params.get('disaster');
+  const inferred = (params.get('wf')||'').startsWith('SN-') ? 'snow' : (params.get('wf')||'').startsWith('TR-') ? 'typhoon-rain' : 'wildfire';
+  return { disaster: Object.hasOwn(hazards, explicit) ? explicit : inferred, wf: params.get('wf'), node: params.get('node') };
 }
 function saveHash() {
   if (!state.selected) return;
-  const params = new URLSearchParams({wf: state.selected.id});
+  const params = new URLSearchParams({disaster:state.disaster,wf: state.selected.id});
   if (state.node) params.set('node', state.node.id);
   history.replaceState(null, '', `#${params}`);
 }
-function tags(w) { return [...w.phases.map(p => `<span class="tag">${esc(p)}</span>`), ...w.agencies.map(a => `<span class="tag agency">${esc(a)}</span>`)].join(''); }
+function tags(w) { return [ ...(w.scope ? [`<span class="tag scope-tag">${w.scope==='common'?'풍수해 공통':'재난 전용'}</span>`] : []),...w.phases.map(p => `<span class="tag">${esc(p)}</span>`), ...w.agencies.map(a => `<span class="tag agency">${esc(a)}</span>`)].join(''); }
 async function search() {
+  if (!state.meta) return;
   const request = ++state.request;
   ++state.selectionRequest;
   $('workspace').setAttribute('aria-busy','true');
   try {
-    const params = new URLSearchParams({q:$('search').value.trim(),phase:$('phase').value,agency:$('agency').value});
+    const params = new URLSearchParams({q:$('search').value.trim(),phase:$('phase').value,agency:$('agency').value,scope:$('scope').value});
     const result = await api(`/api/workflows?${params}`);
     if (request !== state.request) return;
     state.items = result.items;
@@ -34,7 +38,7 @@ async function search() {
     if (!result.total) {
       state.selected = null; state.node = null;
       $('selected-workflow').hidden = true; $('selection-empty').hidden = false;
-      history.replaceState(null, '', location.pathname);
+      history.replaceState(null, '', `#disaster=${state.disaster}`);
       return;
     }
     const requested = currentHash();
@@ -49,7 +53,7 @@ async function search() {
   } finally { if(request===state.request) $('workspace').setAttribute('aria-busy','false'); }
 }
 function renderCatalog() {
-  $('workflow-list').innerHTML = state.items.length ? state.items.map(w => `<button class="workflow-card ${state.selected?.id === w.id?'active':''}" data-wf="${esc(w.id)}" aria-pressed="${state.selected?.id===w.id}"><span class="wid">${esc(w.id)}</span><strong>${esc(w.title)}</strong><small>${esc(w.phases.join(' · '))} <span aria-hidden="true">/</span> ${w.nodes.length}개 조치</small></button>`).join('') : '<p class="empty">검색 결과가 없습니다.</p>';
+  $('workflow-list').innerHTML = state.items.length ? state.items.map(w => `<button class="workflow-card ${state.selected?.id === w.id?'active':''}" data-wf="${esc(w.id)}" aria-pressed="${state.selected?.id===w.id}"><span class="wid">${esc(w.id)}</span><strong>${esc(w.title)}</strong><small>${w.scope==='common'?'풍수해 공통 · ':''}${esc(w.phases.join(' · '))} <span aria-hidden="true">/</span> ${w.nodes.length}개 조치</small></button>`).join('') : '<p class="empty">검색 결과가 없습니다.</p>';
   $('workflow-list').querySelectorAll('button').forEach(button => button.addEventListener('click', () => selectWorkflow(button.dataset.wf)));
 }
 async function selectWorkflow(id, nodeId) {
@@ -64,6 +68,8 @@ async function selectWorkflow(id, nodeId) {
     $('selected-id').textContent=w.id;
     $('selected-title').textContent=w.title;
     $('selected-tags').innerHTML=tags(w);
+    $('condition-note').textContent=w.condition ? `적용 조건: ${w.condition}` : '';
+    $('review-note').textContent=w.reviewNote||''; $('review-note').hidden=!w.reviewNote;
     renderCatalog(); renderActions(); renderGraph(); renderEvidence(); saveHash();
   } catch(error) { if(request===state.selectionRequest) notice(`${error.message}. 업무를 다시 선택하세요.`,true); }
 }
@@ -126,7 +132,7 @@ function renderEvidence() {
   const n=state.node;
   $('evidence-content').innerHTML=`<h4>${esc(n.label)}</h4>`+n.evidenceIds.map(id=>{
     const e=state.selected.evidence[id];
-    return `<p class="reference-heading">${esc(e.heading)}</p><blockquote>${esc(e.quote)}</blockquote><p class="locator">${esc(e.member)} · XML 요소 ${e.elementIndex} · 문단 ID ${esc(e.paragraphId)}</p><div class="evidence-links"><a href="/api/evidence/${encodeURIComponent(id)}" target="_blank" rel="noopener">근거 데이터 열기 ↗</a><a href="/source-excerpts.xml" download>원문 XML 발췌 다운로드 ↓</a></div>`;
+    return `<p class="reference-heading">${esc(e.heading)}</p><blockquote>${esc(e.quote)}</blockquote><p class="locator">${esc(e.member)} · XML 요소 ${e.elementIndex} · 문단 ID ${esc(e.paragraphId)}</p><div class="evidence-links"><a href="/api/disasters/${state.disaster}/evidence/${encodeURIComponent(id)}" target="_blank" rel="noopener">근거 데이터 열기 ↗</a><a href="/manuals/${state.disaster}/source-excerpts.xml" download>원문 XML 발췌 다운로드 ↓</a></div>`;
   }).join('');
 }
 function setTab(graph) {
@@ -144,8 +150,8 @@ document.querySelector('.view-tabs').addEventListener('keydown',event=>{
 });
 let timer;
 $('search').addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(search,180);});
-for(const id of ['phase','agency']) $(id).addEventListener('change',()=>{clearTimeout(timer);search();});
-$('reset').addEventListener('click',()=>{clearTimeout(timer);for(const id of ['search','phase','agency']) $(id).value='';search();});
+for(const id of ['phase','agency','scope']) $(id).addEventListener('change',()=>{clearTimeout(timer);search();});
+$('reset').addEventListener('click',()=>{clearTimeout(timer);for(const id of ['search','phase','agency','scope']) $(id).value='';search();});
 $('zoom-in').addEventListener('click',()=>{state.zoom=Math.min(2.5,state.zoom+.2);transformGraph();});
 $('zoom-out').addEventListener('click',()=>{state.zoom=Math.max(.5,state.zoom-.2);transformGraph();});
 $('zoom-reset').addEventListener('click',()=>{state.zoom=1;state.x=0;state.y=0;transformGraph();});
@@ -158,22 +164,54 @@ $('source-info').addEventListener('click',()=>{if(state.meta)$('source-dialog').
 $('close-dialog').addEventListener('click',()=>$('source-dialog').close());
 window.addEventListener('hashchange',()=>{
   const h=currentHash();
-  if(!/^WF-\d{3}$/.test(h.wf||''))return;
+  if(h.disaster!==state.disaster){ switchDisaster(h.disaster, false); return; }
+  if(!/^(WF|FW|TR|SN)-\d{3}$/.test(h.wf||''))return;
   clearTimeout(timer);
   if(state.items.some(w=>w.id===h.wf))selectWorkflow(h.wf,h.node);
   else {
     // An incoming shared link takes precedence over filters from the previous view.
-    for(const id of ['search','phase','agency'])$(id).value='';
+    for(const id of ['search','phase','agency','scope'])$(id).value='';
     search();
   }
 });
 async function boot() {
+  const request=++state.bootRequest;
   try {
-    state.meta=await api('/api/meta'); const m=state.meta;
+    const m=await api('/api/meta');
+    if(request!==state.bootRequest)return;
+    state.meta=m;
+    $('publisher-label').textContent=`${m.source.publisher} · ${m.source.edition}`;
+    $('manual-title').textContent=m.source.title;
+    $('manual-publisher').textContent=`${m.source.publisher} / ${m.source.edition}`;
+    $('footer-source').textContent=`기준: ${m.source.publisher} ${m.source.title}, ${m.source.edition}`;
+    $('workflow-scope').textContent=m.commonCount ? `전용 ${m.workflowCount-m.commonCount}개 · 풍수해 공통 ${m.commonCount}개` : 'WF-001 ~ WF-012';
+    for(const id of ['phase','agency']) $(id).replaceChildren(new Option(id==='phase'?'전체 단계':'전체 기관·부서',''));
+
     $('workflow-count').textContent=m.workflowCount; $('node-count').textContent=m.nodeCount;
     for(const [id,values] of [['phase',m.phases],['agency',m.agencies]]) for(const value of values) {const option=document.createElement('option');option.value=value;option.textContent=value;$(id).append(option);}
-    $('source-content').innerHTML=`<p><strong>${esc(m.source.title)}</strong><br>${esc(m.source.publisher)} · ${esc(m.source.edition)}</p><p>${esc(m.editorialNote)}</p><p>${esc(m.source.locatorNote)} ${esc(m.source.extractionNote)}</p><p>원천 파일: ${esc(m.source.filename)}</p><p>원천 파일 SHA-256<br><code>${esc(m.source.sha256)}</code></p><p>서비스에는 업무 관련 원문 발췌를 수록했습니다. 전체 HWPX는 포함하지 않습니다.</p><a href="/source-excerpts.xml" download>원문 XML 발췌 다운로드 ↓</a>`;
+    $('source-content').innerHTML=`<p><strong>${esc(m.source.title)}</strong><br>${esc(m.source.publisher)} · ${esc(m.source.edition)}</p><p>${esc(m.editorialNote)}</p><p>${esc(m.source.locatorNote)} ${esc(m.source.extractionNote)}</p><p>원천 파일: ${esc(m.source.filename)}</p><p>원천 파일 SHA-256<br><code>${esc(m.source.sha256)}</code></p><p>서비스에는 업무 관련 원문 발췌를 수록했습니다. 전체 HWPX는 포함하지 않습니다.</p><a href="/manuals/${state.disaster}/source-excerpts.xml" download>원문 XML 발췌 다운로드 ↓</a>`;
     await search();
-  } catch(error){notice(`초기 데이터를 불러오지 못했습니다. ${error.message}. 새로고침해 주세요.`,true);}
+  } catch(error){if(request!==state.bootRequest)return;notice(`초기 데이터를 불러오지 못했습니다. ${error.message}. 새로고침해 주세요.`,true);}
 }
-boot();
+function switchDisaster(disaster, replaceHash=true) {
+  if(!Object.hasOwn(hazards,disaster))return;
+  clearTimeout(timer);
+  ++state.request; ++state.selectionRequest; ++state.bootRequest;
+  state.disaster=disaster; state.meta=null; state.items=[]; state.selected=null; state.node=null;
+  for(const id of ['search','phase','agency','scope'])$(id).value='';
+  $('selected-workflow').hidden=true; $('selection-empty').hidden=true;
+  $('workflow-list').replaceChildren(); $('result-count').textContent='0';
+  $('workflow-count').textContent='—'; $('node-count').textContent='—';
+  if ($('source-dialog').open) $('source-dialog').close();
+  $('source-content').replaceChildren();
+  for(const id of ['manual-title','manual-publisher','publisher-label','footer-source','workflow-scope'])$(id).textContent='—';
+  $('disaster-heading').textContent=`${hazards[disaster]} 대응 워크플로우`;
+  document.title=`${hazards[disaster]} 대응 SOP | Workflow Explorer`;
+  $('scope-field').hidden=disaster==='wildfire';
+  document.querySelectorAll('[data-disaster]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.disaster===disaster)));
+  if(replaceHash)history.replaceState(null,'',`#disaster=${disaster}`);
+  notice(`${hazards[disaster]} 매뉴얼 데이터를 불러오는 중입니다.`);
+  boot();
+}
+document.querySelectorAll('[data-disaster]').forEach(b=>b.addEventListener('click',()=>switchDisaster(b.dataset.disaster)));
+switchDisaster(currentHash().disaster,false);

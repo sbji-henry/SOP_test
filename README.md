@@ -1,6 +1,6 @@
-# 산불재난 SOP_test (산림청)
+# 재난 대응 SOP_test
 
-산림청 「산불 재난」 위기대응 실무매뉴얼 **2026. 6.**의 업무를 탐색하고, 조치 원문을 확인하는 1차 서비스입니다.
+산림청 「산불 재난」 위기대응 실무매뉴얼과 밀양시 「풍수해(태풍·호우, 대설) 재난」 현장조치 행동매뉴얼 **2026. 6.**의 업무를 재난별로 탐색하고 조치 원문을 확인하는 서비스입니다.
 
 ## 실행 — Docker Desktop
 
@@ -26,9 +26,12 @@ docker compose down
 
 8080 포트를 다른 프로그램이 사용 중이면 프로젝트 루트에 `.env` 파일을 만들고 `SOP_PORT=8081`을 넣은 뒤 다시 실행합니다. 이 경우 접속 주소는 http://localhost:8081 입니다. 기본 바인딩은 로컬 PC 전용 `127.0.0.1`입니다.
 
-## 1차 구현 범위
+## 수록 범위
 
-- WF-001~WF-012 / **51개 조치**, 원문 발췌 50개와 연결.
+- **산불:** WF-001~WF-012 / 12개 업무, 51개 조치, 산림청 원문 발췌 50개.
+- **태풍·호우:** TR-001~TR-008 전용 업무 8개와 FW-001~FW-011 풍수해 공통 업무 11개. 총 19개 업무, 110개 조치.
+- **대설:** SN-001~SN-004 전용 업무 4개와 동일한 풍수해 공통 업무 11개. 총 15개 업무, 77개 조치.
+- 재난 선택과 업무 구분 필터, 재난별 검색 결과·원문 근거·공유 링크. 공통 업무는 데이터 한 벌을 두 재난에 표시합니다.
 - 업무명·기관·조치 원문 통합 검색. 업무 단계·관련 기관 필터를 AND 조건으로 결합.
 - Workflow Graph: 업무 포함 관계, 원문에 명시된 순서/조건, 노드 선택, 확대·축소·화면 맞춤·드래그.
 - 조치 목록과 원문 패널. 업무·조치 단위 URL 링크 복사 및 재접속.
@@ -40,7 +43,7 @@ docker compose down
 
 **조치 본문은 원문에서 추출하며 AI가 절차를 생성하지 않습니다.** 줄바꿈/공백만 정규화하고 조건·기호를 보존합니다. WF 번호·업무명·단계 및 기관 검색 분류는 서비스 탐색용 편집 매핑이며, 공식 매뉴얼 코드나 새 지휘·책임 체계가 아닙니다.
 
-이전 WF 번호별 정의는 빈 저장소와 제공된 대화 자료에서 확인되지 않아, 이번 버전의 매핑을 [docs/WORKFLOWS.md](docs/WORKFLOWS.md)에 명시했습니다.
+산불 WF 번호별 매핑은 [docs/WORKFLOWS.md](docs/WORKFLOWS.md), 풍수해 FW/TR/SN 매핑은 [docs/WEATHER_WORKFLOWS.md](docs/WEATHER_WORKFLOWS.md)에 명시했습니다.
 
 그래프의 실선은 **업무에 포함된 조치**이며 실행 선후 관계가 아닙니다. 화살표는 원문에 명시된 `잔불 진화 후` 및 `추가피해 가능성에 따라` 관계에만 사용합니다. 병렬로 수행할 수 있는 신고·전파·진화·대피를 임의의 직렬 절차로 연결하지 않습니다. 원문 속 `필요시`, `산불발생 시`, `대피 권고 시`, `대피 명령 시` 조건을 유지합니다.
 
@@ -50,6 +53,7 @@ docker compose down
 
 ```sh
 python scripts/build_data.py "/path/to/산불재난위기대응실무매뉴얼산림청260625.hwpx" --check
+python scripts/build_weather_data.py "/path/to/태풍·호우현장조치행동매뉴얼경상남도밀양시260630.hwpx" --check
 ```
 
 원천 파일명까지 기록하므로 첨부 파일의 이름을 유지합니다. 매뉴얼 변경 시 `scripts/build_data.py`의 매핑을 원문과 대조한 후 `--check` 없이 생성하고 테스트합니다.
@@ -82,7 +86,9 @@ Linux CI에서는 브라우저 시스템 라이브러리를 설치하도록 `npx
 | `web/` | 기본 UI, SVG Workflow Graph, 원문 조회 |
 | `data/workflows.json` | 12개 업무·51개 조치·원문 근거 데이터 |
 | `data/source-excerpts.xml` | 원천 HWPX에서 추출한 실제 XML 문단 |
+| `data/weather/` | 밀양시 풍수해 업무·원문 XML 발췌 |
 | `scripts/build_data.py` | 원문 매핑·추출·원본 대조 |
+| `scripts/build_weather_data.py` | 태풍·호우·대설 원문 매핑·추출·원본 대조 |
 | `tests/`, `scripts/smoke.py` | 원문/검색/API/브라우저 및 실제 서비스 테스트 |
 | `Dockerfile`, `compose.yaml` | Docker Desktop용 단일 서비스 구성 |
 | `.github/workflows/ci.yml` | main/tag push 시 Docker 빌드·기동·브라우저 검증 |
@@ -95,16 +101,26 @@ Linux CI에서는 브라우저 시스템 라이브러리를 설치하도록 `npx
 | `GET /api/workflows/WF-007` | 업무·노드·연결선·근거 |
 | `GET /api/evidence/S3-E1302` | 개별 근거 및 원천 문서 정보 |
 | `GET /source-excerpts.xml` | 원문 XML 발췌 |
+| `GET /api/disasters` | 재난 선택 목록 |
+| `GET /api/disasters/{wildfire\|typhoon-rain\|snow}/meta` | 재난별 문서·업무 수 |
+| `GET /api/disasters/{재난}/workflows?scope=common` | 해당 재난에서 볼 수 있는 풍수해 공통 업무 |
+| `GET /api/disasters/{재난}/workflows/{업무ID}` | 해당 재난의 업무·조치·근거 |
+| `GET /manuals/{재난}/source-excerpts.xml` | 해당 재난의 원문 발췌 |
+
+기존 `/api/workflows` 등 재난 ID가 없는 API는 산불 데이터를 반환하여 이전 링크와 연동을 유지합니다. 화면 공유 링크는 `#disaster=snow&wf=SN-002`처럼 재난을 명시합니다.
 
 ## 후속 버전
 
 | 버전 | 계획 |
 |---|---|
-| v0.2.0 | 기관 Swimlane, 상세 노드 모델, 원문 근거 탐색 고도화 |
-| v0.3.0 | 산불 CCTV 이벤트 → SOP 자동 진입 |
+| v0.3.0 | 기관 Swimlane, 상세 노드 모델, 산불 CCTV 이벤트 → SOP 자동 진입 |
 | v0.4.0 | RAG 기반 매뉴얼 검색 및 AI Agent |
 | v1.0.0 | 조치 체크·담당자 확인·상황보고 초안 |
 
 1차는 매뉴얼 조회 서비스입니다. 실시간 사고 현황·경보 자동발령·기관 통보·조치 실행·완료 상태 저장은 구현 범위에 포함하지 않습니다.
 
-지정한 구현 커밋 메시지로 `main`에 반영된 경우, CI가 Docker·브라우저 검증에 성공한 뒤 `v0.1.0` 태그를 생성합니다. 기존 태그를 다른 커밋으로 이동하지 않습니다.
+기존 v0.1.0 태그는 그대로 유지합니다. 새 변경은 main push 시 Docker·브라우저 검증을 받습니다.
+
+## PC를 원본 서버로 유지하며 HTTPS 공개
+
+Northflank + Tailscale 프록시와 무료 임시 터널 설정은 [PC 원본 호스팅 안내](docs/PC_ORIGIN_HOSTING.md)를 참고하세요.

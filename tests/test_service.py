@@ -10,7 +10,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
-from app.server import DATA, create_server, filter_workflows, validate_data
+from app.server import DATA, WEATHER, DATASETS, create_server, filter_workflows, validate_data
 from scripts.build_data import paragraph_text
 
 
@@ -58,6 +58,30 @@ class SourceIntegrityTests(unittest.TestCase):
         self.assertEqual([w['id'] for w in filter_workflows('오보', '초기 대응', '대변인')], ['WF-010'])
         self.assertEqual(filter_workflows('<script>alert(1)</script>'), [])
 
+    def test_weather_actions_match_preserved_manual_excerpts(self):
+        root = ET.parse(Path(__file__).resolve().parents[1] / 'data/weather/source-excerpts.xml').getroot()
+        self.assertEqual(root.get('sourceSha256'), WEATHER['source']['sha256'])
+        excerpts = {e.get('id'): paragraph_text(e[0]) for e in root}
+        self.assertEqual(set(excerpts), set(WEATHER['evidence']))
+        for workflow in WEATHER['workflows']:
+            for node in workflow['nodes']:
+                quote = excerpts[node['evidenceIds'][0]]
+                self.assertEqual(node['text'], quote, node['id'])
+                self.assertEqual(WEATHER['evidence'][node['evidenceIds'][0]]['sha256'],
+                                 hashlib.sha256(quote.encode()).hexdigest())
+
+    def test_weather_common_and_specific_scope(self):
+        wildfire = {w['id'] for w in DATASETS['wildfire']['workflows']}
+        typhoon = {w['id'] for w in DATASETS['typhoon-rain']['workflows']}
+        snow = {w['id'] for w in DATASETS['snow']['workflows']}
+        common = {w['id'] for w in WEATHER['workflows'] if w['scope'] == 'common'}
+        self.assertEqual(typhoon & snow, common)
+        self.assertEqual(len(common), 11)
+        self.assertFalse(wildfire & (typhoon | snow))
+        self.assertTrue(any(w.startswith('TR-') for w in typhoon - snow))
+        self.assertTrue(any(w.startswith('SN-') for w in snow - typhoon))
+        self.assertEqual({w['id'] for w in filter_workflows(data=DATASETS['snow'], scope='common')}, common)
+
 
 class ApiTests(unittest.TestCase):
     @classmethod
@@ -101,6 +125,33 @@ class ApiTests(unittest.TestCase):
             self.assertEqual([w['id'] for w in json.load(response)['items']], ['WF-007'])
         with self.get('/api/workflows?q=zzzzzz') as response:
             self.assertEqual(json.load(response), {'total': 0, 'items': []})
+
+    def test_disaster_routes_keep_exclusive_workflows_and_evidence_separate(self):
+        with self.get('/api/disasters') as response:
+            self.assertEqual({item['id'] for item in json.load(response)['items']},
+                             {'wildfire', 'typhoon-rain', 'snow'})
+        for disaster, total, specific in [('typhoon-rain', 19, 'TR-001'), ('snow', 15, 'SN-001')]:
+            with self.get(f'/api/disasters/{disaster}/meta') as response:
+                meta = json.load(response)
+            self.assertEqual((meta['workflowCount'], meta['commonCount']), (total, 11))
+            with self.get(f'/api/disasters/{disaster}/workflows?scope=common') as response:
+                shared = json.load(response)
+            self.assertEqual(shared['total'], 11)
+            self.assertEqual({w['id'] for w in shared['items']},
+                             {w['id'] for w in DATASETS[disaster]['workflows'] if w['scope'] == 'common'})
+            with self.get(f'/api/disasters/{disaster}/workflows/{specific}') as response:
+                detail = json.load(response)
+            self.assertTrue(detail['nodes'])
+            with self.get(f'/manuals/{disaster}/source-excerpts.xml') as response:
+                ids = {e.get('id') for e in ET.fromstring(response.read())}
+            self.assertEqual(ids, set(DATASETS[disaster]['evidence']))
+        for path in ['/api/disasters/snow/workflows/TR-001',
+                     '/api/disasters/typhoon-rain/workflows/SN-001',
+                     '/api/disasters/wildfire/workflows/FW-001',
+                     '/api/disasters/unknown/meta']:
+            with self.subTest(path=path), self.assertRaises(HTTPError) as error:
+                self.get(path)
+            self.assertEqual(error.exception.code, 404)
 
     def test_invalid_requests(self):
         for path, status in [('/api/workflows/WF-999',404),('/api/evidence/missing',404),

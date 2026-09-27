@@ -1,0 +1,34 @@
+services:
+  gateway:
+    build: ./deploy/northflank
+    image: sop-northflank-proxy:local
+    ports:
+      - "127.0.0.1:8090:8080"
+    env_file:
+      - path: .secrets/gateway.env
+        format: raw
+    volumes:
+      - ./deploy/local/Caddyfile:/etc/caddy/Caddyfile:ro
+    depends_on:
+      sop:
+        condition: service_healthy
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+  quick-tunnel:
+    image: cloudflare/cloudflared:latest
+    profiles: [quick]
+    command: [tunnel, --no-autoupdate, --url, "http://gateway:8080"]
+    depends_on: [gateway]
+    restart: "no"
+  named-tunnel:
+    image: cloudflare/cloudflared:latest
+    profiles: [named]
+    command: [tunnel, --no-autoupdate, run, --token-file, /run/secrets/tunnel-token]
+    secrets: [tunnel-token]
+    depends_on: [gateway]
+    restart: unless-stopped
+secrets:
+  tunnel-token:
+    file: .secrets/cloudflare-token.txt

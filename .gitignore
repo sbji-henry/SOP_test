@@ -6,3 +6,10 @@ playwright-report/
 .env
 *.hwpx
 .venv/
+/work/
+
+.secrets/
+
+SOP Test_token.txt
+
+/*CNTRL.txt

@@ -1,4 +1,4 @@
-name: Verify wildfire SOP
+name: Verify disaster SOP
 on:
   push:
     branches: [main]

@@ -1,0 +1,4790 @@
+{
+  "version": "0.2.0",
+  "source": {
+    "id": "MIRYANG-WEATHER-2026-06",
+    "title": "「풍수해(태풍·호우, 대설) 재난」 현장조치 행동매뉴얼",
+    "publisher": "경상남도 밀양시",
+    "edition": "2026. 6.",
+    "filename": "태풍·호우현장조치행동매뉴얼경상남도밀양시260630.hwpx",
+    "sha256": "598e5613ea011bfb3b318c9bac4493ee9831b8008191740cd322845bd30ce715",
+    "locatorNote": "HWPX 내부 XML 위치이며 인쇄 쪽수는 추정하지 않았습니다.",
+    "extractionNote": "주요 대응업무 발췌입니다. 원문 문자·기호를 보존하고 공백만 정규화합니다. 전체 매뉴얼을 대체하지 않습니다."
+  },
+  "phases": [
+    "징후 감지",
+    "초기 대응",
+    "비상 대응",
+    "수습·복구"
+  ],
+  "editorialNote": "FW는 풍수해 공통, TR은 태풍·호우, SN은 대설 탐색용 코드입니다. 업무 제목·검색 분류는 편집 매핑이며 공식 코드나 실행 순서가 아닙니다.",
+  "graphNote": "선은 업무 포함 관계이며 선후 관계를 의미하지 않습니다. 적용 조건과 원문을 확인하세요.",
+  "workflows": [
+    {
+      "id": "FW-001",
+      "title": "사전대비·기상감시",
+      "phases": [
+        "징후 감지"
+      ],
+      "agencies": [
+        "안전재난과"
+      ],
+      "condition": "태풍·호우·대설 공통",
+      "applicability": [
+        "typhoon-rain",
+        "snow"
+      ],
+      "scope": "common",
+      "nodes": [
+        {
+          "id": "FW-001-N01",
+          "label": "여름철, 겨울철 사전대비 추진계획 수립",
+          "text": "- 여름철, 겨울철 사전대비 추진계획 수립",
+          "evidenceIds": [
+            "MY-S3-E105304"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-001-N02",
+          "label": "여름철, 겨울철 사전 대비기간 운영",
+          "text": "- 여름철, 겨울철 사전 대비기간 운영",
+          "evidenceIds": [
+            "MY-S3-E105310"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-001-N03",
+          "label": "여름철, 겨울철 사전대비 중앙합동, 자체점검 및 미흡사…",
+          "text": "- 여름철, 겨울철 사전대비 중앙합동, 자체점검 및 미흡사항 보완 조치",
+          "evidenceIds": [
+            "MY-S3-E105316"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-001-N04",
+          "label": "재난상황실 - 24시간 상황근무 체계 가동",
+          "text": "- 재난상황실 - 24시간 상황근무 체계 가동",
+          "evidenceIds": [
+            "MY-S3-E105372"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-001-N05",
+          "label": "기상관측 및 예보 모니터링",
+          "text": "○ 기상관측 및 예보 모니터링",
+          "evidenceIds": [
+            "MY-S3-E105405"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E105304",
+        "MY-S3-E105310",
+        "MY-S3-E105316",
+        "MY-S3-E105372",
+        "MY-S3-E105405"
+      ],
+      "edges": [
+        {
+          "source": "FW-001",
+          "target": "FW-001-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105304"
+          ]
+        },
+        {
+          "source": "FW-001",
+          "target": "FW-001-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105310"
+          ]
+        },
+        {
+          "source": "FW-001",
+          "target": "FW-001-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105316"
+          ]
+        },
+        {
+          "source": "FW-001",
+          "target": "FW-001-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105372"
+          ]
+        },
+        {
+          "source": "FW-001",
+          "target": "FW-001-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105405"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FW-002",
+      "title": "대비 총괄·취약시설 예찰",
+      "phases": [
+        "징후 감지"
+      ],
+      "agencies": [
+        "안전재난과",
+        "시설별 해당부서"
+      ],
+      "condition": "태풍·호우·대설 공통",
+      "applicability": [
+        "typhoon-rain",
+        "snow"
+      ],
+      "scope": "common",
+      "nodes": [
+        {
+          "id": "FW-002-N01",
+          "label": "대처계획 수립 총괄, 상황판단회의",
+          "text": "‧ 대처계획 수립 총괄, 상황판단회의",
+          "evidenceIds": [
+            "MY-S3-E107136"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-002-N02",
+          "label": "기상특보 등 정보 수집 및 전파",
+          "text": "‧ 기상특보 등 정보 수집 및 전파",
+          "evidenceIds": [
+            "MY-S3-E107144"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-002-N03",
+          "label": "관계기관 대책회의 운영(필요시)",
+          "text": "‧ 관계기관 대책회의 운영(필요시)",
+          "evidenceIds": [
+            "MY-S3-E107150"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-002-N04",
+          "label": "소관시설 예찰 및 사전 통제",
+          "text": "‧ 소관시설 예찰 및 사전 통제",
+          "evidenceIds": [
+            "MY-S3-E107187"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E107136",
+        "MY-S3-E107144",
+        "MY-S3-E107150",
+        "MY-S3-E107187"
+      ],
+      "edges": [
+        {
+          "source": "FW-002",
+          "target": "FW-002-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107136"
+          ]
+        },
+        {
+          "source": "FW-002",
+          "target": "FW-002-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107144"
+          ]
+        },
+        {
+          "source": "FW-002",
+          "target": "FW-002-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107150"
+          ]
+        },
+        {
+          "source": "FW-002",
+          "target": "FW-002-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107187"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FW-003",
+      "title": "초기 대응·상황보고",
+      "phases": [
+        "초기 대응"
+      ],
+      "agencies": [
+        "안전재난과"
+      ],
+      "condition": "태풍·호우·대설 공통",
+      "applicability": [
+        "typhoon-rain",
+        "snow"
+      ],
+      "scope": "common",
+      "nodes": [
+        {
+          "id": "FW-003-N01",
+          "label": "대처(대비)상황 총괄, 상황판단회의 개최",
+          "text": "‧ 대처(대비)상황 총괄, 상황판단회의 개최",
+          "evidenceIds": [
+            "MY-S3-E107282"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-003-N02",
+          "label": "기상특보 등 정보 수집 및 전파",
+          "text": "‧ 기상특보 등 정보 수집 및 전파",
+          "evidenceIds": [
+            "MY-S3-E107292"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-003-N03",
+          "label": "관계기관 대책회의 운영",
+          "text": "‧ 관계기관 대책회의 운영",
+          "evidenceIds": [
+            "MY-S3-E107298"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-003-N04",
+          "label": "기상상황, 인명‧재산 피해 현황",
+          "text": "‧ 기상상황, 인명‧재산 피해 현황",
+          "evidenceIds": [
+            "MY-S3-E107322"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-003-N05",
+          "label": "대처상황 및 여론 등",
+          "text": "‧ 대처상황 및 여론 등",
+          "evidenceIds": [
+            "MY-S3-E107328"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E107282",
+        "MY-S3-E107292",
+        "MY-S3-E107298",
+        "MY-S3-E107322",
+        "MY-S3-E107328"
+      ],
+      "edges": [
+        {
+          "source": "FW-003",
+          "target": "FW-003-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107282"
+          ]
+        },
+        {
+          "source": "FW-003",
+          "target": "FW-003-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107292"
+          ]
+        },
+        {
+          "source": "FW-003",
+          "target": "FW-003-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107298"
+          ]
+        },
+        {
+          "source": "FW-003",
+          "target": "FW-003-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107322"
+          ]
+        },
+        {
+          "source": "FW-003",
+          "target": "FW-003-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107328"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FW-004",
+      "title": "초기 응급복구·홍보",
+      "phases": [
+        "초기 대응"
+      ],
+      "agencies": [
+        "시설별 해당부서",
+        "공보감사담당관"
+      ],
+      "condition": "태풍·호우·대설 공통",
+      "applicability": [
+        "typhoon-rain",
+        "snow"
+      ],
+      "scope": "common",
+      "nodes": [
+        {
+          "id": "FW-004-N01",
+          "label": "피해시설 응급복구 실시",
+          "text": "‧ 피해시설 응급복구 실시",
+          "evidenceIds": [
+            "MY-S3-E107365"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-004-N02",
+          "label": "브리핑 보도자료 배포,",
+          "text": "‧ 브리핑 보도자료 배포,",
+          "evidenceIds": [
+            "MY-S3-E107401"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-004-N03",
+          "label": "언론 모니터링, 오보 대응",
+          "text": "‧ 언론 모니터링, 오보 대응",
+          "evidenceIds": [
+            "MY-S3-E107407"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E107365",
+        "MY-S3-E107401",
+        "MY-S3-E107407"
+      ],
+      "edges": [
+        {
+          "source": "FW-004",
+          "target": "FW-004-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107365"
+          ]
+        },
+        {
+          "source": "FW-004",
+          "target": "FW-004-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107401"
+          ]
+        },
+        {
+          "source": "FW-004",
+          "target": "FW-004-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107407"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FW-005",
+      "title": "비상 상황관리·자원지원",
+      "phases": [
+        "비상 대응"
+      ],
+      "agencies": [
+        "안전재난과"
+      ],
+      "condition": "태풍·호우·대설 공통",
+      "applicability": [
+        "typhoon-rain",
+        "snow"
+      ],
+      "scope": "common",
+      "nodes": [
+        {
+          "id": "FW-005-N01",
+          "label": "대처상황 총괄, 재난방송‧문자 송출",
+          "text": "‧ 대처상황 총괄, 재난방송‧문자 송출",
+          "evidenceIds": [
+            "MY-S3-E107462"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-005-N02",
+          "label": "상황보고서 작성, 대책회의 운영",
+          "text": "‧ 상황보고서 작성, 대책회의 운영",
+          "evidenceIds": [
+            "MY-S3-E107469"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-005-N03",
+          "label": "재난자원 보유현황 파악",
+          "text": "‧ 재난자원 보유현황 파악",
+          "evidenceIds": [
+            "MY-S3-E107672"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-005-N04",
+          "label": "지원소요 점검 및 자원 지원",
+          "text": "‧ 지원소요 점검 및 자원 지원",
+          "evidenceIds": [
+            "MY-S3-E107678"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E107462",
+        "MY-S3-E107469",
+        "MY-S3-E107672",
+        "MY-S3-E107678"
+      ],
+      "edges": [
+        {
+          "source": "FW-005",
+          "target": "FW-005-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107462"
+          ]
+        },
+        {
+          "source": "FW-005",
+          "target": "FW-005-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107469"
+          ]
+        },
+        {
+          "source": "FW-005",
+          "target": "FW-005-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107672"
+          ]
+        },
+        {
+          "source": "FW-005",
+          "target": "FW-005-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107678"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FW-006",
+      "title": "이재민 구호·유족지원",
+      "phases": [
+        "비상 대응"
+      ],
+      "agencies": [
+        "주민복지과"
+      ],
+      "condition": "태풍·호우·대설 공통",
+      "applicability": [
+        "typhoon-rain",
+        "snow"
+      ],
+      "scope": "common",
+      "nodes": [
+        {
+          "id": "FW-006-N01",
+          "label": "구호물자 지원, 이재민 수용 및 지원",
+          "text": "‧ 구호물자 지원, 이재민 수용 및 지원",
+          "evidenceIds": [
+            "MY-S3-E107504"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-006-N02",
+          "label": "사망‧실종자 유족 대책",
+          "text": "‧ 사망‧실종자 유족 대책",
+          "evidenceIds": [
+            "MY-S3-E107510"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E107504",
+        "MY-S3-E107510"
+      ],
+      "edges": [
+        {
+          "source": "FW-006",
+          "target": "FW-006-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107504"
+          ]
+        },
+        {
+          "source": "FW-006",
+          "target": "FW-006-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107510"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FW-007",
+      "title": "긴급통신·통신시설 복구",
+      "phases": [
+        "비상 대응"
+      ],
+      "agencies": [
+        "정보통신과"
+      ],
+      "condition": "태풍·호우·대설 공통",
+      "applicability": [
+        "typhoon-rain",
+        "snow"
+      ],
+      "scope": "common",
+      "nodes": [
+        {
+          "id": "FW-007-N01",
+          "label": "재난현장 긴급통신 지원",
+          "text": "‧ 재난현장 긴급통신 지원",
+          "evidenceIds": [
+            "MY-S3-E107545"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-007-N02",
+          "label": "통신시설 피해 복구",
+          "text": "‧ 통신시설 피해 복구",
+          "evidenceIds": [
+            "MY-S3-E107551"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-007-N03",
+          "label": "관계기관 영상회의 지원",
+          "text": "‧ 관계기관 영상회의 지원",
+          "evidenceIds": [
+            "MY-S3-E107557"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E107545",
+        "MY-S3-E107551",
+        "MY-S3-E107557"
+      ],
+      "edges": [
+        {
+          "source": "FW-007",
+          "target": "FW-007-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107545"
+          ]
+        },
+        {
+          "source": "FW-007",
+          "target": "FW-007-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107551"
+          ]
+        },
+        {
+          "source": "FW-007",
+          "target": "FW-007-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107557"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FW-008",
+      "title": "시설물·에너지 응급복구",
+      "phases": [
+        "비상 대응"
+      ],
+      "agencies": [
+        "소관부서",
+        "지역경제과"
+      ],
+      "condition": "태풍·호우·대설 공통",
+      "applicability": [
+        "typhoon-rain",
+        "snow"
+      ],
+      "scope": "common",
+      "nodes": [
+        {
+          "id": "FW-008-N01",
+          "label": "피해현황 파악 및 응급복구 지원",
+          "text": "‧ 피해현황 파악 및 응급복구 지원",
+          "evidenceIds": [
+            "MY-S3-E107592"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-008-N02",
+          "label": "가스‧전기‧유류 등 피해현황 파악",
+          "text": "‧ 가스‧전기‧유류 등 피해현황 파악",
+          "evidenceIds": [
+            "MY-S3-E107627"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-008-N03",
+          "label": "공급기능 복구",
+          "text": "‧ 공급기능 복구",
+          "evidenceIds": [
+            "MY-S3-E107635"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E107592",
+        "MY-S3-E107627",
+        "MY-S3-E107635"
+      ],
+      "edges": [
+        {
+          "source": "FW-008",
+          "target": "FW-008-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107592"
+          ]
+        },
+        {
+          "source": "FW-008",
+          "target": "FW-008-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107627"
+          ]
+        },
+        {
+          "source": "FW-008",
+          "target": "FW-008-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107635"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FW-009",
+      "title": "교통대책·사회질서 유지",
+      "phases": [
+        "비상 대응"
+      ],
+      "agencies": [
+        "교통행정과",
+        "밀양경찰서"
+      ],
+      "condition": "태풍·호우·대설 공통",
+      "applicability": [
+        "typhoon-rain",
+        "snow"
+      ],
+      "scope": "common",
+      "nodes": [
+        {
+          "id": "FW-009-N01",
+          "label": "교통통제 상황관리",
+          "text": "‧ 교통통제 상황관리",
+          "evidenceIds": [
+            "MY-S3-E107713"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-009-N02",
+          "label": "우회도로 및 대체교통수단 지원",
+          "text": "‧ 우회도로 및 대체교통수단 지원",
+          "evidenceIds": [
+            "MY-S3-E107719"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-009-N03",
+          "label": "재난현장 출입통제 및 차량통제",
+          "text": "‧ 재난현장 출입통제 및 차량통제",
+          "evidenceIds": [
+            "MY-S3-E107867"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-009-N04",
+          "label": "주민혼란 방지를 위한 사회질서 유지",
+          "text": "‧ 주민혼란 방지를 위한 사회질서 유지",
+          "evidenceIds": [
+            "MY-S3-E107873"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E107713",
+        "MY-S3-E107719",
+        "MY-S3-E107867",
+        "MY-S3-E107873"
+      ],
+      "edges": [
+        {
+          "source": "FW-009",
+          "target": "FW-009-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107713"
+          ]
+        },
+        {
+          "source": "FW-009",
+          "target": "FW-009-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107719"
+          ]
+        },
+        {
+          "source": "FW-009",
+          "target": "FW-009-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107867"
+          ]
+        },
+        {
+          "source": "FW-009",
+          "target": "FW-009-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107873"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FW-010",
+      "title": "의료·방역·수색구조구급",
+      "phases": [
+        "비상 대응"
+      ],
+      "agencies": [
+        "보건위생과",
+        "밀양소방서"
+      ],
+      "condition": "태풍·호우·대설 공통",
+      "applicability": [
+        "typhoon-rain",
+        "snow"
+      ],
+      "scope": "common",
+      "nodes": [
+        {
+          "id": "FW-010-N01",
+          "label": "피해지역 및 이재민 급식소 위생관리",
+          "text": "‧ 피해지역 및 이재민 급식소 위생관리",
+          "evidenceIds": [
+            "MY-S3-E107754"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-010-N02",
+          "label": "방역 대책 점검 및 부상자 의료지원",
+          "text": "‧ 방역 대책 점검 및 부상자 의료지원",
+          "evidenceIds": [
+            "MY-S3-E107760"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-010-N03",
+          "label": "재난현장 구조‧구급 활동",
+          "text": "‧ 재난현장 구조‧구급 활동",
+          "evidenceIds": [
+            "MY-S3-E107910"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-010-N04",
+          "label": "구조‧구급 관련 장비 지원(헬기 등)",
+          "text": "‧ 구조‧구급 관련 장비 지원(헬기 등)",
+          "evidenceIds": [
+            "MY-S3-E107916"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E107754",
+        "MY-S3-E107760",
+        "MY-S3-E107910",
+        "MY-S3-E107916"
+      ],
+      "edges": [
+        {
+          "source": "FW-010",
+          "target": "FW-010-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107754"
+          ]
+        },
+        {
+          "source": "FW-010",
+          "target": "FW-010-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107760"
+          ]
+        },
+        {
+          "source": "FW-010",
+          "target": "FW-010-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107910"
+          ]
+        },
+        {
+          "source": "FW-010",
+          "target": "FW-010-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107916"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FW-011",
+      "title": "환경정비·자원봉사·홍보",
+      "phases": [
+        "비상 대응"
+      ],
+      "agencies": [
+        "환경관리과",
+        "주민복지과",
+        "공보감사담당관"
+      ],
+      "condition": "태풍·호우·대설 공통",
+      "applicability": [
+        "typhoon-rain",
+        "snow"
+      ],
+      "scope": "common",
+      "nodes": [
+        {
+          "id": "FW-011-N01",
+          "label": "재난현장 쓰레기 수거‧처리 지원",
+          "text": "‧ 재난현장 쓰레기 수거‧처리 지원",
+          "evidenceIds": [
+            "MY-S3-E107795"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-011-N02",
+          "label": "재난현장 자원봉사자 모집‧배치 등 지원 및 관리",
+          "text": "‧ 재난현장 자원봉사자 모집‧배치 등 지원 및 관리",
+          "evidenceIds": [
+            "MY-S3-E107830"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "FW-011-N03",
+          "label": "보도자료 배포, 언론 모니터링, 재난현장 브리핑, 오보…",
+          "text": "‧ 보도자료 배포, 언론 모니터링, 재난현장 브리핑, 오보 대응",
+          "evidenceIds": [
+            "MY-S3-E107952"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E107795",
+        "MY-S3-E107830",
+        "MY-S3-E107952"
+      ],
+      "edges": [
+        {
+          "source": "FW-011",
+          "target": "FW-011-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107795"
+          ]
+        },
+        {
+          "source": "FW-011",
+          "target": "FW-011-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107830"
+          ]
+        },
+        {
+          "source": "FW-011",
+          "target": "FW-011-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107952"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TR-001",
+      "title": "태풍 징후감시·대비",
+      "phases": [
+        "징후 감지"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "태풍정보",
+      "applicability": [
+        "typhoon-rain"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "TR-001-N01",
+          "label": "기상상황(전망)‧피해사례 확인 및 대처계획 수립 지시",
+          "text": "•기상상황(전망)‧피해사례 확인 및 대처계획 수립 지시",
+          "evidenceIds": [
+            "MY-S3-E105664"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-001-N02",
+          "label": "태풍 예상 진로 및 초기상황판단회의 결과 확인",
+          "text": "–태풍 예상 진로 및 초기상황판단회의 결과 확인",
+          "evidenceIds": [
+            "MY-S3-E105675"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-001-N03",
+          "label": "태풍으로 인한 과거 피해사례 확인, 유사피해 방지대책 …",
+          "text": "–태풍으로 인한 과거 피해사례 확인, 유사피해 방지대책 점검",
+          "evidenceIds": [
+            "MY-S3-E105680"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-001-N04",
+          "label": "태풍 내습 대비 상황별 대처계획 수립 지시",
+          "text": "–태풍 내습 대비 상황별 대처계획 수립 지시",
+          "evidenceIds": [
+            "MY-S3-E105687"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-001-N05",
+          "label": "관계기관장 및 부서장 직통연락망 구축 지시",
+          "text": "‧ 관계기관장 및 부서장 직통연락망 구축 지시",
+          "evidenceIds": [
+            "MY-S3-E105692"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-001-N06",
+          "label": "태풍 피해 예상 시설물 예찰 및 사전 통제 지시",
+          "text": "•태풍 피해 예상 시설물 예찰 및 사전 통제 지시",
+          "evidenceIds": [
+            "MY-S3-E105708"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-001-N07",
+          "label": "인명피해우려지역(상습침수지역, 붕괴위험지역 등), 둔치…",
+          "text": "–인명피해우려지역(상습침수지역, 붕괴위험지역 등), 둔치주차장, 옥외광고물, 배수펌프장(시험 가동) 등",
+          "evidenceIds": [
+            "MY-S3-E105715"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E105664",
+        "MY-S3-E105675",
+        "MY-S3-E105680",
+        "MY-S3-E105687",
+        "MY-S3-E105692",
+        "MY-S3-E105708",
+        "MY-S3-E105715"
+      ],
+      "edges": [
+        {
+          "source": "TR-001",
+          "target": "TR-001-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105664"
+          ]
+        },
+        {
+          "source": "TR-001",
+          "target": "TR-001-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105675"
+          ]
+        },
+        {
+          "source": "TR-001",
+          "target": "TR-001-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105680"
+          ]
+        },
+        {
+          "source": "TR-001",
+          "target": "TR-001-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105687"
+          ]
+        },
+        {
+          "source": "TR-001",
+          "target": "TR-001-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105692"
+          ]
+        },
+        {
+          "source": "TR-001",
+          "target": "TR-001-N06",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105708"
+          ]
+        },
+        {
+          "source": "TR-001",
+          "target": "TR-001-N07",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105715"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TR-002",
+      "title": "태풍 초기 대응",
+      "phases": [
+        "초기 대응"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "태풍 예비특보",
+      "applicability": [
+        "typhoon-rain"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "TR-002-N01",
+          "label": "상황판단회의 주재(또는 개최 지시)",
+          "text": "•상황판단회의 주재(또는 개최 지시)",
+          "evidenceIds": [
+            "MY-S3-E105754"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-002-N02",
+          "label": "태풍 예상 진로 및 상황대처계획 점검",
+          "text": "–태풍 예상 진로 및 상황대처계획 점검",
+          "evidenceIds": [
+            "MY-S3-E105761"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-002-N03",
+          "label": "CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+          "text": "–CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+          "evidenceIds": [
+            "MY-S3-E105767"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-002-N04",
+          "label": "지역재난안전대책본부 비상근무 지시(단체장 정위치)",
+          "text": "–지역재난안전대책본부 비상근무 지시(단체장 정위치)",
+          "evidenceIds": [
+            "MY-S3-E105774"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-002-N05",
+          "label": "관계기관 (긴급)대책회의 주재",
+          "text": "•관계기관 (긴급)대책회의 주재",
+          "evidenceIds": [
+            "MY-S3-E105791"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-002-N06",
+          "label": "관계 부서‧기관별 태풍 대처계획 점검 및 협조사항 당부",
+          "text": "–관계 부서‧기관별 태풍 대처계획 점검 및 협조사항 당부",
+          "evidenceIds": [
+            "MY-S3-E105798"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-002-N07",
+          "label": "시설물 예찰 결과 및 출입‧교통 통제현황 점검, 보완 …",
+          "text": "–시설물 예찰 결과 및 출입‧교통 통제현황 점검, 보완 지시 (필요시 주민대피계획 점검)",
+          "evidenceIds": [
+            "MY-S3-E105807"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-002-N08",
+          "label": "취약지역‧취약계층 안전관리 강화 지시",
+          "text": "–취약지역‧취약계층 안전관리 강화 지시",
+          "evidenceIds": [
+            "MY-S3-E105818"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-002-N09",
+          "label": "구호물품‧수방자재 비축 현황 및 지원능력 점검",
+          "text": "–구호물품‧수방자재 비축 현황 및 지원능력 점검",
+          "evidenceIds": [
+            "MY-S3-E105823"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-002-N10",
+          "label": "배수펌프장 가동 준비상태 점검 및 적기 가동 지시",
+          "text": "–배수펌프장 가동 준비상태 점검 및 적기 가동 지시",
+          "evidenceIds": [
+            "MY-S3-E105828"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-002-N11",
+          "label": "태풍 내습 시 주민행동요령 당부(브리핑, 보도자료)",
+          "text": "•태풍 내습 시 주민행동요령 당부(브리핑, 보도자료)",
+          "evidenceIds": [
+            "MY-S3-E105843"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E105754",
+        "MY-S3-E105761",
+        "MY-S3-E105767",
+        "MY-S3-E105774",
+        "MY-S3-E105791",
+        "MY-S3-E105798",
+        "MY-S3-E105807",
+        "MY-S3-E105818",
+        "MY-S3-E105823",
+        "MY-S3-E105828",
+        "MY-S3-E105843"
+      ],
+      "edges": [
+        {
+          "source": "TR-002",
+          "target": "TR-002-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105754"
+          ]
+        },
+        {
+          "source": "TR-002",
+          "target": "TR-002-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105761"
+          ]
+        },
+        {
+          "source": "TR-002",
+          "target": "TR-002-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105767"
+          ]
+        },
+        {
+          "source": "TR-002",
+          "target": "TR-002-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105774"
+          ]
+        },
+        {
+          "source": "TR-002",
+          "target": "TR-002-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105791"
+          ]
+        },
+        {
+          "source": "TR-002",
+          "target": "TR-002-N06",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105798"
+          ]
+        },
+        {
+          "source": "TR-002",
+          "target": "TR-002-N07",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105807"
+          ]
+        },
+        {
+          "source": "TR-002",
+          "target": "TR-002-N08",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105818"
+          ]
+        },
+        {
+          "source": "TR-002",
+          "target": "TR-002-N09",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105823"
+          ]
+        },
+        {
+          "source": "TR-002",
+          "target": "TR-002-N10",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105828"
+          ]
+        },
+        {
+          "source": "TR-002",
+          "target": "TR-002-N11",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105843"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TR-003",
+      "title": "태풍 비상 대응·대피",
+      "phases": [
+        "비상 대응"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "태풍주의보·경보",
+      "applicability": [
+        "typhoon-rain"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "TR-003-N01",
+          "label": "지역재난안전대책본부 지휘 및 회의 주재",
+          "text": "•지역재난안전대책본부 지휘 및 회의 주재",
+          "evidenceIds": [
+            "MY-S3-E105875"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N02",
+          "label": "인명‧재산 피해 파악, 사상자 지원 대책 마련 지시",
+          "text": "–인명‧재산 피해 파악, 사상자 지원 대책 마련 지시",
+          "evidenceIds": [
+            "MY-S3-E105882"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N03",
+          "label": "대피주민 긴급구호를 위한 물자 및 인력 지원 지시",
+          "text": "–대피주민 긴급구호를 위한 물자 및 인력 지원 지시",
+          "evidenceIds": [
+            "MY-S3-E105887"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N04",
+          "label": "재난현장 통합지원본부 설치 지시, 운영상황 점검",
+          "text": "–재난현장 통합지원본부 설치 지시, 운영상황 점검",
+          "evidenceIds": [
+            "MY-S3-E105895"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N05",
+          "label": "CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+          "text": "–CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+          "evidenceIds": [
+            "MY-S3-E105901"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N06",
+          "label": "지역재난안전대책본부 비상근무 상향 조정 검토‧지시",
+          "text": "–지역재난안전대책본부 비상근무 상향 조정 검토‧지시",
+          "evidenceIds": [
+            "MY-S3-E105908"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N07",
+          "label": "정부 지원 필요사항 파악 및 건의(지시)",
+          "text": "–정부 지원 필요사항 파악 및 건의(지시)",
+          "evidenceIds": [
+            "MY-S3-E105915"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N08",
+          "label": "대피명령 및 강제 대피조치(시장‧군수‧구청장)",
+          "text": "•대피명령 및 강제 대피조치(시장‧군수‧구청장)",
+          "evidenceIds": [
+            "MY-S3-E105927"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N09",
+          "label": "전문가, 관계기관‧부서 의견을 종합하여 인명피해우려지역…",
+          "text": "–전문가, 관계기관‧부서 의견을 종합하여 인명피해우려지역 등 취약지역내 주민, 선박‧자동차 등을 대피토록 명령",
+          "evidenceIds": [
+            "MY-S3-E105934"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N10",
+          "label": "교통통제 상황 점검, 교통대책(긴급수송‧대체교통 등) …",
+          "text": "•교통통제 상황 점검, 교통대책(긴급수송‧대체교통 등) 지시‧점검",
+          "evidenceIds": [
+            "MY-S3-E105957"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N11",
+          "label": "필요시 재난대응 현장 방문‧지휘, 관계자 격려",
+          "text": "•필요시 재난대응 현장 방문‧지휘, 관계자 격려",
+          "evidenceIds": [
+            "MY-S3-E105976"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N12",
+          "label": "대책본부 및 재난현장 대변인 지정(언론대응 창구 일원화…",
+          "text": "•대책본부 및 재난현장 대변인 지정(언론대응 창구 일원화)",
+          "evidenceIds": [
+            "MY-S3-E105989"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-003-N13",
+          "label": "재난상황 정보 제공(CBS, 언론브리핑, 보도자료)",
+          "text": "•재난상황 정보 제공(CBS, 언론브리핑, 보도자료)",
+          "evidenceIds": [
+            "MY-S3-E105998"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E105875",
+        "MY-S3-E105882",
+        "MY-S3-E105887",
+        "MY-S3-E105895",
+        "MY-S3-E105901",
+        "MY-S3-E105908",
+        "MY-S3-E105915",
+        "MY-S3-E105927",
+        "MY-S3-E105934",
+        "MY-S3-E105957",
+        "MY-S3-E105976",
+        "MY-S3-E105989",
+        "MY-S3-E105998"
+      ],
+      "edges": [
+        {
+          "source": "TR-003",
+          "target": "TR-003-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105875"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105882"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105887"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105895"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105901"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N06",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105908"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N07",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105915"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N08",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105927"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N09",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105934"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N10",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105957"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N11",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105976"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N12",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105989"
+          ]
+        },
+        {
+          "source": "TR-003",
+          "target": "TR-003-N13",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E105998"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TR-004",
+      "title": "태풍 수습·복구",
+      "phases": [
+        "수습·복구"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "특보 해제",
+      "applicability": [
+        "typhoon-rain"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "TR-004-N01",
+          "label": "피해 지역‧복구 현장 및 이재민 구호소 방문, 피해주민…",
+          "text": "•피해 지역‧복구 현장 및 이재민 구호소 방문, 피해주민 위로",
+          "evidenceIds": [
+            "MY-S3-E106030"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-004-N02",
+          "label": "피해원인 분석 및 향후 개선대책 마련 지시",
+          "text": "•피해원인 분석 및 향후 개선대책 마련 지시",
+          "evidenceIds": [
+            "MY-S3-E106044"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-004-N03",
+          "label": "복구상황 점검 및 정보 제공(언론 브리핑, 보도자료)",
+          "text": "•복구상황 점검 및 정보 제공(언론 브리핑, 보도자료)",
+          "evidenceIds": [
+            "MY-S3-E106058"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-004-N04",
+          "label": "이재민 구호 및 피해‧재난현장 상황, 주요조치 및 향후…",
+          "text": "–이재민 구호 및 피해‧재난현장 상황, 주요조치 및 향후 계획 등",
+          "evidenceIds": [
+            "MY-S3-E106067"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E106030",
+        "MY-S3-E106044",
+        "MY-S3-E106058",
+        "MY-S3-E106067"
+      ],
+      "edges": [
+        {
+          "source": "TR-004",
+          "target": "TR-004-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106030"
+          ]
+        },
+        {
+          "source": "TR-004",
+          "target": "TR-004-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106044"
+          ]
+        },
+        {
+          "source": "TR-004",
+          "target": "TR-004-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106058"
+          ]
+        },
+        {
+          "source": "TR-004",
+          "target": "TR-004-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106067"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TR-005",
+      "title": "호우 징후감시·대비",
+      "phases": [
+        "징후 감지"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "호우 예비특보",
+      "applicability": [
+        "typhoon-rain"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "TR-005-N01",
+          "label": "기상상황(전망)‧피해사례 확인 및 대처계획 수립 지시",
+          "text": "•기상상황(전망)‧피해사례 확인 및 대처계획 수립 지시",
+          "evidenceIds": [
+            "MY-S3-E106138"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-005-N02",
+          "label": "예상 강우량 및 초기상황판단회의 개최 결과 확인",
+          "text": "–예상 강우량 및 초기상황판단회의 개최 결과 확인",
+          "evidenceIds": [
+            "MY-S3-E106149"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-005-N03",
+          "label": "과거 지역내 집중호우 피해사례 확인, 유사피해 방지대책…",
+          "text": "–과거 지역내 집중호우 피해사례 확인, 유사피해 방지대책 점검",
+          "evidenceIds": [
+            "MY-S3-E106154"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-005-N04",
+          "label": "집중호우 대비(새벽‧주말 등 취약시간대) 상황대처계획 …",
+          "text": "–집중호우 대비(새벽‧주말 등 취약시간대) 상황대처계획 수립 지시",
+          "evidenceIds": [
+            "MY-S3-E106161"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-005-N05",
+          "label": "관계기관장 및 부서장 직통연락망 구축 지시",
+          "text": "‧ 관계기관장 및 부서장 직통연락망 구축 지시",
+          "evidenceIds": [
+            "MY-S3-E106173"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-005-N06",
+          "label": "호우 피해 예상 시설물 예찰 및 사전 통제 지시",
+          "text": "•호우 피해 예상 시설물 예찰 및 사전 통제 지시",
+          "evidenceIds": [
+            "MY-S3-E106189"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-005-N07",
+          "label": "인명피해우려지역(상습침수지역, 붕괴위험지역 등), 하천…",
+          "text": "–인명피해우려지역(상습침수지역, 붕괴위험지역 등), 하천 둔치주차장, 지하차도, 옥외 광고물, 배수펌프장(시험 가동) 등",
+          "evidenceIds": [
+            "MY-S3-E106196"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E106138",
+        "MY-S3-E106149",
+        "MY-S3-E106154",
+        "MY-S3-E106161",
+        "MY-S3-E106173",
+        "MY-S3-E106189",
+        "MY-S3-E106196"
+      ],
+      "edges": [
+        {
+          "source": "TR-005",
+          "target": "TR-005-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106138"
+          ]
+        },
+        {
+          "source": "TR-005",
+          "target": "TR-005-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106149"
+          ]
+        },
+        {
+          "source": "TR-005",
+          "target": "TR-005-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106154"
+          ]
+        },
+        {
+          "source": "TR-005",
+          "target": "TR-005-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106161"
+          ]
+        },
+        {
+          "source": "TR-005",
+          "target": "TR-005-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106173"
+          ]
+        },
+        {
+          "source": "TR-005",
+          "target": "TR-005-N06",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106189"
+          ]
+        },
+        {
+          "source": "TR-005",
+          "target": "TR-005-N07",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106196"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TR-006",
+      "title": "호우 초기 대응",
+      "phases": [
+        "초기 대응"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "호우주의보 및 피해 시작",
+      "applicability": [
+        "typhoon-rain"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "TR-006-N01",
+          "label": "상황판단회의 주재(또는 개최 지시)",
+          "text": "•상황판단회의 주재(또는 개최 지시)",
+          "evidenceIds": [
+            "MY-S3-E106239"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-006-N02",
+          "label": "예상 강우량, 상황대처계획 점검",
+          "text": "–예상 강우량, 상황대처계획 점검",
+          "evidenceIds": [
+            "MY-S3-E106246"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-006-N03",
+          "label": "CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+          "text": "–CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+          "evidenceIds": [
+            "MY-S3-E106252"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-006-N04",
+          "label": "지역재난안전대책본부 비상근무 지시(단체장 정위치)",
+          "text": "–지역재난안전대책본부 비상근무 지시(단체장 정위치)",
+          "evidenceIds": [
+            "MY-S3-E106257"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-006-N05",
+          "label": "관계기관 (긴급)대책회의 주재",
+          "text": "•관계기관 (긴급)대책회의 주재",
+          "evidenceIds": [
+            "MY-S3-E106274"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-006-N06",
+          "label": "관계 부서‧기관별 집중호우 대처계획 점검 및 협조사항 …",
+          "text": "–관계 부서‧기관별 집중호우 대처계획 점검 및 협조사항 당부",
+          "evidenceIds": [
+            "MY-S3-E106281"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-006-N07",
+          "label": "시설물 예찰 결과 및 출입‧교통 통제 현황 점검, 보완…",
+          "text": "–시설물 예찰 결과 및 출입‧교통 통제 현황 점검, 보완 지시 (필요시 주민대피계획 점검)",
+          "evidenceIds": [
+            "MY-S3-E106288"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-006-N08",
+          "label": "취약지역‧취약계층 안전관리 강화 지시",
+          "text": "–취약지역‧취약계층 안전관리 강화 지시",
+          "evidenceIds": [
+            "MY-S3-E106299"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-006-N09",
+          "label": "구호물품, 수방자재 비축 현황 및 지원능력 점검",
+          "text": "–구호물품, 수방자재 비축 현황 및 지원능력 점검",
+          "evidenceIds": [
+            "MY-S3-E106304"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-006-N10",
+          "label": "배수펌프장 가동 준비상태 점검 및 적기 가동 지시",
+          "text": "–배수펌프장 가동 준비상태 점검 및 적기 가동 지시",
+          "evidenceIds": [
+            "MY-S3-E106309"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-006-N11",
+          "label": "집중호우 시 주민행동요령 당부(언론 브리핑, 보도자료 …",
+          "text": "•집중호우 시 주민행동요령 당부(언론 브리핑, 보도자료 배포)",
+          "evidenceIds": [
+            "MY-S3-E106322"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E106239",
+        "MY-S3-E106246",
+        "MY-S3-E106252",
+        "MY-S3-E106257",
+        "MY-S3-E106274",
+        "MY-S3-E106281",
+        "MY-S3-E106288",
+        "MY-S3-E106299",
+        "MY-S3-E106304",
+        "MY-S3-E106309",
+        "MY-S3-E106322"
+      ],
+      "edges": [
+        {
+          "source": "TR-006",
+          "target": "TR-006-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106239"
+          ]
+        },
+        {
+          "source": "TR-006",
+          "target": "TR-006-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106246"
+          ]
+        },
+        {
+          "source": "TR-006",
+          "target": "TR-006-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106252"
+          ]
+        },
+        {
+          "source": "TR-006",
+          "target": "TR-006-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106257"
+          ]
+        },
+        {
+          "source": "TR-006",
+          "target": "TR-006-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106274"
+          ]
+        },
+        {
+          "source": "TR-006",
+          "target": "TR-006-N06",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106281"
+          ]
+        },
+        {
+          "source": "TR-006",
+          "target": "TR-006-N07",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106288"
+          ]
+        },
+        {
+          "source": "TR-006",
+          "target": "TR-006-N08",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106299"
+          ]
+        },
+        {
+          "source": "TR-006",
+          "target": "TR-006-N09",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106304"
+          ]
+        },
+        {
+          "source": "TR-006",
+          "target": "TR-006-N10",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106309"
+          ]
+        },
+        {
+          "source": "TR-006",
+          "target": "TR-006-N11",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106322"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TR-007",
+      "title": "호우 비상 대응·대피",
+      "phases": [
+        "비상 대응"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "호우경보 및 피해 확산",
+      "applicability": [
+        "typhoon-rain"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "TR-007-N01",
+          "label": "지역재난안전대책본부 지휘 및 회의 주재",
+          "text": "•지역재난안전대책본부 지휘 및 회의 주재",
+          "evidenceIds": [
+            "MY-S3-E106356"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N02",
+          "label": "인명‧재산 피해 파악, 사상자 지원 대책 마련 지시",
+          "text": "–인명‧재산 피해 파악, 사상자 지원 대책 마련 지시",
+          "evidenceIds": [
+            "MY-S3-E106363"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N03",
+          "label": "대피주민 긴급구호를 위한 물자 및 인력 지원 지시",
+          "text": "–대피주민 긴급구호를 위한 물자 및 인력 지원 지시",
+          "evidenceIds": [
+            "MY-S3-E106368"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N04",
+          "label": "재난현장 통합지원본부 설치 지시, 운영상황 점검",
+          "text": "–재난현장 통합지원본부 설치 지시, 운영상황 점검",
+          "evidenceIds": [
+            "MY-S3-E106374"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N05",
+          "label": "CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+          "text": "–CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+          "evidenceIds": [
+            "MY-S3-E106380"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N06",
+          "label": "지역재난안전대책본부 비상근무 상향 조정 검토‧지시",
+          "text": "–지역재난안전대책본부 비상근무 상향 조정 검토‧지시",
+          "evidenceIds": [
+            "MY-S3-E106385"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N07",
+          "label": "정부 지원 필요사항 파악 및 건의(지시)",
+          "text": "–정부 지원 필요사항 파악 및 건의(지시)",
+          "evidenceIds": [
+            "MY-S3-E106392"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N08",
+          "label": "대피명령 및 강제 대피조치(시장‧군수‧구청장)",
+          "text": "•대피명령 및 강제 대피조치(시장‧군수‧구청장)",
+          "evidenceIds": [
+            "MY-S3-E106404"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N09",
+          "label": "전문가, 관계기관‧부서 의견을 종합하여 인명피해우려 지…",
+          "text": "–전문가, 관계기관‧부서 의견을 종합하여 인명피해우려 지역 등 취약지역 주민, 선박‧자동차 등을 대피토록 명령",
+          "evidenceIds": [
+            "MY-S3-E106411"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N10",
+          "label": "교통통제 상황 점검, 교통대책(긴급수송‧대체교통 등) …",
+          "text": "•교통통제 상황 점검, 교통대책(긴급수송‧대체교통 등) 지시‧점검",
+          "evidenceIds": [
+            "MY-S3-E106432"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N11",
+          "label": "필요시 재난대응 현장 방문‧지휘, 관계자 격려",
+          "text": "•필요시 재난대응 현장 방문‧지휘, 관계자 격려",
+          "evidenceIds": [
+            "MY-S3-E106450"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N12",
+          "label": "대책본부 및 재난현장 대변인 지정(언론대응 창구 일원화…",
+          "text": "•대책본부 및 재난현장 대변인 지정(언론대응 창구 일원화)",
+          "evidenceIds": [
+            "MY-S3-E106462"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-007-N13",
+          "label": "재난상황 정보 제공(CBS, 언론 브리핑, 보도자료 배…",
+          "text": "•재난상황 정보 제공(CBS, 언론 브리핑, 보도자료 배포)",
+          "evidenceIds": [
+            "MY-S3-E106471"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E106356",
+        "MY-S3-E106363",
+        "MY-S3-E106368",
+        "MY-S3-E106374",
+        "MY-S3-E106380",
+        "MY-S3-E106385",
+        "MY-S3-E106392",
+        "MY-S3-E106404",
+        "MY-S3-E106411",
+        "MY-S3-E106432",
+        "MY-S3-E106450",
+        "MY-S3-E106462",
+        "MY-S3-E106471"
+      ],
+      "edges": [
+        {
+          "source": "TR-007",
+          "target": "TR-007-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106356"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106363"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106368"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106374"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106380"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N06",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106385"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N07",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106392"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N08",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106404"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N09",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106411"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N10",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106432"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N11",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106450"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N12",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106462"
+          ]
+        },
+        {
+          "source": "TR-007",
+          "target": "TR-007-N13",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106471"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TR-008",
+      "title": "호우 수습·복구",
+      "phases": [
+        "수습·복구"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "특보 해제",
+      "applicability": [
+        "typhoon-rain"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "TR-008-N01",
+          "label": "피해 지역‧복구 현장 및 이재민 구호소 방문, 피해주민…",
+          "text": "•피해 지역‧복구 현장 및 이재민 구호소 방문, 피해주민 위로",
+          "evidenceIds": [
+            "MY-S3-E106503"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-008-N02",
+          "label": "피해원인 분석 및 향후 개선대책 마련 지시",
+          "text": "•피해원인 분석 및 향후 개선대책 마련 지시",
+          "evidenceIds": [
+            "MY-S3-E106517"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-008-N03",
+          "label": "복구상황 점검 및 정보 제공(언론 브리핑, 보도자료 배…",
+          "text": "•복구상황 점검 및 정보 제공(언론 브리핑, 보도자료 배포)",
+          "evidenceIds": [
+            "MY-S3-E106531"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "TR-008-N04",
+          "label": "이재민 구호, 피해‧재난현장 상황, 주요조치 및 향후 …",
+          "text": "–이재민 구호, 피해‧재난현장 상황, 주요조치 및 향후 계획 등",
+          "evidenceIds": [
+            "MY-S3-E106540"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E106503",
+        "MY-S3-E106517",
+        "MY-S3-E106531",
+        "MY-S3-E106540"
+      ],
+      "edges": [
+        {
+          "source": "TR-008",
+          "target": "TR-008-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106503"
+          ]
+        },
+        {
+          "source": "TR-008",
+          "target": "TR-008-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106517"
+          ]
+        },
+        {
+          "source": "TR-008",
+          "target": "TR-008-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106531"
+          ]
+        },
+        {
+          "source": "TR-008",
+          "target": "TR-008-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106540"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SN-001",
+      "title": "대설 징후감시·제설 준비",
+      "phases": [
+        "징후 감지"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "대설 예비특보",
+      "applicability": [
+        "snow"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "SN-001-N01",
+          "label": "기상상황(전망)‧피해사례 확인 및 대처계획 수립 지시",
+          "text": "•기상상황(전망)‧피해사례 확인 및 대처계획 수립 지시",
+          "evidenceIds": [
+            "MY-S3-E106610"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-001-N02",
+          "label": "예상 적설량 및 초기상황판단회의 개최 결과 확인",
+          "text": "–예상 적설량 및 초기상황판단회의 개최 결과 확인",
+          "evidenceIds": [
+            "MY-S3-E106621"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-001-N03",
+          "label": "대설로 인한 과거 피해사례 확인 및 유사피해 방지대책 …",
+          "text": "–대설로 인한 과거 피해사례 확인 및 유사피해 방지대책 점검",
+          "evidenceIds": [
+            "MY-S3-E106626"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-001-N04",
+          "label": "대설 대비(새벽‧주말 등 취약시간대) 상황대처계획 수립…",
+          "text": "–대설 대비(새벽‧주말 등 취약시간대) 상황대처계획 수립 지시",
+          "evidenceIds": [
+            "MY-S3-E106633"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-001-N05",
+          "label": "관계기관장 및 부서장 직통연락망 구축 지시",
+          "text": "•관계기관장 및 부서장 직통연락망 구축 지시",
+          "evidenceIds": [
+            "MY-S3-E106645"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-001-N06",
+          "label": "대설 피해 예상 시설물 등 예찰, 사전 통제 지시",
+          "text": "•대설 피해 예상 시설물 등 예찰, 사전 통제 지시",
+          "evidenceIds": [
+            "MY-S3-E106660"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-001-N07",
+          "label": "적설 취약구조물, 제설 취약구간, 상습결빙지역, 고립 …",
+          "text": "–적설 취약구조물, 제설 취약구간, 상습결빙지역, 고립 예상지역(도서‧산간) 등 대비태세 확인 등",
+          "evidenceIds": [
+            "MY-S3-E106667"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-001-N08",
+          "label": "주요 도로 등 제설대책 수립 지시",
+          "text": "•주요 도로 등 제설대책 수립 지시",
+          "evidenceIds": [
+            "MY-S3-E106680"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-001-N09",
+          "label": "제설제 비축 현황, 제설제‧제설장비 전진배치, 제설제 …",
+          "text": "–제설제 비축 현황, 제설제‧제설장비 전진배치, 제설제 사전살포, 자동염수분사장치 가동 준비 등",
+          "evidenceIds": [
+            "MY-S3-E106687"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E106610",
+        "MY-S3-E106621",
+        "MY-S3-E106626",
+        "MY-S3-E106633",
+        "MY-S3-E106645",
+        "MY-S3-E106660",
+        "MY-S3-E106667",
+        "MY-S3-E106680",
+        "MY-S3-E106687"
+      ],
+      "edges": [
+        {
+          "source": "SN-001",
+          "target": "SN-001-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106610"
+          ]
+        },
+        {
+          "source": "SN-001",
+          "target": "SN-001-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106621"
+          ]
+        },
+        {
+          "source": "SN-001",
+          "target": "SN-001-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106626"
+          ]
+        },
+        {
+          "source": "SN-001",
+          "target": "SN-001-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106633"
+          ]
+        },
+        {
+          "source": "SN-001",
+          "target": "SN-001-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106645"
+          ]
+        },
+        {
+          "source": "SN-001",
+          "target": "SN-001-N06",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106660"
+          ]
+        },
+        {
+          "source": "SN-001",
+          "target": "SN-001-N07",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106667"
+          ]
+        },
+        {
+          "source": "SN-001",
+          "target": "SN-001-N08",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106680"
+          ]
+        },
+        {
+          "source": "SN-001",
+          "target": "SN-001-N09",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106687"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SN-002",
+      "title": "대설 초기 대응·제설 가동",
+      "phases": [
+        "초기 대응"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "대설주의보·경보",
+      "applicability": [
+        "snow"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "SN-002-N01",
+          "label": "상황판단회의 주재(또는 개최 지시)",
+          "text": "•상황판단회의 주재(또는 개최 지시)",
+          "evidenceIds": [
+            "MY-S3-E106717"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-002-N02",
+          "label": "예상 적설량 및 상황대처계획 점검",
+          "text": "–예상 적설량 및 상황대처계획 점검",
+          "evidenceIds": [
+            "MY-S3-E106724"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-002-N03",
+          "label": "CCTV 통합관제센터를 활용한 실시간 상황 파악",
+          "text": "–CCTV 통합관제센터를 활용한 실시간 상황 파악",
+          "evidenceIds": [
+            "MY-S3-E106730"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-002-N04",
+          "label": "지역재난안전대책본부 비상근무 지시(단체장 정위치)",
+          "text": "–지역재난안전대책본부 비상근무 지시(단체장 정위치)",
+          "evidenceIds": [
+            "MY-S3-E106735"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-002-N05",
+          "label": "관계기관 (긴급)대책회의 주재",
+          "text": "•관계기관 (긴급)대책회의 주재",
+          "evidenceIds": [
+            "MY-S3-E106750"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-002-N06",
+          "label": "관계 부서‧기관별 대설 대처계획 점검 및 협조사항 당부",
+          "text": "–관계 부서‧기관별 대설 대처계획 점검 및 협조사항 당부",
+          "evidenceIds": [
+            "MY-S3-E106757"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-002-N07",
+          "label": "시설물 예찰 결과 및 출입‧교통 통제현황 점검, 보완 …",
+          "text": "–시설물 예찰 결과 및 출입‧교통 통제현황 점검, 보완 지시 (필요시 주민대피계획 점검)",
+          "evidenceIds": [
+            "MY-S3-E106764"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-002-N08",
+          "label": "취약지역‧취약계층 안전관리 강화 지시",
+          "text": "–취약지역‧취약계층 안전관리 강화 지시",
+          "evidenceIds": [
+            "MY-S3-E106777"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-002-N09",
+          "label": "구호물품 비축현황‧지원능력 점검, 제설상황 확인",
+          "text": "–구호물품 비축현황‧지원능력 점검, 제설상황 확인",
+          "evidenceIds": [
+            "MY-S3-E106782"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-002-N10",
+          "label": "제설전진기지, 자동제설장치 적기 가동 지시",
+          "text": "–제설전진기지, 자동제설장치 적기 가동 지시",
+          "evidenceIds": [
+            "MY-S3-E106787"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-002-N11",
+          "label": "대설 시 주민행동요령 당부(언론 브리핑, 보도자료 배포…",
+          "text": "•대설 시 주민행동요령 당부(언론 브리핑, 보도자료 배포)",
+          "evidenceIds": [
+            "MY-S3-E106800"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E106717",
+        "MY-S3-E106724",
+        "MY-S3-E106730",
+        "MY-S3-E106735",
+        "MY-S3-E106750",
+        "MY-S3-E106757",
+        "MY-S3-E106764",
+        "MY-S3-E106777",
+        "MY-S3-E106782",
+        "MY-S3-E106787",
+        "MY-S3-E106800"
+      ],
+      "edges": [
+        {
+          "source": "SN-002",
+          "target": "SN-002-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106717"
+          ]
+        },
+        {
+          "source": "SN-002",
+          "target": "SN-002-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106724"
+          ]
+        },
+        {
+          "source": "SN-002",
+          "target": "SN-002-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106730"
+          ]
+        },
+        {
+          "source": "SN-002",
+          "target": "SN-002-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106735"
+          ]
+        },
+        {
+          "source": "SN-002",
+          "target": "SN-002-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106750"
+          ]
+        },
+        {
+          "source": "SN-002",
+          "target": "SN-002-N06",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106757"
+          ]
+        },
+        {
+          "source": "SN-002",
+          "target": "SN-002-N07",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106764"
+          ]
+        },
+        {
+          "source": "SN-002",
+          "target": "SN-002-N08",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106777"
+          ]
+        },
+        {
+          "source": "SN-002",
+          "target": "SN-002-N09",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106782"
+          ]
+        },
+        {
+          "source": "SN-002",
+          "target": "SN-002-N10",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106787"
+          ]
+        },
+        {
+          "source": "SN-002",
+          "target": "SN-002-N11",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106800"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SN-003",
+      "title": "대설 비상 대응·대피",
+      "phases": [
+        "비상 대응"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "대설경보 및 대규모 재난 위험",
+      "applicability": [
+        "snow"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "SN-003-N01",
+          "label": "지역재난안전대책본부 지휘 및 회의 주재",
+          "text": "•지역재난안전대책본부 지휘 및 회의 주재",
+          "evidenceIds": [
+            "MY-S3-E106833"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N02",
+          "label": "인명‧재산 피해 파악, 사상자 지원 대책 마련 지시",
+          "text": "–인명‧재산 피해 파악, 사상자 지원 대책 마련 지시",
+          "evidenceIds": [
+            "MY-S3-E106840"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N03",
+          "label": "대피주민 긴급구호를 위한 물자 및 인력 지원 지시",
+          "text": "–대피주민 긴급구호를 위한 물자 및 인력 지원 지시",
+          "evidenceIds": [
+            "MY-S3-E106845"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N04",
+          "label": "재난현장 통합지원본부 설치 지시, 운영상황 점검",
+          "text": "–재난현장 통합지원본부 설치 지시, 운영상황 점검",
+          "evidenceIds": [
+            "MY-S3-E106851"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N05",
+          "label": "CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+          "text": "–CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+          "evidenceIds": [
+            "MY-S3-E106857"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N06",
+          "label": "지역재난안전대책본부 비상근무 상향 조정 검토‧지시",
+          "text": "–지역재난안전대책본부 비상근무 상향 조정 검토‧지시",
+          "evidenceIds": [
+            "MY-S3-E106862"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N07",
+          "label": "정부 지원 필요사항 파악 및 건의(지시)",
+          "text": "–정부 지원 필요사항 파악 및 건의(지시)",
+          "evidenceIds": [
+            "MY-S3-E106867"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N08",
+          "label": "대피명령 및 강제 대피조치(행정시장)",
+          "text": "•대피명령 및 강제 대피조치(행정시장)",
+          "evidenceIds": [
+            "MY-S3-E106879"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N09",
+          "label": "전문가, 관계기관‧부서 의견을 종합하여 적설 취약시설물…",
+          "text": "–전문가, 관계기관‧부서 의견을 종합하여 적설 취약시설물, 고립지역 등으로부터 주민 및 차량 등 대피",
+          "evidenceIds": [
+            "MY-S3-E106886"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N10",
+          "label": "교통통제 상황 점검, 교통대책(긴급수송‧대체교통 등) …",
+          "text": "•교통통제 상황 점검, 교통대책(긴급수송‧대체교통 등) 지시‧점검",
+          "evidenceIds": [
+            "MY-S3-E106905"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N11",
+          "label": "필요시 재난대응 현장 방문‧지휘, 관계자 격려",
+          "text": "•필요시 재난대응 현장 방문‧지휘, 관계자 격려",
+          "evidenceIds": [
+            "MY-S3-E106924"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N12",
+          "label": "대책본부 및 재난현장 대변인 지정(언론대응 창구 일원화…",
+          "text": "•대책본부 및 재난현장 대변인 지정(언론대응 창구 일원화)",
+          "evidenceIds": [
+            "MY-S3-E106937"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-003-N13",
+          "label": "재난상황 정보 제공(CBS, 언론 브리핑, 보도자료 배…",
+          "text": "•재난상황 정보 제공(CBS, 언론 브리핑, 보도자료 배포)",
+          "evidenceIds": [
+            "MY-S3-E106946"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E106833",
+        "MY-S3-E106840",
+        "MY-S3-E106845",
+        "MY-S3-E106851",
+        "MY-S3-E106857",
+        "MY-S3-E106862",
+        "MY-S3-E106867",
+        "MY-S3-E106879",
+        "MY-S3-E106886",
+        "MY-S3-E106905",
+        "MY-S3-E106924",
+        "MY-S3-E106937",
+        "MY-S3-E106946"
+      ],
+      "edges": [
+        {
+          "source": "SN-003",
+          "target": "SN-003-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106833"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106840"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106845"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106851"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N05",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106857"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N06",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106862"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N07",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106867"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N08",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106879"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N09",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106886"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N10",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106905"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N11",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106924"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N12",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106937"
+          ]
+        },
+        {
+          "source": "SN-003",
+          "target": "SN-003-N13",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106946"
+          ]
+        }
+      ],
+      "reviewNote": "[확인 필요] 대설 원문에 “행정시장”으로 표기되어 있습니다. 원문을 보존했으며 밀양시 적용 직위는 담당부서 확인이 필요합니다."
+    },
+    {
+      "id": "SN-004",
+      "title": "대설 수습·복구",
+      "phases": [
+        "수습·복구"
+      ],
+      "agencies": [
+        "밀양시 재난안전대책본부장"
+      ],
+      "condition": "특보 해제",
+      "applicability": [
+        "snow"
+      ],
+      "scope": "specific",
+      "nodes": [
+        {
+          "id": "SN-004-N01",
+          "label": "피해 지역‧복구 현장 및 이재민 구호소 방문, 피해주민…",
+          "text": "•피해 지역‧복구 현장 및 이재민 구호소 방문, 피해주민 위로",
+          "evidenceIds": [
+            "MY-S3-E106978"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-004-N02",
+          "label": "피해원인 분석 및 향후 개선대책 마련 지시",
+          "text": "•피해원인 분석 및 향후 개선대책 마련 지시",
+          "evidenceIds": [
+            "MY-S3-E106992"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-004-N03",
+          "label": "복구상황 점검 및 정보 제공(언론 브리핑, 보도자료 배…",
+          "text": "•복구상황 점검 및 정보 제공(언론 브리핑, 보도자료 배포)",
+          "evidenceIds": [
+            "MY-S3-E107006"
+          ],
+          "kind": "action"
+        },
+        {
+          "id": "SN-004-N04",
+          "label": "이재민 구호, 피해‧재난현장 상황, 주요조치 및 향후 …",
+          "text": "–이재민 구호, 피해‧재난현장 상황, 주요조치 및 향후 계획 등",
+          "evidenceIds": [
+            "MY-S3-E107015"
+          ],
+          "kind": "action"
+        }
+      ],
+      "evidenceIds": [
+        "MY-S3-E106978",
+        "MY-S3-E106992",
+        "MY-S3-E107006",
+        "MY-S3-E107015"
+      ],
+      "edges": [
+        {
+          "source": "SN-004",
+          "target": "SN-004-N01",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106978"
+          ]
+        },
+        {
+          "source": "SN-004",
+          "target": "SN-004-N02",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E106992"
+          ]
+        },
+        {
+          "source": "SN-004",
+          "target": "SN-004-N03",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107006"
+          ]
+        },
+        {
+          "source": "SN-004",
+          "target": "SN-004-N04",
+          "kind": "contains",
+          "label": "수록 조치",
+          "evidenceIds": [
+            "MY-S3-E107015"
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": {
+    "MY-S3-E105304": {
+      "id": "MY-S3-E105304",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105304,
+      "paragraphId": "2147483648",
+      "quote": "- 여름철, 겨울철 사전대비 추진계획 수립",
+      "sha256": "09337073d5d75f21d387778f185bdb20163296c32c4d27f4b6fd262b3a4de101"
+    },
+    "MY-S3-E105310": {
+      "id": "MY-S3-E105310",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105310,
+      "paragraphId": "2147483648",
+      "quote": "- 여름철, 겨울철 사전 대비기간 운영",
+      "sha256": "2f2ff77cc1ef13c6d452a1db20e97e25973afc4f26d580a4e3f51db97d6077da"
+    },
+    "MY-S3-E105316": {
+      "id": "MY-S3-E105316",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105316,
+      "paragraphId": "2147483648",
+      "quote": "- 여름철, 겨울철 사전대비 중앙합동, 자체점검 및 미흡사항 보완 조치",
+      "sha256": "abb0c9ee4d62b2e8a4366dc854edcb7243b89dd537238245f8963cac6dbd9835"
+    },
+    "MY-S3-E105372": {
+      "id": "MY-S3-E105372",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105372,
+      "paragraphId": "2147483648",
+      "quote": "- 재난상황실 - 24시간 상황근무 체계 가동",
+      "sha256": "f9d13d1e4402d00103f4e7a70c270f9de54d86dbfe13856e63fed956280ce13e"
+    },
+    "MY-S3-E105405": {
+      "id": "MY-S3-E105405",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105405,
+      "paragraphId": "2147483648",
+      "quote": "○ 기상관측 및 예보 모니터링",
+      "sha256": "10c6e174cf228df99decee02754b577bf4a77b28eac48f707aca46ab9249dfe7"
+    },
+    "MY-S3-E107136": {
+      "id": "MY-S3-E107136",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107136,
+      "paragraphId": "2147483648",
+      "quote": "‧ 대처계획 수립 총괄, 상황판단회의",
+      "sha256": "22d77958734efe4e98aa9fcdc772d2bf50bf6c970d4a3489ec7b34af0372f9f4"
+    },
+    "MY-S3-E107144": {
+      "id": "MY-S3-E107144",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107144,
+      "paragraphId": "2147483648",
+      "quote": "‧ 기상특보 등 정보 수집 및 전파",
+      "sha256": "3f44ee7dfd68fb0a89435d054dd7a88cb848704e28e33e45c9f3652e169cdc07"
+    },
+    "MY-S3-E107150": {
+      "id": "MY-S3-E107150",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107150,
+      "paragraphId": "2147483648",
+      "quote": "‧ 관계기관 대책회의 운영(필요시)",
+      "sha256": "1858665414272de2f343c8112f3a93b2aff26f4156369e0c9396018ba6535b0a"
+    },
+    "MY-S3-E107187": {
+      "id": "MY-S3-E107187",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107187,
+      "paragraphId": "2147483648",
+      "quote": "‧ 소관시설 예찰 및 사전 통제",
+      "sha256": "031de300d0d7ac1c49d3d843736bbba8a3d732cf24c40901d8646688c747ac2f"
+    },
+    "MY-S3-E107282": {
+      "id": "MY-S3-E107282",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107282,
+      "paragraphId": "2147483648",
+      "quote": "‧ 대처(대비)상황 총괄, 상황판단회의 개최",
+      "sha256": "4b2ce211d4b8141e470b3b878bfa2ab26a3028bc4e2c59abf9f3208d5c1f5fa4"
+    },
+    "MY-S3-E107292": {
+      "id": "MY-S3-E107292",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107292,
+      "paragraphId": "2147483648",
+      "quote": "‧ 기상특보 등 정보 수집 및 전파",
+      "sha256": "3f44ee7dfd68fb0a89435d054dd7a88cb848704e28e33e45c9f3652e169cdc07"
+    },
+    "MY-S3-E107298": {
+      "id": "MY-S3-E107298",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107298,
+      "paragraphId": "2147483648",
+      "quote": "‧ 관계기관 대책회의 운영",
+      "sha256": "497bc31d9f1c8344e15cb5dce90ec73bd71d9b53da060034e9ce2b15567d7616"
+    },
+    "MY-S3-E107322": {
+      "id": "MY-S3-E107322",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107322,
+      "paragraphId": "2147483648",
+      "quote": "‧ 기상상황, 인명‧재산 피해 현황",
+      "sha256": "88b2afebd811a140f8f3c1e136e586f6656bda213fbcf70c50722b72a7063d41"
+    },
+    "MY-S3-E107328": {
+      "id": "MY-S3-E107328",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107328,
+      "paragraphId": "2147483648",
+      "quote": "‧ 대처상황 및 여론 등",
+      "sha256": "851c89554c645b464b9da8212a983c4193a588a8d03bdde234722be36d5dfc37"
+    },
+    "MY-S3-E107365": {
+      "id": "MY-S3-E107365",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107365,
+      "paragraphId": "2147483648",
+      "quote": "‧ 피해시설 응급복구 실시",
+      "sha256": "9bae43dfe550a864916b5582fb3082933e262a01698b18bfee4a8828d0395c1d"
+    },
+    "MY-S3-E107401": {
+      "id": "MY-S3-E107401",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107401,
+      "paragraphId": "2147483648",
+      "quote": "‧ 브리핑 보도자료 배포,",
+      "sha256": "deaabfcc43dcc3c7b439ef7cca7b7afc79fdca32d7479bc64ed867efb10f952c"
+    },
+    "MY-S3-E107407": {
+      "id": "MY-S3-E107407",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107407,
+      "paragraphId": "2147483648",
+      "quote": "‧ 언론 모니터링, 오보 대응",
+      "sha256": "93a5a4673440dc68e6e00d4f72001df6a7ee60050f6676883f926659227aa6be"
+    },
+    "MY-S3-E107462": {
+      "id": "MY-S3-E107462",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107462,
+      "paragraphId": "2147483648",
+      "quote": "‧ 대처상황 총괄, 재난방송‧문자 송출",
+      "sha256": "d20122608c357134e183c5a2d2f4a242a9e47bbefb165afbbc67fc29cc6365d7"
+    },
+    "MY-S3-E107469": {
+      "id": "MY-S3-E107469",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107469,
+      "paragraphId": "2147483648",
+      "quote": "‧ 상황보고서 작성, 대책회의 운영",
+      "sha256": "e18667fd05ec4714f136015d6866950e94810198dce4b029ad47f4ab1a7f84f1"
+    },
+    "MY-S3-E107672": {
+      "id": "MY-S3-E107672",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107672,
+      "paragraphId": "2147483648",
+      "quote": "‧ 재난자원 보유현황 파악",
+      "sha256": "05c5091631ca5de0307d6a746c2b9debb98f8b75562b1a72b7a1f5a711127282"
+    },
+    "MY-S3-E107678": {
+      "id": "MY-S3-E107678",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107678,
+      "paragraphId": "2147483648",
+      "quote": "‧ 지원소요 점검 및 자원 지원",
+      "sha256": "241408ae8ea8d2400bf8f6d34b034c2273cef578c04a1dca25ba8c887aa7049c"
+    },
+    "MY-S3-E107504": {
+      "id": "MY-S3-E107504",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107504,
+      "paragraphId": "2147483648",
+      "quote": "‧ 구호물자 지원, 이재민 수용 및 지원",
+      "sha256": "d6447cbf64e4878dfe2fbff61f257d0c322603a226d4d6b22aac407439ded149"
+    },
+    "MY-S3-E107510": {
+      "id": "MY-S3-E107510",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107510,
+      "paragraphId": "2147483648",
+      "quote": "‧ 사망‧실종자 유족 대책",
+      "sha256": "92a69280ea5fc3a865624c6a48c3edfc6a8f9b5674a28faff3c84f41ae6f8bf7"
+    },
+    "MY-S3-E107545": {
+      "id": "MY-S3-E107545",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107545,
+      "paragraphId": "2147483648",
+      "quote": "‧ 재난현장 긴급통신 지원",
+      "sha256": "7d5a26b5b12fa774730ff85890c759c86e79f4e003b5b223e51455c2f8654d7e"
+    },
+    "MY-S3-E107551": {
+      "id": "MY-S3-E107551",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107551,
+      "paragraphId": "2147483648",
+      "quote": "‧ 통신시설 피해 복구",
+      "sha256": "6979ed235a6f5afc5410dc6a9c2398c275da7d477323dc8a4d1e39f3dab09771"
+    },
+    "MY-S3-E107557": {
+      "id": "MY-S3-E107557",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107557,
+      "paragraphId": "2147483648",
+      "quote": "‧ 관계기관 영상회의 지원",
+      "sha256": "980063426226bc9d29277cdea1ca245f025c7b17062454df599396cf2b55bcbf"
+    },
+    "MY-S3-E107592": {
+      "id": "MY-S3-E107592",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107592,
+      "paragraphId": "2147483648",
+      "quote": "‧ 피해현황 파악 및 응급복구 지원",
+      "sha256": "f8b0692611c7f943bf4abb519dea8f8b49f0f2cf15772070aef671b306dcae37"
+    },
+    "MY-S3-E107627": {
+      "id": "MY-S3-E107627",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107627,
+      "paragraphId": "2147483648",
+      "quote": "‧ 가스‧전기‧유류 등 피해현황 파악",
+      "sha256": "8641383e86ce0fbfd151a45954b7fe09263afd5a25ad5a0a247a10abdf66c10a"
+    },
+    "MY-S3-E107635": {
+      "id": "MY-S3-E107635",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107635,
+      "paragraphId": "2147483648",
+      "quote": "‧ 공급기능 복구",
+      "sha256": "d97228118f7bd557e800d144f5b0fb4728d085e4cdeba844edc0d29d33592813"
+    },
+    "MY-S3-E107713": {
+      "id": "MY-S3-E107713",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107713,
+      "paragraphId": "2147483648",
+      "quote": "‧ 교통통제 상황관리",
+      "sha256": "696fd06e884321cba42300fdf84cb65666dc74880477aec549afb13ed27b24a1"
+    },
+    "MY-S3-E107719": {
+      "id": "MY-S3-E107719",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107719,
+      "paragraphId": "2147483648",
+      "quote": "‧ 우회도로 및 대체교통수단 지원",
+      "sha256": "2a2e84db4f4aa4bb8abd2a0535b5911d6786a730c6a131e5633ecb09996c1758"
+    },
+    "MY-S3-E107867": {
+      "id": "MY-S3-E107867",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107867,
+      "paragraphId": "2147483648",
+      "quote": "‧ 재난현장 출입통제 및 차량통제",
+      "sha256": "3de75202d853c529cf9f3eae56d6b855ab4b061f297f5d4643aa4a166cbae975"
+    },
+    "MY-S3-E107873": {
+      "id": "MY-S3-E107873",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107873,
+      "paragraphId": "2147483648",
+      "quote": "‧ 주민혼란 방지를 위한 사회질서 유지",
+      "sha256": "bd53c04f7ef6528c44b793a398caf2522b8902f9ae51c94a7ca8eaff47c61544"
+    },
+    "MY-S3-E107754": {
+      "id": "MY-S3-E107754",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107754,
+      "paragraphId": "2147483648",
+      "quote": "‧ 피해지역 및 이재민 급식소 위생관리",
+      "sha256": "0ca883b8c32b2c2b0d0c922f3303d2f70c07dd0e4bea3db6c51b932546690b58"
+    },
+    "MY-S3-E107760": {
+      "id": "MY-S3-E107760",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107760,
+      "paragraphId": "2147483648",
+      "quote": "‧ 방역 대책 점검 및 부상자 의료지원",
+      "sha256": "fdf4079ca78df4ea9fad4255f6901c9570cd356a7f3ec860f6b8a4c102f2b6e0"
+    },
+    "MY-S3-E107910": {
+      "id": "MY-S3-E107910",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107910,
+      "paragraphId": "2147483648",
+      "quote": "‧ 재난현장 구조‧구급 활동",
+      "sha256": "5afcc4fe1c3f215a53af2cbf7159f277d0dda628c43916c63c237551d2c592d4"
+    },
+    "MY-S3-E107916": {
+      "id": "MY-S3-E107916",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107916,
+      "paragraphId": "2147483648",
+      "quote": "‧ 구조‧구급 관련 장비 지원(헬기 등)",
+      "sha256": "fbbb97c2bc2f8ca99dd653dcdc85ecb6b31571dcfd51165bff3d02b048589e9c"
+    },
+    "MY-S3-E107795": {
+      "id": "MY-S3-E107795",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107795,
+      "paragraphId": "2147483648",
+      "quote": "‧ 재난현장 쓰레기 수거‧처리 지원",
+      "sha256": "01def9f29343e374e3125f14d6aed8dcbae4a1e1d6458f2e26d71e3f4c2dc118"
+    },
+    "MY-S3-E107830": {
+      "id": "MY-S3-E107830",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107830,
+      "paragraphId": "2147483648",
+      "quote": "‧ 재난현장 자원봉사자 모집‧배치 등 지원 및 관리",
+      "sha256": "c4467438d91cc9411a704c831daaa7fe4c801b516c3ae9708e20d55348a87fe6"
+    },
+    "MY-S3-E107952": {
+      "id": "MY-S3-E107952",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍·호우·대설 공통",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107952,
+      "paragraphId": "2147483648",
+      "quote": "‧ 보도자료 배포, 언론 모니터링, 재난현장 브리핑, 오보 대응",
+      "sha256": "718539d91295de3f916291f21ccb6d21eeb5db787c21b25c5cf24e99b8f406b3"
+    },
+    "MY-S3-E105664": {
+      "id": "MY-S3-E105664",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍정보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105664,
+      "paragraphId": "2147483648",
+      "quote": "•기상상황(전망)‧피해사례 확인 및 대처계획 수립 지시",
+      "sha256": "4280611ea96338d09ff7b33b98785acae38a71788e7d5865d9641ff66486b1cf"
+    },
+    "MY-S3-E105675": {
+      "id": "MY-S3-E105675",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍정보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105675,
+      "paragraphId": "2147483648",
+      "quote": "–태풍 예상 진로 및 초기상황판단회의 결과 확인",
+      "sha256": "e7e77764f230a9b8bf1bfbf7e4ff3f69ffcb0f40a8896a3f701982080bfaacd9"
+    },
+    "MY-S3-E105680": {
+      "id": "MY-S3-E105680",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍정보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105680,
+      "paragraphId": "2147483648",
+      "quote": "–태풍으로 인한 과거 피해사례 확인, 유사피해 방지대책 점검",
+      "sha256": "8466177390592a3b16fb53a9d1b3963759344d98a2fb7433391f43688c5560de"
+    },
+    "MY-S3-E105687": {
+      "id": "MY-S3-E105687",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍정보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105687,
+      "paragraphId": "2147483648",
+      "quote": "–태풍 내습 대비 상황별 대처계획 수립 지시",
+      "sha256": "e0b3f7e7708d7b061f116d64b9608ebb5e1d348f04d6eaa3fd71fd1b8373736f"
+    },
+    "MY-S3-E105692": {
+      "id": "MY-S3-E105692",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍정보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105692,
+      "paragraphId": "2147483648",
+      "quote": "‧ 관계기관장 및 부서장 직통연락망 구축 지시",
+      "sha256": "258dd9a1c705e81f1da81224f563c1f91fdef2f00a2dab9112183e98d48b85d5"
+    },
+    "MY-S3-E105708": {
+      "id": "MY-S3-E105708",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍정보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105708,
+      "paragraphId": "2147483648",
+      "quote": "•태풍 피해 예상 시설물 예찰 및 사전 통제 지시",
+      "sha256": "56c357241599bc9b4472d0319fea82b988b2224c0e31085a72dc5b44f4bea4e0"
+    },
+    "MY-S3-E105715": {
+      "id": "MY-S3-E105715",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍정보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105715,
+      "paragraphId": "2147483648",
+      "quote": "–인명피해우려지역(상습침수지역, 붕괴위험지역 등), 둔치주차장, 옥외광고물, 배수펌프장(시험 가동) 등",
+      "sha256": "22df8b4eb671321d7afbd8c204ee71ccbcbbf5bbc45741757eda0820c2053271"
+    },
+    "MY-S3-E105754": {
+      "id": "MY-S3-E105754",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105754,
+      "paragraphId": "2147483648",
+      "quote": "•상황판단회의 주재(또는 개최 지시)",
+      "sha256": "839588d814739ac7392a2ff82fd39b461cb162d143caa3206b4f779ffb2c3654"
+    },
+    "MY-S3-E105761": {
+      "id": "MY-S3-E105761",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105761,
+      "paragraphId": "2147483648",
+      "quote": "–태풍 예상 진로 및 상황대처계획 점검",
+      "sha256": "f899e0538d3b6e299c3953de285496bdf769b8882bd2e8492a911245936b2946"
+    },
+    "MY-S3-E105767": {
+      "id": "MY-S3-E105767",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105767,
+      "paragraphId": "2147483648",
+      "quote": "–CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+      "sha256": "0e5e13961629abd60837e00f045716899662e7bd062c1dd1c16135a124248fcb"
+    },
+    "MY-S3-E105774": {
+      "id": "MY-S3-E105774",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105774,
+      "paragraphId": "2147483648",
+      "quote": "–지역재난안전대책본부 비상근무 지시(단체장 정위치)",
+      "sha256": "0f819f257176dd2b1d9ef37ee8ce66d472d69d1521ec08d895fbdef6741b3856"
+    },
+    "MY-S3-E105791": {
+      "id": "MY-S3-E105791",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105791,
+      "paragraphId": "2147483648",
+      "quote": "•관계기관 (긴급)대책회의 주재",
+      "sha256": "4acef08044c53a641a074d05d87eb537aeed647238fdd5bff2e69e224b2061e8"
+    },
+    "MY-S3-E105798": {
+      "id": "MY-S3-E105798",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105798,
+      "paragraphId": "2147483648",
+      "quote": "–관계 부서‧기관별 태풍 대처계획 점검 및 협조사항 당부",
+      "sha256": "9bae31b86de31466a338e4fee52c6d56f24326833e266dd36f9d4dfc0e0325ff"
+    },
+    "MY-S3-E105807": {
+      "id": "MY-S3-E105807",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105807,
+      "paragraphId": "2147483648",
+      "quote": "–시설물 예찰 결과 및 출입‧교통 통제현황 점검, 보완 지시 (필요시 주민대피계획 점검)",
+      "sha256": "f58224985a3a1acdf3f37c3e30fa5b57942afa06683ff00d3103f5984bb96350"
+    },
+    "MY-S3-E105818": {
+      "id": "MY-S3-E105818",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105818,
+      "paragraphId": "2147483648",
+      "quote": "–취약지역‧취약계층 안전관리 강화 지시",
+      "sha256": "d312550e861e7373b4291cb7c9afb6c710e9bad052bd4753a926c35bf4450c90"
+    },
+    "MY-S3-E105823": {
+      "id": "MY-S3-E105823",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105823,
+      "paragraphId": "2147483648",
+      "quote": "–구호물품‧수방자재 비축 현황 및 지원능력 점검",
+      "sha256": "e533681157c831b335aa67042e09aa8b6deda2c2517aaca5ff26ca491315c343"
+    },
+    "MY-S3-E105828": {
+      "id": "MY-S3-E105828",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105828,
+      "paragraphId": "2147483648",
+      "quote": "–배수펌프장 가동 준비상태 점검 및 적기 가동 지시",
+      "sha256": "8c9fa54f26d7099eb8a8cddac559cc5714d4af3d18d104edd76109dd006079da"
+    },
+    "MY-S3-E105843": {
+      "id": "MY-S3-E105843",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105843,
+      "paragraphId": "2147483648",
+      "quote": "•태풍 내습 시 주민행동요령 당부(브리핑, 보도자료)",
+      "sha256": "973c61224cf0fd4d5716d9f9543952e643dd8b8510c481f2f081c8533247c5f1"
+    },
+    "MY-S3-E105875": {
+      "id": "MY-S3-E105875",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105875,
+      "paragraphId": "2147483648",
+      "quote": "•지역재난안전대책본부 지휘 및 회의 주재",
+      "sha256": "127668a8c83752d3b668e35433aba3139242a64d9758d52bcbd6bc48e0f79796"
+    },
+    "MY-S3-E105882": {
+      "id": "MY-S3-E105882",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105882,
+      "paragraphId": "2147483648",
+      "quote": "–인명‧재산 피해 파악, 사상자 지원 대책 마련 지시",
+      "sha256": "2efd5e992d2e84ac7a3f494584af97008548283330fb2ff5c7e025f54f832685"
+    },
+    "MY-S3-E105887": {
+      "id": "MY-S3-E105887",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105887,
+      "paragraphId": "2147483648",
+      "quote": "–대피주민 긴급구호를 위한 물자 및 인력 지원 지시",
+      "sha256": "81b0de9191d70c4f3ffa13a638b2e10c60fb98b4e0b0cf41c0914ecfd1d80ba7"
+    },
+    "MY-S3-E105895": {
+      "id": "MY-S3-E105895",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105895,
+      "paragraphId": "2147483648",
+      "quote": "–재난현장 통합지원본부 설치 지시, 운영상황 점검",
+      "sha256": "be5e124c0798a6a78155d66cabeaa802dfe682106daec168e436098513663a85"
+    },
+    "MY-S3-E105901": {
+      "id": "MY-S3-E105901",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105901,
+      "paragraphId": "2147483648",
+      "quote": "–CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+      "sha256": "0e5e13961629abd60837e00f045716899662e7bd062c1dd1c16135a124248fcb"
+    },
+    "MY-S3-E105908": {
+      "id": "MY-S3-E105908",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105908,
+      "paragraphId": "2147483648",
+      "quote": "–지역재난안전대책본부 비상근무 상향 조정 검토‧지시",
+      "sha256": "be3b5854c439f21b5acc167ab924914a6509acc5e8de1e8d85cd0c3368359c95"
+    },
+    "MY-S3-E105915": {
+      "id": "MY-S3-E105915",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105915,
+      "paragraphId": "2147483648",
+      "quote": "–정부 지원 필요사항 파악 및 건의(지시)",
+      "sha256": "89bd7f1085cfbec56d9b69da32d813a19fec0f6f4eac907b72993ec014c9a27a"
+    },
+    "MY-S3-E105927": {
+      "id": "MY-S3-E105927",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105927,
+      "paragraphId": "2147483648",
+      "quote": "•대피명령 및 강제 대피조치(시장‧군수‧구청장)",
+      "sha256": "f875953f71d330e27970ef4141ce7dd8f5df4f71b7d17c598d656f830f10b57a"
+    },
+    "MY-S3-E105934": {
+      "id": "MY-S3-E105934",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105934,
+      "paragraphId": "2147483648",
+      "quote": "–전문가, 관계기관‧부서 의견을 종합하여 인명피해우려지역 등 취약지역내 주민, 선박‧자동차 등을 대피토록 명령",
+      "sha256": "6437a91db756511e57d17214f04a65710c0723f506999271ee30881e066fa2bd"
+    },
+    "MY-S3-E105957": {
+      "id": "MY-S3-E105957",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105957,
+      "paragraphId": "2147483648",
+      "quote": "•교통통제 상황 점검, 교통대책(긴급수송‧대체교통 등) 지시‧점검",
+      "sha256": "054a53ce7be383048ecb6b40c423ae7b4bf9837f0671471d7d2d84314b04cd1a"
+    },
+    "MY-S3-E105976": {
+      "id": "MY-S3-E105976",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105976,
+      "paragraphId": "2147483648",
+      "quote": "•필요시 재난대응 현장 방문‧지휘, 관계자 격려",
+      "sha256": "f1e877bce38167655a0370e5bf4cd172a0653eba9275a9fb78a8ecf774489773"
+    },
+    "MY-S3-E105989": {
+      "id": "MY-S3-E105989",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105989,
+      "paragraphId": "2147483648",
+      "quote": "•대책본부 및 재난현장 대변인 지정(언론대응 창구 일원화)",
+      "sha256": "2590df6f3fcfcf1986d695ad45aa004f5cf6f81a81b34429bd8ab95d36b02807"
+    },
+    "MY-S3-E105998": {
+      "id": "MY-S3-E105998",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 태풍주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 105998,
+      "paragraphId": "2147483648",
+      "quote": "•재난상황 정보 제공(CBS, 언론브리핑, 보도자료)",
+      "sha256": "b008951cd5f81c0753456a571bfaf1e814fd7088ad13fe549da18f9edb0f2bf1"
+    },
+    "MY-S3-E106030": {
+      "id": "MY-S3-E106030",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106030,
+      "paragraphId": "2147483648",
+      "quote": "•피해 지역‧복구 현장 및 이재민 구호소 방문, 피해주민 위로",
+      "sha256": "03cce6abb3fd5c95e062afd830e02095181edf90ed4a945a13e3e7b48f73459c"
+    },
+    "MY-S3-E106044": {
+      "id": "MY-S3-E106044",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106044,
+      "paragraphId": "2147483648",
+      "quote": "•피해원인 분석 및 향후 개선대책 마련 지시",
+      "sha256": "41e12e0ca927607fad102ec5b8792fbcf6ae67facca2992402dde2107a57e252"
+    },
+    "MY-S3-E106058": {
+      "id": "MY-S3-E106058",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106058,
+      "paragraphId": "2147483648",
+      "quote": "•복구상황 점검 및 정보 제공(언론 브리핑, 보도자료)",
+      "sha256": "bab7b23dd7aeb213ac36acc9fcbea450badcbf79ac94acab40b2f0303c8a6501"
+    },
+    "MY-S3-E106067": {
+      "id": "MY-S3-E106067",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106067,
+      "paragraphId": "2147483648",
+      "quote": "–이재민 구호 및 피해‧재난현장 상황, 주요조치 및 향후 계획 등",
+      "sha256": "15e201540404e0f270d01a09e93c777a0c087f02d3c704fd725231bfd992ca58"
+    },
+    "MY-S3-E106138": {
+      "id": "MY-S3-E106138",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106138,
+      "paragraphId": "2147483648",
+      "quote": "•기상상황(전망)‧피해사례 확인 및 대처계획 수립 지시",
+      "sha256": "4280611ea96338d09ff7b33b98785acae38a71788e7d5865d9641ff66486b1cf"
+    },
+    "MY-S3-E106149": {
+      "id": "MY-S3-E106149",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106149,
+      "paragraphId": "2147483648",
+      "quote": "–예상 강우량 및 초기상황판단회의 개최 결과 확인",
+      "sha256": "ff57577c5c48b4d2fa1156340443fc50f3fb46bbac221e9ef1b96a80e3bc4b36"
+    },
+    "MY-S3-E106154": {
+      "id": "MY-S3-E106154",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106154,
+      "paragraphId": "2147483648",
+      "quote": "–과거 지역내 집중호우 피해사례 확인, 유사피해 방지대책 점검",
+      "sha256": "33c4d4e6129647552645d02e6f250d23c0d65c62b3704862ce6660c40f1ab6c9"
+    },
+    "MY-S3-E106161": {
+      "id": "MY-S3-E106161",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106161,
+      "paragraphId": "2147483648",
+      "quote": "–집중호우 대비(새벽‧주말 등 취약시간대) 상황대처계획 수립 지시",
+      "sha256": "99a5aacea5880d70e38e49246be56528031c105b6962b6c78d1aa6a239e0f3ff"
+    },
+    "MY-S3-E106173": {
+      "id": "MY-S3-E106173",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106173,
+      "paragraphId": "2147483648",
+      "quote": "‧ 관계기관장 및 부서장 직통연락망 구축 지시",
+      "sha256": "258dd9a1c705e81f1da81224f563c1f91fdef2f00a2dab9112183e98d48b85d5"
+    },
+    "MY-S3-E106189": {
+      "id": "MY-S3-E106189",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106189,
+      "paragraphId": "2147483648",
+      "quote": "•호우 피해 예상 시설물 예찰 및 사전 통제 지시",
+      "sha256": "9bd306d809c684aa8d8b5d8c71ee973d8f69948662a42dd2275a493126ff896b"
+    },
+    "MY-S3-E106196": {
+      "id": "MY-S3-E106196",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106196,
+      "paragraphId": "2147483648",
+      "quote": "–인명피해우려지역(상습침수지역, 붕괴위험지역 등), 하천 둔치주차장, 지하차도, 옥외 광고물, 배수펌프장(시험 가동) 등",
+      "sha256": "b4ab20745615be640f239db5e4a9959d58be9e5c1cd5c7dab95dbb7d433a6ca6"
+    },
+    "MY-S3-E106239": {
+      "id": "MY-S3-E106239",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우주의보 및 피해 시작",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106239,
+      "paragraphId": "2147483648",
+      "quote": "•상황판단회의 주재(또는 개최 지시)",
+      "sha256": "839588d814739ac7392a2ff82fd39b461cb162d143caa3206b4f779ffb2c3654"
+    },
+    "MY-S3-E106246": {
+      "id": "MY-S3-E106246",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우주의보 및 피해 시작",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106246,
+      "paragraphId": "2147483648",
+      "quote": "–예상 강우량, 상황대처계획 점검",
+      "sha256": "e9334f40672a00604aae31f9896959e8870017acaf2292464e1e7f3e6d591393"
+    },
+    "MY-S3-E106252": {
+      "id": "MY-S3-E106252",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우주의보 및 피해 시작",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106252,
+      "paragraphId": "2147483648",
+      "quote": "–CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+      "sha256": "0e5e13961629abd60837e00f045716899662e7bd062c1dd1c16135a124248fcb"
+    },
+    "MY-S3-E106257": {
+      "id": "MY-S3-E106257",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우주의보 및 피해 시작",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106257,
+      "paragraphId": "2147483648",
+      "quote": "–지역재난안전대책본부 비상근무 지시(단체장 정위치)",
+      "sha256": "0f819f257176dd2b1d9ef37ee8ce66d472d69d1521ec08d895fbdef6741b3856"
+    },
+    "MY-S3-E106274": {
+      "id": "MY-S3-E106274",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우주의보 및 피해 시작",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106274,
+      "paragraphId": "2147483648",
+      "quote": "•관계기관 (긴급)대책회의 주재",
+      "sha256": "4acef08044c53a641a074d05d87eb537aeed647238fdd5bff2e69e224b2061e8"
+    },
+    "MY-S3-E106281": {
+      "id": "MY-S3-E106281",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우주의보 및 피해 시작",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106281,
+      "paragraphId": "2147483648",
+      "quote": "–관계 부서‧기관별 집중호우 대처계획 점검 및 협조사항 당부",
+      "sha256": "6d7158e2405bb2afc24378ba49af786e9160b2acbb681c73c06cd85724c7b72a"
+    },
+    "MY-S3-E106288": {
+      "id": "MY-S3-E106288",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우주의보 및 피해 시작",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106288,
+      "paragraphId": "2147483648",
+      "quote": "–시설물 예찰 결과 및 출입‧교통 통제 현황 점검, 보완 지시 (필요시 주민대피계획 점검)",
+      "sha256": "6894257d7112a3b823130c3c3b3feb4bb730610bf44f8f282c63a2e2b7d51122"
+    },
+    "MY-S3-E106299": {
+      "id": "MY-S3-E106299",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우주의보 및 피해 시작",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106299,
+      "paragraphId": "2147483648",
+      "quote": "–취약지역‧취약계층 안전관리 강화 지시",
+      "sha256": "d312550e861e7373b4291cb7c9afb6c710e9bad052bd4753a926c35bf4450c90"
+    },
+    "MY-S3-E106304": {
+      "id": "MY-S3-E106304",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우주의보 및 피해 시작",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106304,
+      "paragraphId": "2147483648",
+      "quote": "–구호물품, 수방자재 비축 현황 및 지원능력 점검",
+      "sha256": "8aa382c1051a253d69088ac32f7e3b49fbd37944ad0d3bdf23c40eb607942101"
+    },
+    "MY-S3-E106309": {
+      "id": "MY-S3-E106309",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우주의보 및 피해 시작",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106309,
+      "paragraphId": "2147483648",
+      "quote": "–배수펌프장 가동 준비상태 점검 및 적기 가동 지시",
+      "sha256": "8c9fa54f26d7099eb8a8cddac559cc5714d4af3d18d104edd76109dd006079da"
+    },
+    "MY-S3-E106322": {
+      "id": "MY-S3-E106322",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우주의보 및 피해 시작",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106322,
+      "paragraphId": "2147483648",
+      "quote": "•집중호우 시 주민행동요령 당부(언론 브리핑, 보도자료 배포)",
+      "sha256": "8ff0b7e5ab446071f88c0cf2a311e355c89ae1af0f4341bb68f9fe84c8bae440"
+    },
+    "MY-S3-E106356": {
+      "id": "MY-S3-E106356",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106356,
+      "paragraphId": "2147483648",
+      "quote": "•지역재난안전대책본부 지휘 및 회의 주재",
+      "sha256": "127668a8c83752d3b668e35433aba3139242a64d9758d52bcbd6bc48e0f79796"
+    },
+    "MY-S3-E106363": {
+      "id": "MY-S3-E106363",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106363,
+      "paragraphId": "2147483648",
+      "quote": "–인명‧재산 피해 파악, 사상자 지원 대책 마련 지시",
+      "sha256": "2efd5e992d2e84ac7a3f494584af97008548283330fb2ff5c7e025f54f832685"
+    },
+    "MY-S3-E106368": {
+      "id": "MY-S3-E106368",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106368,
+      "paragraphId": "2147483648",
+      "quote": "–대피주민 긴급구호를 위한 물자 및 인력 지원 지시",
+      "sha256": "81b0de9191d70c4f3ffa13a638b2e10c60fb98b4e0b0cf41c0914ecfd1d80ba7"
+    },
+    "MY-S3-E106374": {
+      "id": "MY-S3-E106374",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106374,
+      "paragraphId": "2147483648",
+      "quote": "–재난현장 통합지원본부 설치 지시, 운영상황 점검",
+      "sha256": "be5e124c0798a6a78155d66cabeaa802dfe682106daec168e436098513663a85"
+    },
+    "MY-S3-E106380": {
+      "id": "MY-S3-E106380",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106380,
+      "paragraphId": "2147483648",
+      "quote": "–CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+      "sha256": "0e5e13961629abd60837e00f045716899662e7bd062c1dd1c16135a124248fcb"
+    },
+    "MY-S3-E106385": {
+      "id": "MY-S3-E106385",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106385,
+      "paragraphId": "2147483648",
+      "quote": "–지역재난안전대책본부 비상근무 상향 조정 검토‧지시",
+      "sha256": "be3b5854c439f21b5acc167ab924914a6509acc5e8de1e8d85cd0c3368359c95"
+    },
+    "MY-S3-E106392": {
+      "id": "MY-S3-E106392",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106392,
+      "paragraphId": "2147483648",
+      "quote": "–정부 지원 필요사항 파악 및 건의(지시)",
+      "sha256": "89bd7f1085cfbec56d9b69da32d813a19fec0f6f4eac907b72993ec014c9a27a"
+    },
+    "MY-S3-E106404": {
+      "id": "MY-S3-E106404",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106404,
+      "paragraphId": "2147483648",
+      "quote": "•대피명령 및 강제 대피조치(시장‧군수‧구청장)",
+      "sha256": "f875953f71d330e27970ef4141ce7dd8f5df4f71b7d17c598d656f830f10b57a"
+    },
+    "MY-S3-E106411": {
+      "id": "MY-S3-E106411",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106411,
+      "paragraphId": "2147483648",
+      "quote": "–전문가, 관계기관‧부서 의견을 종합하여 인명피해우려 지역 등 취약지역 주민, 선박‧자동차 등을 대피토록 명령",
+      "sha256": "2f7f58ee36b207287afae74b8e39533a095997b0d6f2e6b2412831104ef8ddd3"
+    },
+    "MY-S3-E106432": {
+      "id": "MY-S3-E106432",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106432,
+      "paragraphId": "2147483648",
+      "quote": "•교통통제 상황 점검, 교통대책(긴급수송‧대체교통 등) 지시‧점검",
+      "sha256": "054a53ce7be383048ecb6b40c423ae7b4bf9837f0671471d7d2d84314b04cd1a"
+    },
+    "MY-S3-E106450": {
+      "id": "MY-S3-E106450",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106450,
+      "paragraphId": "2147483648",
+      "quote": "•필요시 재난대응 현장 방문‧지휘, 관계자 격려",
+      "sha256": "f1e877bce38167655a0370e5bf4cd172a0653eba9275a9fb78a8ecf774489773"
+    },
+    "MY-S3-E106462": {
+      "id": "MY-S3-E106462",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106462,
+      "paragraphId": "2147483648",
+      "quote": "•대책본부 및 재난현장 대변인 지정(언론대응 창구 일원화)",
+      "sha256": "2590df6f3fcfcf1986d695ad45aa004f5cf6f81a81b34429bd8ab95d36b02807"
+    },
+    "MY-S3-E106471": {
+      "id": "MY-S3-E106471",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 호우경보 및 피해 확산",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106471,
+      "paragraphId": "2147483648",
+      "quote": "•재난상황 정보 제공(CBS, 언론 브리핑, 보도자료 배포)",
+      "sha256": "6744e78f5bcef5f77ff688873204005b24c1fb3917f7de52d6f5fcf5a5712f74"
+    },
+    "MY-S3-E106503": {
+      "id": "MY-S3-E106503",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106503,
+      "paragraphId": "2147483648",
+      "quote": "•피해 지역‧복구 현장 및 이재민 구호소 방문, 피해주민 위로",
+      "sha256": "03cce6abb3fd5c95e062afd830e02095181edf90ed4a945a13e3e7b48f73459c"
+    },
+    "MY-S3-E106517": {
+      "id": "MY-S3-E106517",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106517,
+      "paragraphId": "2147483648",
+      "quote": "•피해원인 분석 및 향후 개선대책 마련 지시",
+      "sha256": "41e12e0ca927607fad102ec5b8792fbcf6ae67facca2992402dde2107a57e252"
+    },
+    "MY-S3-E106531": {
+      "id": "MY-S3-E106531",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106531,
+      "paragraphId": "2147483648",
+      "quote": "•복구상황 점검 및 정보 제공(언론 브리핑, 보도자료 배포)",
+      "sha256": "b440c1df65fe4f88588313d1e1acebe34a98868d174666630100269683195b1f"
+    },
+    "MY-S3-E106540": {
+      "id": "MY-S3-E106540",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106540,
+      "paragraphId": "2147483648",
+      "quote": "–이재민 구호, 피해‧재난현장 상황, 주요조치 및 향후 계획 등",
+      "sha256": "c9dad2f243a529f5f7598ce474a9c9bc4b2e25a878b8e2b4c37d1d54e4df0c5e"
+    },
+    "MY-S3-E106610": {
+      "id": "MY-S3-E106610",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106610,
+      "paragraphId": "2147483648",
+      "quote": "•기상상황(전망)‧피해사례 확인 및 대처계획 수립 지시",
+      "sha256": "4280611ea96338d09ff7b33b98785acae38a71788e7d5865d9641ff66486b1cf"
+    },
+    "MY-S3-E106621": {
+      "id": "MY-S3-E106621",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106621,
+      "paragraphId": "2147483648",
+      "quote": "–예상 적설량 및 초기상황판단회의 개최 결과 확인",
+      "sha256": "03e392d576e987448515870224058164213b2614168cfda806297e5d46fc59b6"
+    },
+    "MY-S3-E106626": {
+      "id": "MY-S3-E106626",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106626,
+      "paragraphId": "2147483648",
+      "quote": "–대설로 인한 과거 피해사례 확인 및 유사피해 방지대책 점검",
+      "sha256": "ff74bc1b2789c91ee3649603a35479d5a0bba694e65c5550eb8e71930cf7354e"
+    },
+    "MY-S3-E106633": {
+      "id": "MY-S3-E106633",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106633,
+      "paragraphId": "2147483648",
+      "quote": "–대설 대비(새벽‧주말 등 취약시간대) 상황대처계획 수립 지시",
+      "sha256": "16dd3de49708dae161ec126b996ebc588a2e512477c1b0ba6d6c8ba60876e985"
+    },
+    "MY-S3-E106645": {
+      "id": "MY-S3-E106645",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106645,
+      "paragraphId": "2147483648",
+      "quote": "•관계기관장 및 부서장 직통연락망 구축 지시",
+      "sha256": "2163d17278b365c7897d45fe3ffab532d34dd07abeaa2229468ee400cfba4cb5"
+    },
+    "MY-S3-E106660": {
+      "id": "MY-S3-E106660",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106660,
+      "paragraphId": "2147483648",
+      "quote": "•대설 피해 예상 시설물 등 예찰, 사전 통제 지시",
+      "sha256": "75d3bb4fe0001f513e21a240d5de937dff4eb6dbcc405695ca6bd190fe565ebe"
+    },
+    "MY-S3-E106667": {
+      "id": "MY-S3-E106667",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106667,
+      "paragraphId": "2147483648",
+      "quote": "–적설 취약구조물, 제설 취약구간, 상습결빙지역, 고립 예상지역(도서‧산간) 등 대비태세 확인 등",
+      "sha256": "ac2ed1c8397e4877ba8071a6e07484cd08b9ed70d904f210d5a2746a71cbc89e"
+    },
+    "MY-S3-E106680": {
+      "id": "MY-S3-E106680",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106680,
+      "paragraphId": "2147483648",
+      "quote": "•주요 도로 등 제설대책 수립 지시",
+      "sha256": "cbf5e7e68abc31f19e6b14f4c38bfb60d1967922533f69b553ee4d81f2932437"
+    },
+    "MY-S3-E106687": {
+      "id": "MY-S3-E106687",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설 예비특보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106687,
+      "paragraphId": "2147483648",
+      "quote": "–제설제 비축 현황, 제설제‧제설장비 전진배치, 제설제 사전살포, 자동염수분사장치 가동 준비 등",
+      "sha256": "c223c714a55d74b643a63e0998826f1fc9bee3933e5ec8695dab082f9af130a2"
+    },
+    "MY-S3-E106717": {
+      "id": "MY-S3-E106717",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106717,
+      "paragraphId": "2147483648",
+      "quote": "•상황판단회의 주재(또는 개최 지시)",
+      "sha256": "839588d814739ac7392a2ff82fd39b461cb162d143caa3206b4f779ffb2c3654"
+    },
+    "MY-S3-E106724": {
+      "id": "MY-S3-E106724",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106724,
+      "paragraphId": "2147483648",
+      "quote": "–예상 적설량 및 상황대처계획 점검",
+      "sha256": "1a6e76da9635309bf6388d3cebd7e61d913803a79fea2971a7d449e01c3ad306"
+    },
+    "MY-S3-E106730": {
+      "id": "MY-S3-E106730",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106730,
+      "paragraphId": "2147483648",
+      "quote": "–CCTV 통합관제센터를 활용한 실시간 상황 파악",
+      "sha256": "79632fdc49f9ab57395ede87ec96d210c3e32280e84850ac0048a6975b9c53a6"
+    },
+    "MY-S3-E106735": {
+      "id": "MY-S3-E106735",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106735,
+      "paragraphId": "2147483648",
+      "quote": "–지역재난안전대책본부 비상근무 지시(단체장 정위치)",
+      "sha256": "0f819f257176dd2b1d9ef37ee8ce66d472d69d1521ec08d895fbdef6741b3856"
+    },
+    "MY-S3-E106750": {
+      "id": "MY-S3-E106750",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106750,
+      "paragraphId": "2147483648",
+      "quote": "•관계기관 (긴급)대책회의 주재",
+      "sha256": "4acef08044c53a641a074d05d87eb537aeed647238fdd5bff2e69e224b2061e8"
+    },
+    "MY-S3-E106757": {
+      "id": "MY-S3-E106757",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106757,
+      "paragraphId": "2147483648",
+      "quote": "–관계 부서‧기관별 대설 대처계획 점검 및 협조사항 당부",
+      "sha256": "1749e026c0496e523d221900a83f9b7cc0309a84576ae719c8522d9e6cf23566"
+    },
+    "MY-S3-E106764": {
+      "id": "MY-S3-E106764",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106764,
+      "paragraphId": "2147483648",
+      "quote": "–시설물 예찰 결과 및 출입‧교통 통제현황 점검, 보완 지시 (필요시 주민대피계획 점검)",
+      "sha256": "f58224985a3a1acdf3f37c3e30fa5b57942afa06683ff00d3103f5984bb96350"
+    },
+    "MY-S3-E106777": {
+      "id": "MY-S3-E106777",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106777,
+      "paragraphId": "2147483648",
+      "quote": "–취약지역‧취약계층 안전관리 강화 지시",
+      "sha256": "d312550e861e7373b4291cb7c9afb6c710e9bad052bd4753a926c35bf4450c90"
+    },
+    "MY-S3-E106782": {
+      "id": "MY-S3-E106782",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106782,
+      "paragraphId": "2147483648",
+      "quote": "–구호물품 비축현황‧지원능력 점검, 제설상황 확인",
+      "sha256": "ae8ff68ca3545be6c3b9680725cf26dc32e47e3106d00abd57165fdb111d7111"
+    },
+    "MY-S3-E106787": {
+      "id": "MY-S3-E106787",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106787,
+      "paragraphId": "2147483648",
+      "quote": "–제설전진기지, 자동제설장치 적기 가동 지시",
+      "sha256": "28ab8b455b3d114050a7a06227ed1e8f9dead8ba28a73d5937d8a23fdf943c04"
+    },
+    "MY-S3-E106800": {
+      "id": "MY-S3-E106800",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설주의보·경보",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106800,
+      "paragraphId": "2147483648",
+      "quote": "•대설 시 주민행동요령 당부(언론 브리핑, 보도자료 배포)",
+      "sha256": "b10368edc18909ac82dd7085c938fbf4d2020ed0b6d8a8b040152c943b47a1e1"
+    },
+    "MY-S3-E106833": {
+      "id": "MY-S3-E106833",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106833,
+      "paragraphId": "2147483648",
+      "quote": "•지역재난안전대책본부 지휘 및 회의 주재",
+      "sha256": "127668a8c83752d3b668e35433aba3139242a64d9758d52bcbd6bc48e0f79796"
+    },
+    "MY-S3-E106840": {
+      "id": "MY-S3-E106840",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106840,
+      "paragraphId": "2147483648",
+      "quote": "–인명‧재산 피해 파악, 사상자 지원 대책 마련 지시",
+      "sha256": "2efd5e992d2e84ac7a3f494584af97008548283330fb2ff5c7e025f54f832685"
+    },
+    "MY-S3-E106845": {
+      "id": "MY-S3-E106845",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106845,
+      "paragraphId": "2147483648",
+      "quote": "–대피주민 긴급구호를 위한 물자 및 인력 지원 지시",
+      "sha256": "81b0de9191d70c4f3ffa13a638b2e10c60fb98b4e0b0cf41c0914ecfd1d80ba7"
+    },
+    "MY-S3-E106851": {
+      "id": "MY-S3-E106851",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106851,
+      "paragraphId": "2147483648",
+      "quote": "–재난현장 통합지원본부 설치 지시, 운영상황 점검",
+      "sha256": "be5e124c0798a6a78155d66cabeaa802dfe682106daec168e436098513663a85"
+    },
+    "MY-S3-E106857": {
+      "id": "MY-S3-E106857",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106857,
+      "paragraphId": "2147483648",
+      "quote": "–CCTV 통합관제센터 등을 활용한 실시간 상황 파악",
+      "sha256": "0e5e13961629abd60837e00f045716899662e7bd062c1dd1c16135a124248fcb"
+    },
+    "MY-S3-E106862": {
+      "id": "MY-S3-E106862",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106862,
+      "paragraphId": "2147483648",
+      "quote": "–지역재난안전대책본부 비상근무 상향 조정 검토‧지시",
+      "sha256": "be3b5854c439f21b5acc167ab924914a6509acc5e8de1e8d85cd0c3368359c95"
+    },
+    "MY-S3-E106867": {
+      "id": "MY-S3-E106867",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106867,
+      "paragraphId": "2147483648",
+      "quote": "–정부 지원 필요사항 파악 및 건의(지시)",
+      "sha256": "89bd7f1085cfbec56d9b69da32d813a19fec0f6f4eac907b72993ec014c9a27a"
+    },
+    "MY-S3-E106879": {
+      "id": "MY-S3-E106879",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106879,
+      "paragraphId": "2147483648",
+      "quote": "•대피명령 및 강제 대피조치(행정시장)",
+      "sha256": "7d39a0b7309b6f4d8767dc45066a578da863a65c5c86482e49ea020c71bc67e3"
+    },
+    "MY-S3-E106886": {
+      "id": "MY-S3-E106886",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106886,
+      "paragraphId": "2147483648",
+      "quote": "–전문가, 관계기관‧부서 의견을 종합하여 적설 취약시설물, 고립지역 등으로부터 주민 및 차량 등 대피",
+      "sha256": "6b3eec21867980317dcd217cca60899f1e2742756c20c779d9b7b5c7031b10bd"
+    },
+    "MY-S3-E106905": {
+      "id": "MY-S3-E106905",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106905,
+      "paragraphId": "2147483648",
+      "quote": "•교통통제 상황 점검, 교통대책(긴급수송‧대체교통 등) 지시‧점검",
+      "sha256": "054a53ce7be383048ecb6b40c423ae7b4bf9837f0671471d7d2d84314b04cd1a"
+    },
+    "MY-S3-E106924": {
+      "id": "MY-S3-E106924",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106924,
+      "paragraphId": "2147483648",
+      "quote": "•필요시 재난대응 현장 방문‧지휘, 관계자 격려",
+      "sha256": "f1e877bce38167655a0370e5bf4cd172a0653eba9275a9fb78a8ecf774489773"
+    },
+    "MY-S3-E106937": {
+      "id": "MY-S3-E106937",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106937,
+      "paragraphId": "2147483648",
+      "quote": "•대책본부 및 재난현장 대변인 지정(언론대응 창구 일원화)",
+      "sha256": "2590df6f3fcfcf1986d695ad45aa004f5cf6f81a81b34429bd8ab95d36b02807"
+    },
+    "MY-S3-E106946": {
+      "id": "MY-S3-E106946",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 대설경보 및 대규모 재난 위험",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106946,
+      "paragraphId": "2147483648",
+      "quote": "•재난상황 정보 제공(CBS, 언론 브리핑, 보도자료 배포)",
+      "sha256": "6744e78f5bcef5f77ff688873204005b24c1fb3917f7de52d6f5fcf5a5712f74"
+    },
+    "MY-S3-E106978": {
+      "id": "MY-S3-E106978",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106978,
+      "paragraphId": "2147483648",
+      "quote": "•피해 지역‧복구 현장 및 이재민 구호소 방문, 피해주민 위로",
+      "sha256": "03cce6abb3fd5c95e062afd830e02095181edf90ed4a945a13e3e7b48f73459c"
+    },
+    "MY-S3-E106992": {
+      "id": "MY-S3-E106992",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 106992,
+      "paragraphId": "2147483648",
+      "quote": "•피해원인 분석 및 향후 개선대책 마련 지시",
+      "sha256": "41e12e0ca927607fad102ec5b8792fbcf6ae67facca2992402dde2107a57e252"
+    },
+    "MY-S3-E107006": {
+      "id": "MY-S3-E107006",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107006,
+      "paragraphId": "2147483648",
+      "quote": "•복구상황 점검 및 정보 제공(언론 브리핑, 보도자료 배포)",
+      "sha256": "b440c1df65fe4f88588313d1e1acebe34a98868d174666630100269683195b1f"
+    },
+    "MY-S3-E107015": {
+      "id": "MY-S3-E107015",
+      "sourceId": "MIRYANG-WEATHER-2026-06",
+      "heading": "Ⅴ. 즉시가동 준비사항 및 본부장 임무와 역할 / 특보 해제",
+      "member": "Contents/section3.xml",
+      "elementIndex": 107015,
+      "paragraphId": "2147483648",
+      "quote": "–이재민 구호, 피해‧재난현장 상황, 주요조치 및 향후 계획 등",
+      "sha256": "c9dad2f243a529f5f7598ce474a9c9bc4b2e25a878b8e2b4c37d1d54e4df0c5e"
+    }
+  }
+}

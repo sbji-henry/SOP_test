@@ -1,0 +1,13 @@
+{
+  "tagOwners": {
+    "tag:northflank-sop": [],
+    "tag:sop-origin": ["autogroup:admin"]
+  },
+  "grants": [
+    {
+      "src": ["tag:northflank-sop"],
+      "dst": ["tag:sop-origin"],
+      "ip": ["tcp:443"]
+    }
+  ]
+}

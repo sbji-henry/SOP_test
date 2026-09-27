@@ -1,6 +1,6 @@
 {
-  "name": "wildfire-sop-tests",
-  "version": "0.1.0",
+  "name": "disaster-sop-tests",
+  "version": "0.2.0",
   "private": true,
   "description": "Browser tests only; the service has no npm runtime dependencies",
   "scripts": { "test:e2e": "node tests/e2e.cjs" },

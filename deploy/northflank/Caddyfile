@@ -1,0 +1,23 @@
+{
+    admin off
+    auto_https off
+}
+:8080 {
+    handle /healthz {
+        respond "proxy-alive" 200
+    }
+    handle {
+        basic_auth {
+            {$SOP_USER} {$SOP_PASSWORD_HASH}
+        }
+        reverse_proxy https://{$ORIGIN_HOST} {
+            header_up Host {upstream_hostport}
+            header_up -Authorization
+            flush_interval -1
+            transport http {
+                dial_timeout 10s
+                response_header_timeout 60s
+            }
+        }
+    }
+}
