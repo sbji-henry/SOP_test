@@ -136,15 +136,15 @@ Northflank + Cloudflare 조합도 기술적으로 가능하지만 Cloudflare ori
 
 ## 5. Tailscale Funnel 대안
 
-Northflank 없이 Tailscale만 사용할 경우 로컬 인증 게이트웨이에 연결한다.
+Northflank 없이 Tailscale만 사용할 경우 로컬 인증 게이트웨이에 연결한다. `8443` 포트를 사용하면 Northflank 원본용 Serve `443`과 동시에 실행할 수 있다.
 
 ```powershell
  docker compose -f compose.yaml -f compose.public.yaml up -d sop gateway
-& 'C:\Program Files\Tailscale\tailscale.exe' funnel --bg --https=443 http://127.0.0.1:8090
+& 'C:\Program Files\Tailscale\tailscale.exe' funnel --bg --https=8443 http://127.0.0.1:8090
 & 'C:\Program Files\Tailscale\tailscale.exe' funnel status
 ```
 
-MagicDNS·HTTPS·Funnel 권한이 필요하다. 같은 443 포트의 Serve/Funnel은 동시에 사용할 수 없으므로 Northflank + Serve와는 대안 관계다. `*.ts.net` 이름만 사용하며 공개 포트는 443/8443/10000, 변경할 수 없는 대역폭 제한이 있다. Funnel은 방문자를 인증해 주지 않으므로 위 Caddy 인증을 유지한다.
+MagicDNS·HTTPS·Funnel 권한이 필요하다. **같은 포트**의 Serve/Funnel은 동시에 사용할 수 없다. 이 구성은 Serve 443과 Funnel 8443을 함께 사용한다. 공개 주소는 `https://<PC의 ts.net 이름>:8443/`이며, 공개 포트는 443/8443/10000으로 제한되고 대역폭 제한이 있다. Funnel은 방문자를 인증해 주지 않으므로 위 Caddy 인증을 유지한다. Tailscale이 Funnel을 처음 활성화할 때 tailnet 정책에 Funnel 권한을 추가할 수 있다.
 
 ## 공식 근거
 
@@ -163,4 +163,4 @@ MagicDNS·HTTPS·Funnel 권한이 필요하다. 같은 443 포트의 Serve/Funne
 
 ## 배포 후 점검
 
-로컬 `/health`, 태풍·호우·대설 화면의 업무 수, 두 재난의 풍수해 공통 11개 업무, 비인증 외부 요청의 401, 인증 후 외부 API의 200을 확인한다. Northflank를 선택하면 프록시 `/healthz`와 인증 후 `/api/disasters/snow/meta`를 모두 검사해야 Tailscale 원본 연결까지 확인할 수 있다. Quick Tunnel 주소는 컨테이너가 다시 만들어지면 바뀔 수 있으므로 로그에서 최신 주소를 확인한다.
+로컬 `/health`, 태풍·호우·대설 화면의 업무 수, 두 재난의 풍수해 공통 11개 업무, 비인증 외부 요청의 401, 인증 후 외부 API의 200을 확인한다. Northflank를 선택하면 프록시 `/healthz`와 인증 후 `/api/disasters/snow/meta`를 모두 검사해야 Tailscale 원본 연결까지 확인할 수 있다. Funnel 주소는 tailnet 기기 이름을 유지하는 동안 고정된다. Quick Tunnel 주소는 컨테이너가 다시 만들어지면 바뀔 수 있으므로 로그에서 최신 주소를 확인한다.
