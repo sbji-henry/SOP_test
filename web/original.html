@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="재난 대응 SOP 원문 근거 조회">
+  <title>원문보기 | 재난 대응 SOP</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/original.css">
+  <script src="/original.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#document-view">본문으로 이동</a>
+<header class="topbar">
+  <a class="brand" id="home-link" href="/"><span class="brand-icon">山</span><span>재난 대응 <b>SOP</b><small>DISASTER RESPONSE WORKSPACE</small></span></a>
+  <div class="header-meta"><span class="pill">원문 근거 검증</span><span id="publisher-label">문서 불러오는 중</span><span class="version">v0.2.0</span></div>
+</header>
+
+<main>
+  <nav class="breadcrumb" aria-label="현재 위치">
+    <a id="back-link" href="/">SOP</a><span aria-hidden="true">›</span><span id="workflow-crumb">원문 근거</span><span aria-hidden="true">›</span><strong>원문보기</strong>
+  </nav>
+
+  <section class="document-heading">
+    <div>
+      <div class="eyebrow">SOURCE EVIDENCE VIEWER</div>
+      <h1 id="document-title">원문 근거를 불러오는 중입니다.</h1>
+      <p id="document-subtitle">원천 문서와 서비스 조치 문구를 한 화면에서 대조합니다.</p>
+    </div>
+    <div class="heading-actions">
+      <button id="copy-link" class="outline">링크 복사</button>
+      <a id="download-source" class="button-link" href="#" download>원문 XML 발췌 ↓</a>
+      <a id="return-sop" class="button-link primary" href="/">SOP로 돌아가기</a>
+    </div>
+  </section>
+
+  <div id="status" role="status" aria-live="polite">원문 데이터를 확인하는 중입니다.</div>
+
+  <section class="viewer-layout">
+    <article class="viewer-card" id="document-view">
+      <div class="viewer-toolbar">
+        <div class="tabs" role="tablist" aria-label="원문 보기 방식">
+          <button role="tab" aria-selected="true" data-tab="original">원문</button>
+          <button role="tab" aria-selected="false" data-tab="structured" tabindex="-1">구조화 정보</button>
+          <button role="tab" aria-selected="false" data-tab="compare" tabindex="-1">원문·조치 비교</button>
+        </div>
+        <div class="viewer-tools">
+          <button id="zoom-out" aria-label="문서 축소">−</button>
+          <span id="zoom-label">100%</span>
+          <button id="zoom-in" aria-label="문서 확대">＋</button>
+          <button id="zoom-reset">화면 맞춤</button>
+        </div>
+      </div>
+
+      <div class="paper-stage">
+        <div class="paper" id="paper">
+          <section class="tab-panel" data-panel="original">
+            <div class="paper-kicker" id="paper-source"></div>
+            <h2 id="source-heading">원문 근거</h2>
+            <blockquote id="source-quote"></blockquote>
+            <div class="source-location">
+              <span>원천 위치</span>
+              <code id="source-locator">—</code>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-panel="structured" hidden>
+            <div class="paper-kicker">구조화된 원문 근거 정보</div>
+            <h2>근거 구조</h2>
+            <dl class="structured-list">
+              <div><dt>근거 ID</dt><dd id="evidence-id">—</dd></div>
+              <div><dt>문단 제목</dt><dd id="evidence-heading">—</dd></div>
+              <div><dt>원천 XML</dt><dd id="evidence-member">—</dd></div>
+              <div><dt>요소 위치</dt><dd id="evidence-index">—</dd></div>
+              <div><dt>문단 ID</dt><dd id="evidence-paragraph">—</dd></div>
+              <div><dt>SHA-256</dt><dd><code id="evidence-sha">—</code></dd></div>
+            </dl>
+          </section>
+
+          <section class="tab-panel" data-panel="compare" hidden>
+            <div class="paper-kicker">서비스 조치 문구와 원문 대조</div>
+            <h2>원문·조치 비교</h2>
+            <div class="compare-grid">
+              <section><h3>원문</h3><p id="compare-source">—</p></section>
+              <section><h3>서비스 조치</h3><p id="compare-action">비교할 조치를 선택하지 않았습니다.</p></section>
+            </div>
+            <div id="match-result" class="match-result neutral">비교 대상 없음</div>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <aside class="side-panel">
+      <section>
+        <div class="panel-heading"><h2>문서 정보</h2><span id="current-badge" class="verified">원문 연결</span></div>
+        <dl class="meta-list">
+          <div><dt>문서명</dt><dd id="meta-title">—</dd></div>
+          <div><dt>발행기관</dt><dd id="meta-publisher">—</dd></div>
+          <div><dt>판본</dt><dd id="meta-edition">—</dd></div>
+          <div><dt>원천 파일</dt><dd id="meta-filename">—</dd></div>
+        </dl>
+      </section>
+
+      <section>
+        <div class="panel-heading"><h2>SOP 연결 정보</h2></div>
+        <dl class="meta-list">
+          <div><dt>재난 유형</dt><dd id="meta-disaster">—</dd></div>
+          <div><dt>워크플로우</dt><dd id="meta-workflow">—</dd></div>
+          <div><dt>선택 조치</dt><dd id="meta-node">—</dd></div>
+        </dl>
+      </section>
+
+      <section>
+        <div class="panel-heading"><h2>원문 데이터</h2></div>
+        <div class="link-stack">
+          <a id="evidence-json" href="#" target="_blank" rel="noopener">근거 JSON 열기 ↗</a>
+          <a id="source-xml" href="#" target="_blank" rel="noopener">원문 XML 발췌 열기 ↗</a>
+        </div>
+        <p class="note">인쇄 쪽수는 검증되지 않은 경우 표시하지 않습니다. XML 요소 위치와 문단 ID를 원문 추적 기준으로 사용합니다.</p>
+      </section>
+    </aside>
+  </section>
+</main>
+</body>
+</html>
