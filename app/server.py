@@ -170,8 +170,12 @@ class Handler(BaseHTTPRequestHandler):
             if evidence:
                 return self.send(200, {**evidence, 'source': data['source']}, head=head)
         static = {'/': ('web/index.html', 'text/html; charset=utf-8'),
+                  '/original': ('web/original.html', 'text/html; charset=utf-8'),
+                  '/original.html': ('web/original.html', 'text/html; charset=utf-8'),
                   '/app.js': ('web/app.js', 'text/javascript; charset=utf-8'),
                   '/styles.css': ('web/styles.css', 'text/css; charset=utf-8'),
+                  '/original.js': ('web/original.js', 'text/javascript; charset=utf-8'),
+                  '/original.css': ('web/original.css', 'text/css; charset=utf-8'),
                   '/source-excerpts.xml': ('data/source-excerpts.xml', 'application/xml; charset=utf-8'),
                   '/workflows.json': ('data/workflows.json', 'application/json; charset=utf-8')}
         if path in static:
