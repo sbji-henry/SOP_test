@@ -132,7 +132,7 @@ function renderEvidence() {
   const n=state.node;
   $('evidence-content').innerHTML=`<h4>${esc(n.label)}</h4>`+n.evidenceIds.map(id=>{
     const e=state.selected.evidence[id];
-    return `<p class="reference-heading">${esc(e.heading)}</p><blockquote>${esc(e.quote)}</blockquote><p class="locator">${esc(e.member)} · XML 요소 ${e.elementIndex} · 문단 ID ${esc(e.paragraphId)}</p><div class="evidence-links"><a href="/api/disasters/${state.disaster}/evidence/${encodeURIComponent(id)}" target="_blank" rel="noopener">근거 데이터 열기 ↗</a><a href="/manuals/${state.disaster}/source-excerpts.xml" download>원문 XML 발췌 다운로드 ↓</a></div>`;
+    const viewer=new URLSearchParams({disaster:state.disaster,wf:state.selected.id,node:n.id,evidence:id});\n    return `<p class="reference-heading">${esc(e.heading)}</p><blockquote>${esc(e.quote)}</blockquote><p class="locator">${esc(e.member)} · XML 요소 ${e.elementIndex} · 문단 ID ${esc(e.paragraphId)}</p><div class="evidence-links"><a class="source-view-link" href="/original?${viewer}">원문보기 ↗</a><a href="/api/disasters/${state.disaster}/evidence/${encodeURIComponent(id)}" target="_blank" rel="noopener">근거 JSON ↗</a><a href="/manuals/${state.disaster}/source-excerpts.xml" download>원문 XML 발췌 ↓</a></div>`;
   }).join('');
 }
 function setTab(graph) {
